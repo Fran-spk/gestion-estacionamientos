@@ -1,0 +1,531 @@
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Vista.exe
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\appsettings.json
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Vista.deps.json
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Vista.runtimeconfig.json
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Vista.pdb
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Azure.Core.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Azure.Identity.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\BouncyCastle.Cryptography.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\HarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Humanizer.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\itextsharp.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\itextsharp.xmlworker.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Logging.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Options.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Identity.Client.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.Common.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Microsoft.SqlServer.Server.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Mono.TextTemplating.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\ScottPlot.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\SixLabors.Fonts.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\SixLabors.ImageSharp.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\SkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\SkiaSharp.HarfBuzz.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\System.Memory.Data.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\System.Runtime.Caching.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\System.Text.Encodings.Web.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\System.Text.Json.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\WinForms.DataVisualization.Utilities.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\WinForms.DataVisualization.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-arm\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-arm64\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-x64\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Modelo.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Servicios.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Controladora.pdb
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Modelo.pdb
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows7.0\Servicios.pdb
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.csproj.AssemblyReference.cache
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormConfiguracion.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.formDescuentos.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormMetodosDepago.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPago.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPagoDetalle.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormReportes.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormTiposVehiculos.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.Menu.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormEspacio.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPlan.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPlanes.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPlazas.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.formTarifa.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormTarifas.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormTickets.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormVehiculo.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.Properties.Resources.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormClaveNueva.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormGrupo.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormGrupos.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormIniciarSesion.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormRecuperarClave.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormUsuario.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormUsuarios.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPagoServicio.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormServicio.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.FormServiciosEnEspera.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.MenuServiciosForm.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.csproj.GenerateResource.cache
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.AssemblyInfoInputs.cache
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.AssemblyInfo.cs
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.csproj.CoreCompileInputs.cache
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.sourcelink.json
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.csproj.Up2Date
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\refint\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.pdb
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\Vista.genruntimeconfig.cache
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows7.0\ref\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Vista.exe
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\appsettings.json
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Vista.deps.json
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Vista.runtimeconfig.json
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Vista.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Azure.Core.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Azure.Identity.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\BouncyCastle.Cryptography.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\HarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Humanizer.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\itextsharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\itextsharp.xmlworker.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Logging.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Options.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Identity.Client.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.Common.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Microsoft.SqlServer.Server.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Mono.TextTemplating.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\ScottPlot.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\SixLabors.Fonts.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\SixLabors.ImageSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\SkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\SkiaSharp.HarfBuzz.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\System.Memory.Data.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\System.Runtime.Caching.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\System.Text.Encodings.Web.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\System.Text.Json.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\WinForms.DataVisualization.Utilities.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\WinForms.DataVisualization.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-arm\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-arm64\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\linux-x64\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Modelo.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Servicios.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Controladora.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Modelo.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\bin\Debug\net6.0-windows7.0\Servicios.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.csproj.AssemblyReference.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormConfiguracion.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.formDescuentos.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormMetodosDepago.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPago.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPagoDetalle.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormReportes.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormTiposVehiculos.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.Menu.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormEspacio.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPlan.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPlanes.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPlazas.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.formTarifa.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormTarifas.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormTickets.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormVehiculo.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.Properties.Resources.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormClaveNueva.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormGrupo.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormGrupos.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormIniciarSesion.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormRecuperarClave.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormUsuario.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormUsuarios.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormPagoServicio.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormServicio.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.FormServiciosEnEspera.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.MenuServiciosForm.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.csproj.GenerateResource.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.AssemblyInfoInputs.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.AssemblyInfo.cs
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.csproj.CoreCompileInputs.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.sourcelink.json
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.csproj.Up2Date
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\refint\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\Vista.genruntimeconfig.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\IDS\obj\Debug\net6.0-windows7.0\ref\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Vista.exe
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\appsettings.json
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Vista.deps.json
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Vista.runtimeconfig.json
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Vista.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Azure.Core.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Azure.Identity.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\BouncyCastle.Cryptography.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\HarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Humanizer.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\itextsharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\itextsharp.xmlworker.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Logging.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Options.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Identity.Client.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.Common.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.SqlServer.Server.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Mono.TextTemplating.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\ScottPlot.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\SixLabors.Fonts.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\SixLabors.ImageSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\SkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\SkiaSharp.HarfBuzz.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.Memory.Data.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.Runtime.Caching.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.Text.Encodings.Web.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.Text.Json.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\WinForms.DataVisualization.Utilities.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\WinForms.DataVisualization.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-arm\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-arm64\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-x64\native\libSkiaSharp.so
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Modelo.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Servicios.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Controladora.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Modelo.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Servicios.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.csproj.AssemblyReference.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormConfiguracion.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.formDescuentos.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormMetodosDepago.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPago.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPagoDetalle.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormReportes.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormTiposVehiculos.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Menu.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormEspacio.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPlan.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPlanes.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPlazas.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.formTarifa.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormTarifas.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormTickets.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormVehiculo.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Properties.Resources.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormClaveNueva.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormGrupo.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormGrupos.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormIniciarSesion.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormRecuperarClave.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormUsuario.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormUsuarios.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPagoServicio.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormServicio.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormServiciosEnEspera.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.MenuServiciosForm.resources
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.csproj.GenerateResource.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.AssemblyInfoInputs.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.AssemblyInfo.cs
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.csproj.CoreCompileInputs.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.csproj.Up2Date
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\refint\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.genruntimeconfig.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\ref\Vista.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Vista.exe
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\appsettings.json
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Vista.deps.json
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Vista.runtimeconfig.json
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Vista.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Vista.pdb
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Azure.Core.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Azure.Identity.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\BouncyCastle.Cryptography.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\HarfBuzzSharp.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Humanizer.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\itextsharp.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\itextsharp.xmlworker.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Data.SqlClient.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Logging.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Options.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Extensions.Primitives.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Identity.Client.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Logging.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.Common.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.DataVisualization.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Microsoft.SqlServer.Server.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Mono.TextTemplating.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\ScottPlot.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\SixLabors.Fonts.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\SixLabors.ImageSharp.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\SkiaSharp.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\SkiaSharp.HarfBuzz.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.Configuration.ConfigurationManager.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.Memory.Data.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.Runtime.Caching.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.Text.Encodings.Web.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\System.Text.Json.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\WinForms.DataVisualization.Utilities.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\WinForms.DataVisualization.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-arm\native\libSkiaSharp.so
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-arm64\native\libSkiaSharp.so
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\linux-x64\native\libSkiaSharp.so
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Controladora.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Modelo.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Servicios.dll
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Controladora.pdb
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Modelo.pdb
+C:\Proyecto Estacionamiento\Vistas\bin\Debug\net6.0-windows7.0\Servicios.pdb
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.csproj.AssemblyReference.cache
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormConfiguracion.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.formDescuentos.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormMetodosDepago.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPago.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPagoDetalle.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormReportes.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormTiposVehiculos.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Menu.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormEspacio.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPlan.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPlanes.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPlazas.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.formTarifa.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormTarifas.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormTickets.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormVehiculo.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Properties.Resources.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormClaveNueva.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormGrupo.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormGrupos.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormIniciarSesion.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormRecuperarClave.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormUsuario.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Seguridad.FormUsuarios.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormPagoServicio.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormServicio.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.FormServiciosEnEspera.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.MenuServiciosForm.resources
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.csproj.GenerateResource.cache
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.AssemblyInfoInputs.cache
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.AssemblyInfo.cs
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.csproj.CoreCompileInputs.cache
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.sourcelink.json
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.csproj.Up2Date
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.dll
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\refint\Vista.dll
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.pdb
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.genruntimeconfig.cache
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\ref\Vista.dll

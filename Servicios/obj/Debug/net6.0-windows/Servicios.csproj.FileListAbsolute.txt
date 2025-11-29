@@ -1,0 +1,15 @@
+C:\Users\judok\OneDrive\Escritorio\Servicios\obj\Debug\net6.0-windows\Servicios.csproj.AssemblyReference.cache
+C:\Users\judok\OneDrive\Escritorio\Servicios\obj\Debug\net6.0-windows\Servicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\judok\OneDrive\Escritorio\Servicios\obj\Debug\net6.0-windows\Servicios.AssemblyInfoInputs.cache
+C:\Users\judok\OneDrive\Escritorio\Servicios\obj\Debug\net6.0-windows\Servicios.AssemblyInfo.cs
+C:\Users\judok\OneDrive\Escritorio\Servicios\obj\Debug\net6.0-windows\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\judok\OneDrive\Escritorio\Servicios\bin\Debug\net6.0-windows\Servicios.deps.json
+C:\Users\judok\OneDrive\Escritorio\Servicios\bin\Debug\net6.0-windows\Servicios.dll
+C:\Users\judok\OneDrive\Escritorio\Servicios\bin\Debug\net6.0-windows\Servicios.pdb
+C:\Users\judok\OneDrive\Escritorio\Servicios\bin\Debug\net6.0-windows\Modelo.dll
+C:\Users\judok\OneDrive\Escritorio\Servicios\bin\Debug\net6.0-windows\Modelo.pdb
+C:\Users\judok\OneDrive\Escritorio\Servicios\obj\Debug\net6.0-windows\Servicios.csproj.Up2Date
+C:\Users\judok\OneDrive\Escritorio\Servicios\obj\Debug\net6.0-windows\Servicios.dll
+C:\Users\judok\OneDrive\Escritorio\Servicios\obj\Debug\net6.0-windows\refint\Servicios.dll
+C:\Users\judok\OneDrive\Escritorio\Servicios\obj\Debug\net6.0-windows\Servicios.pdb
+C:\Users\judok\OneDrive\Escritorio\Servicios\obj\Debug\net6.0-windows\ref\Servicios.dll

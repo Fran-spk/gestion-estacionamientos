@@ -1,0 +1,408 @@
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Vista.exe
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Vista.deps.json
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Vista.runtimeconfig.json
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Vista.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Vista.pdb
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.AssemblyInfo.cs
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\refint\Vista.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.pdb
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.genruntimeconfig.cache
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\ref\Vista.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormConfiguracion.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormPago.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormPagoDetalle.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormPlazas.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.formTarifa.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormVehiculo.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.Menu.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormTickets.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.formDescuentos.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormMetodosDepago.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormPlan.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormPlanes.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormReportes.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\POO.FormTarifas.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.Properties.Resources.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Controladora-DAS.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Modelo-DAS.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Controladora-DAS.pdb
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Modelo-DAS.pdb
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.FormTiposVehiculos.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.FormEspacio.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.FormPagoServicio.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.FormServicio.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.FormServiciosEnEspera.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.MenuServiciosForm.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormIniciarSesion.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.sourcelink.json
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.csproj.Up2Date
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\seg2.FormUsuario.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\seg2.FormUsuarios.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormClaveNueva.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormRecuperarClave.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormGrupos.resources
+C:\Users\PC\Desktop\ejericios en c#\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormGrupo.resources
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Vista.exe
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Vista.deps.json
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Vista.runtimeconfig.json
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Vista.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Vista.pdb
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.csproj.AssemblyReference.cache
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormTiposVehiculos.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormEspacio.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.Properties.Resources.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormClaveNueva.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormGrupo.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormGrupos.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormIniciarSesion.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormRecuperarClave.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormPagoServicio.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormServicio.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormServiciosEnEspera.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.MenuServiciosForm.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.csproj.GenerateResource.cache
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.AssemblyInfoInputs.cache
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.AssemblyInfo.cs
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.csproj.CoreCompileInputs.cache
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.sourcelink.json
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.csproj.Up2Date
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.dll
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\refint\Vista.dll
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.pdb
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.genruntimeconfig.cache
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\ref\Vista.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Controladora.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Modelo.dll
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Controladora.pdb
+C:\Users\fran\Desktop\IDS\bin\Debug\net6.0-windows\Modelo.pdb
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormConfiguracion.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.formDescuentos.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormMetodosDepago.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormPago.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormPagoDetalle.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormReportes.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.Menu.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormPlan.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormPlanes.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormPlazas.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.formTarifa.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormTarifas.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormTickets.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.FormVehiculo.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormUsuarios.resources
+C:\Users\fran\Desktop\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormUsuario.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Vista.exe
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Vista.deps.json
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Vista.runtimeconfig.json
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Vista.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Vista.pdb
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Controladora.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Modelo.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Controladora.pdb
+C:\Users\fran\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Modelo.pdb
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.csproj.AssemblyReference.cache
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormConfiguracion.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.formDescuentos.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormMetodosDepago.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPago.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPagoDetalle.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormReportes.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormTiposVehiculos.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Menu.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormEspacio.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPlan.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPlanes.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPlazas.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.formTarifa.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormTarifas.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormTickets.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormVehiculo.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Properties.Resources.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormClaveNueva.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormGrupo.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormGrupos.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormIniciarSesion.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormRecuperarClave.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormUsuario.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormUsuarios.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPagoServicio.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormServicio.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormServiciosEnEspera.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.MenuServiciosForm.resources
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.csproj.GenerateResource.cache
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.AssemblyInfoInputs.cache
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.AssemblyInfo.cs
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.csproj.CoreCompileInputs.cache
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.sourcelink.json
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.csproj.Up2Date
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\refint\Vista.dll
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.pdb
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.genruntimeconfig.cache
+C:\Users\fran\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\ref\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Vista.exe
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Vista.deps.json
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Vista.runtimeconfig.json
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Vista.pdb
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Modelo.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Controladora.pdb
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Modelo.pdb
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.csproj.AssemblyReference.cache
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormConfiguracion.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.formDescuentos.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormMetodosDepago.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPago.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPagoDetalle.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormReportes.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormTiposVehiculos.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Menu.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormEspacio.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPlan.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPlanes.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPlazas.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.formTarifa.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormTarifas.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormTickets.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormVehiculo.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Properties.Resources.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormClaveNueva.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormGrupo.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormGrupos.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormIniciarSesion.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormRecuperarClave.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormUsuario.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.Seguridad.FormUsuarios.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormPagoServicio.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormServicio.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.FormServiciosEnEspera.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.MenuServiciosForm.resources
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.csproj.GenerateResource.cache
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.AssemblyInfoInputs.cache
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.AssemblyInfo.cs
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.csproj.CoreCompileInputs.cache
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.sourcelink.json
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.csproj.Up2Date
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\refint\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.pdb
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\Vista.genruntimeconfig.cache
+C:\Users\judok\OneDrive\Escritorio\IDS\obj\Debug\net6.0-windows\ref\Vista.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Servicios.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\Servicios.pdb
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\judok\OneDrive\Escritorio\IDS\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll

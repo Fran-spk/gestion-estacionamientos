@@ -1,0 +1,82 @@
+C:\Users\fran\Desktop\Controladora\bin\Debug\net6.0\Controladora.deps.json
+C:\Users\fran\Desktop\Controladora\bin\Debug\net6.0\Controladora.dll
+C:\Users\fran\Desktop\Controladora\bin\Debug\net6.0\Controladora.pdb
+C:\Users\fran\Desktop\Controladora\bin\Debug\net6.0\Modelo.dll
+C:\Users\fran\Desktop\Controladora\bin\Debug\net6.0\Modelo.pdb
+C:\Users\fran\Desktop\Controladora\obj\Debug\net6.0\Controladora.csproj.AssemblyReference.cache
+C:\Users\fran\Desktop\Controladora\obj\Debug\net6.0\Controladora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fran\Desktop\Controladora\obj\Debug\net6.0\Controladora.AssemblyInfoInputs.cache
+C:\Users\fran\Desktop\Controladora\obj\Debug\net6.0\Controladora.AssemblyInfo.cs
+C:\Users\fran\Desktop\Controladora\obj\Debug\net6.0\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\fran\Desktop\Controladora\obj\Debug\net6.0\Controla.1EE7A4DA.Up2Date
+C:\Users\fran\Desktop\Controladora\obj\Debug\net6.0\Controladora.dll
+C:\Users\fran\Desktop\Controladora\obj\Debug\net6.0\refint\Controladora.dll
+C:\Users\fran\Desktop\Controladora\obj\Debug\net6.0\Controladora.pdb
+C:\Users\fran\Desktop\Controladora\obj\Debug\net6.0\ref\Controladora.dll
+C:\Users\fran\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Controladora.deps.json
+C:\Users\fran\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Controladora.dll
+C:\Users\fran\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Controladora.pdb
+C:\Users\fran\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Modelo.dll
+C:\Users\fran\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Modelo.pdb
+C:\Users\fran\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.csproj.AssemblyReference.cache
+C:\Users\fran\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fran\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.AssemblyInfoInputs.cache
+C:\Users\fran\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.AssemblyInfo.cs
+C:\Users\fran\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\fran\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controla.1EE7A4DA.Up2Date
+C:\Users\fran\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.dll
+C:\Users\fran\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\refint\Controladora.dll
+C:\Users\fran\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.pdb
+C:\Users\fran\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\ref\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Controladora.deps.json
+C:\Users\judok\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Controladora.pdb
+C:\Users\judok\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Modelo.dll
+C:\Users\judok\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Servicios.dll
+C:\Users\judok\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Modelo.pdb
+C:\Users\judok\OneDrive\Escritorio\Controladora\bin\Debug\net6.0\Servicios.pdb
+C:\Users\judok\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.csproj.AssemblyReference.cache
+C:\Users\judok\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\judok\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.AssemblyInfoInputs.cache
+C:\Users\judok\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.AssemblyInfo.cs
+C:\Users\judok\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\judok\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controla.1EE7A4DA.Up2Date
+C:\Users\judok\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\refint\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\Controladora.pdb
+C:\Users\judok\OneDrive\Escritorio\Controladora\obj\Debug\net6.0\ref\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\bin\Debug\net6.0\Controladora.deps.json
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\bin\Debug\net6.0\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\bin\Debug\net6.0\Controladora.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\bin\Debug\net6.0\Modelo.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\bin\Debug\net6.0\Servicios.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\bin\Debug\net6.0\Modelo.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\bin\Debug\net6.0\Servicios.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.csproj.AssemblyReference.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.AssemblyInfoInputs.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.AssemblyInfo.cs
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\obj\Debug\net6.0\Controla.1EE7A4DA.Up2Date
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\obj\Debug\net6.0\refint\Controladora.dll
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.pdb
+C:\Users\judok\OneDrive\Escritorio\Estacionamiento\Controladora\obj\Debug\net6.0\ref\Controladora.dll
+C:\Proyecto Estacionamiento\Controladora\bin\Debug\net6.0\Controladora.deps.json
+C:\Proyecto Estacionamiento\Controladora\bin\Debug\net6.0\Controladora.dll
+C:\Proyecto Estacionamiento\Controladora\bin\Debug\net6.0\Controladora.pdb
+C:\Proyecto Estacionamiento\Controladora\bin\Debug\net6.0\Modelo.dll
+C:\Proyecto Estacionamiento\Controladora\bin\Debug\net6.0\Servicios.dll
+C:\Proyecto Estacionamiento\Controladora\bin\Debug\net6.0\Modelo.pdb
+C:\Proyecto Estacionamiento\Controladora\bin\Debug\net6.0\Servicios.pdb
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.csproj.AssemblyReference.cache
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.AssemblyInfoInputs.cache
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.AssemblyInfo.cs
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.csproj.CoreCompileInputs.cache
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.sourcelink.json
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controla.1EE7A4DA.Up2Date
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.dll
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\refint\Controladora.dll
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.pdb
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\ref\Controladora.dll

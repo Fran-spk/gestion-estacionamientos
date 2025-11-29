@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Configuraciones\FormConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\formDescuentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormEspacio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Seguridad\FormClaveNueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Seguridad\FormGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Seguridad\FormGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Seguridad\FormIniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Seguridad\FormRecuperarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Seguridad\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Seguridad\FormUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Servicios\FormPagoServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Servicios\FormServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Servicios\FormServiciosEnEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\FormTiposVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\FormMetodosDepago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\FormPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\FormPagoDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormPlanes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormPlazas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\formTarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormTarifas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Servicios\MenuServiciosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
