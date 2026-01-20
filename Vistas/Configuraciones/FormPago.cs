@@ -47,7 +47,7 @@ namespace Vista
             TxtEstadia.Text = ticket.Estadia.ToString();
             TxtHoraLlegada.Text = ticket.FechaHoraEmision.ToString();
             cbmMetodo.DataSource = ControladoraMetodosDePago.Instancia.getAllMetodosDePagoActivos();
-            txtTipo.Text = ticket.Tarifa.TipoVehiculo.NombreVehiculo;
+            txtTipo.Text = ticket.TarifaEstacionamiento.TipoVehiculo.NombreVehiculo;
         }
 
 
@@ -98,7 +98,7 @@ namespace Vista
         {
             pago.Ticket = ticket;
             pago.RealizarPago();
-            TxtPrecio.Text = pago.Monto.ToString();
+            TxtPrecio.Text = pago.MontoEstacionamiento.ToString();
             TxtPrecioFinal.Text = pago.MontoFinal.ToString();
             txtdesc.Text = pago.MontoDescuento.ToString();
         }

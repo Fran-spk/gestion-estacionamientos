@@ -11,50 +11,50 @@ using System.Threading.Tasks;
 
 namespace Controladora
 {
-    public class ControladoraTarifas
+    public class ControladoraTarifasEstacionamiento
     {
-        private static ControladoraTarifas instancia;
-        public static ControladoraTarifas Instancia
+        private static ControladoraTarifasEstacionamiento instancia;
+        public static ControladoraTarifasEstacionamiento Instancia
         {
             get
             {
                 if (instancia == null)
                 {
-                    instancia = new ControladoraTarifas();
+                    instancia = new ControladoraTarifasEstacionamiento();
                 }
                 return instancia;
             }
         }
-        private ControladoraTarifas()
+        private ControladoraTarifasEstacionamiento()
         {
 
         }
 
-        public ReadOnlyCollection<Tarifa> getAllTarifas()
+        public ReadOnlyCollection<TarifaEstacionamiento> getAllTarifas()
         {
-            return Estacionamiento.Contexto.Tarifas.Include(e => e.TipoVehiculo).ToList().AsReadOnly();
+            return Estacionamiento.Contexto.Tarifas_Estacionamiento.Include(e => e.TipoVehiculo).ToList().AsReadOnly();
         }
 
 
-        public ReadOnlyCollection<Tarifa> getAllTarifasActuales()
+        public ReadOnlyCollection<TarifaEstacionamiento> getAllTarifasActuales()
         {
-            return Estacionamiento.Contexto.Tarifas.Include(e => e.TipoVehiculo).Where(x => x.Vigente).ToList().AsReadOnly();
+            return Estacionamiento.Contexto.Tarifas_Estacionamiento.Include(e => e.TipoVehiculo).Where(x => x.Vigente).ToList().AsReadOnly();
         }
 
 
-        public string ActualizarTarifa(Tarifa tarifa)
+        public string ActualizarTarifa(TarifaEstacionamiento tarifa)
         {
-            var TarifaEx = Estacionamiento.Contexto.Tarifas.FirstOrDefault(x => x.TarifaId == tarifa.TarifaId);
+            var TarifaEx = Estacionamiento.Contexto.Tarifas_Estacionamiento.FirstOrDefault(x => x.TarifaEstacionamientoId == tarifa.TarifaEstacionamientoId);
             if (TarifaEx == null)
             {
-                var Actual = Estacionamiento.Contexto.Tarifas.FirstOrDefault(x => x.TipoVehiculo == tarifa.TipoVehiculo && x.Vigente);
+                var Actual = Estacionamiento.Contexto.Tarifas_Estacionamiento.FirstOrDefault(x => x.TipoVehiculo == tarifa.TipoVehiculo && x.Vigente);
                 if (Actual != null)
                 {
                     Actual.Vigente = false;
-                    Estacionamiento.Contexto.Tarifas.Update(Actual);
+                    Estacionamiento.Contexto.Tarifas_Estacionamiento.Update(Actual);
                 }
                 Estacionamiento.Contexto.Attach(tarifa.TipoVehiculo);
-                Estacionamiento.Contexto.Tarifas.Add(tarifa);
+                Estacionamiento.Contexto.Tarifas_Estacionamiento.Add(tarifa);
                 Estacionamiento.Contexto.SaveChanges();
                 return "Su tarifa fue Actualizada exitosamente";
             }
@@ -67,17 +67,17 @@ namespace Controladora
 
 
 
-        public string EliminarTarifa(Tarifa tarifa)
+        public string EliminarTarifa(TarifaEstacionamiento tarifa)
         {
-            var TarifaEx = Estacionamiento.Contexto.Tarifas.FirstOrDefault(x => x.TarifaId == tarifa.TarifaId);
+            var TarifaEx = Estacionamiento.Contexto.Tarifas_Estacionamiento.FirstOrDefault(x => x.TarifaEstacionamientoId == tarifa.TarifaEstacionamientoId);
             if (TarifaEx != null)
             {
-                var Ticket = ControladoraTicketsBase.Instancia.getAllTickets().FirstOrDefault(x => x.TarifaId == tarifa.TarifaId);
+                var Ticket = ControladoraTicketsBase.Instancia.getAllTickets().FirstOrDefault(x => x.TarifaId == tarifa.TarifaEstacionamientoId);
                 if (Ticket == null)
                 {
                     if (!tarifa.Vigente)
                     {
-                        Estacionamiento.Contexto.Tarifas.Remove(tarifa);                       
+                        Estacionamiento.Contexto.Tarifas_Estacionamiento.Remove(tarifa);                       
                         Estacionamiento.Contexto.SaveChanges();                       
                     }
                     else

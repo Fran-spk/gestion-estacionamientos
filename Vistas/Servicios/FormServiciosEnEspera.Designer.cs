@@ -86,7 +86,7 @@
             // 
             // tarifaBindingSource
             // 
-            tarifaBindingSource.DataSource = typeof(MODELO.Tarifa);
+            tarifaBindingSource.DataSource = typeof(MODELO.TarifaEstacionamiento);
             // 
             // dataGridView1
             // 

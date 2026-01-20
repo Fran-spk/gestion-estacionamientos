@@ -80,3 +80,5 @@ C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.dll
 C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\refint\Controladora.dll
 C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.pdb
 C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\ref\Controladora.dll
+C:\Proyecto Estacionamiento\Controladora\bin\Debug\net6.0\Controladora.runtimeconfig.json
+C:\Proyecto Estacionamiento\Controladora\obj\Debug\net6.0\Controladora.genruntimeconfig.cache

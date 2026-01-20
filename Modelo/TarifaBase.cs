@@ -1,31 +1,21 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MODELO;
 
 namespace MODELO
 {
-    public class Tarifa
+    public abstract class TarifaBase
     {
+        [NotMapped]
         private int tipovehiculoId;
-        private decimal preciomediahora;
-        private decimal preciohora;
-        private decimal preciodia;
-        private decimal preciomes;
         private bool vigente;
         private TipoVehiculo tipovehiculo;
-        private int taridaId;
         private DateTime fechahoraactualizacion;
-
-        public int TarifaId
-        {
-            get { return taridaId; }
-            set { taridaId = value; }
-        }
 
         public bool Vigente
         {
@@ -53,30 +43,6 @@ namespace MODELO
         {
             get { return tipovehiculoId; }
             set { tipovehiculoId = value; }
-        }
-
-        public decimal PrecioMediaHora
-        {
-            get { return preciomediahora; }
-            set { preciomediahora = value; }
-        }
-
-        public decimal PrecioHora
-        {
-            get { return preciohora; }
-            set { preciohora = value; }
-        }
-
-        public decimal PrecioDia
-        {
-            get { return preciodia; }
-            set { preciodia = value; }
-        }
-
-        public decimal PrecioMes
-        {
-            get { return preciomes; }
-            set { preciomes = value; }
         }
     }
 }

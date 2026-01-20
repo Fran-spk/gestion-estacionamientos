@@ -12,12 +12,14 @@ namespace MODELO
         public TicketBase() 
         {
             estadia= new Estadia_Media_Hora();
+            tarifasAdicionales = new List<TarifaServicio>();
         }
         private int ticketbaseId;
         private DateTime fechahoraemision;
         private string patente;
-        private Tarifa tarifa;
-        private int taridaId;
+        private TarifaEstacionamiento tarifaEstacionamiento;
+        private int tarifaEstacionamientoId;
+        private List<TarifaServicio> tarifasAdicionales;
         private Estadia estadia;
         private Estado_Ticket estado;
         private int estadoId;
@@ -31,10 +33,15 @@ namespace MODELO
             set { ticketbaseId = value; }
         }
 
+        public List<TarifaServicio> TarifasAdicionales
+        {
+            get { return tarifasAdicionales; }
+            set { tarifasAdicionales = value; }
+        }
         public int TarifaId
         {
-            get { return taridaId; }
-            set { taridaId = value; }
+            get { return tarifaEstacionamientoId; }
+            set { tarifaEstacionamientoId = value; }
         }
 
       
@@ -51,11 +58,13 @@ namespace MODELO
         }
   
 
-        public Tarifa Tarifa
+        public TarifaEstacionamiento TarifaEstacionamiento
         {
-            get { return tarifa; }
-            set { tarifa = value; }
+            get { return tarifaEstacionamiento; }
+            set { tarifaEstacionamiento = value; }
         }
+
+ 
 
         public Estadia Estadia
         {

@@ -60,7 +60,7 @@ namespace Controladora
             var UsuarioExistente = Estacionamiento.Contexto.Usuarios.ToList().FirstOrDefault(x => x.USU_MAIL == usuario.USU_MAIL);
             if (UsuarioExistente == null)
             {
-                if (ServiciosUsuario.Instancia.SendMail(usuario))
+                if (ServiciosUsuario.Instancia.SendMail(usuario,usuario.USU_CLAVE))
                 {
                     usuario.USU_CLAVE = ServiciosUsuario.Instancia.EncriptarClave(usuario.USU_CLAVE);
                     Estacionamiento.Contexto.Usuarios.Add(usuario);
@@ -140,7 +140,7 @@ namespace Controladora
             var usuario = getAllUsuarios().Where(x => x.USU_USUARIO.Equals(Usuario) && x.USU_MAIL.Equals(mail)).FirstOrDefault();
             if (usuario != null)
             {
-                if (Servicios.ServiciosUsuario.Instancia.SendMail(usuario))
+                if (Servicios.ServiciosUsuario.Instancia.SendMail(usuario,claveNueva))
                 {
                     claveNueva = ServiciosUsuario.Instancia.EncriptarClave(claveNueva);
                     usuario.USU_CLAVE = claveNueva;

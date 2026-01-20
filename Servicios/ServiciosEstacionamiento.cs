@@ -38,7 +38,7 @@ namespace Servicios
                     ticket.FechaHoraEmision,
                     "Entrada",
                     ticket.Patente,
-                    ticket.Tarifa.TipoVehiculo.ToString(),
+                    ticket.TarifaEstacionamiento.TipoVehiculo.ToString(),
                     "-"
                     ));
                 }
@@ -52,7 +52,7 @@ namespace Servicios
                             ticket.FechaHoraEmision,
                             "Nuevo plan mensual",
                             ticket.Patente,
-                            ticket.Tarifa.TipoVehiculo.ToString(),
+                            ticket.TarifaEstacionamiento.TipoVehiculo.ToString(),
                             "-"
                             ));
                         }
@@ -69,8 +69,8 @@ namespace Servicios
                         pago.FechaHoraPago,
                         tipo,
                         pago.Ticket.Patente,
-                        pago.Ticket.Tarifa.TipoVehiculo.ToString(),
-                        pago.Monto.ToString("C2", CultureInfo.CreateSpecificCulture("es-AR"))
+                        pago.Ticket.TarifaEstacionamiento.TipoVehiculo.ToString(),
+                        pago.MontoEstacionamiento.ToString("C2", CultureInfo.CreateSpecificCulture("es-AR"))
                     ));
                 }
             }
@@ -111,7 +111,7 @@ namespace Servicios
 
             // Agrupar por tipo de vehículo y contar
             var datos = ticketsValidos
-                .GroupBy(t => t.Tarifa.TipoVehiculo.ToString())
+                .GroupBy(t => t.TarifaEstacionamiento.TipoVehiculo.ToString())
                 .Select(g => new
                 {
                     TipoVehiculo = g.Key,

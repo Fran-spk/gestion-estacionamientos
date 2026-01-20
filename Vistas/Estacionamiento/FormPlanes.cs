@@ -33,8 +33,8 @@ namespace Vista
                 return;
             }
 
-            await Task.Delay(500); 
-            await TicketsAutomaticos(); 
+            await Task.Delay(500);
+            await TicketsAutomaticos();
         }
 
 
@@ -71,8 +71,16 @@ namespace Vista
             txtDate.Text = plan.FechaHoraAlta.ToString();
             TxtDesc.Text = plan.Descuento?.NombreDescuento;
             //buscar cuota ult
-            var cuota = ControladoraTicketsBase.Instancia.getAllCuotasByPlanId(plan.PER_ID).Last();
-            TxtTipo.Text = cuota.Tarifa.TipoVehiculo.ToString();
+            try
+            {
+                var cuota = ControladoraTicketsBase.Instancia.getAllCuotasByPlanId(plan.PER_ID).Last();
+                TxtTipo.Text = cuota.TarifaEstacionamiento.TipoVehiculo.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("no existen cuotas asociadas");
+            }
+
             if (!plan.EstadoPlan)
             {
                 MessageBox.Show("Este plan se encuentra dado de baja");
@@ -206,10 +214,10 @@ namespace Vista
                         cuota.Espacio = CuotaVencida.Espacio;
                         cuota.Patente = plan.Patente;
 
-                        var tarifa = ControladoraTarifas.Instancia.getAllTarifasActuales().FirstOrDefault(x => x.TipoVehiculo.TipoVehiculoId == CuotaVencida.Tarifa.TipoVehiculoId);
+                        var tarifa = ControladoraTarifas.Instancia.getAllTarifasActuales().FirstOrDefault(x => x.TipoVehiculo.TipoVehiculoId == CuotaVencida.TarifaEstacionamiento.TipoVehiculoId);
                         if (tarifa != null)
                         {
-                            cuota.Tarifa = tarifa;
+                            cuota.TarifaEstacionamiento = tarifa;
                         }
                         else
                         {
@@ -242,6 +250,11 @@ namespace Vista
         }
 
         private void FormPlanes_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

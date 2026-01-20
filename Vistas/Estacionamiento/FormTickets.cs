@@ -64,23 +64,23 @@ namespace Vista
             if (checkBox1.Checked || checkBoxAnulados.Checked)
             {
                 T = T.Where(x =>
-                    (checkBox1.Checked && x.Estado.Nombre == "Pagado") ||  
-                    (checkBoxAnulados.Checked && x.Estado.Nombre == "Cancelado") 
+                    (checkBox1.Checked && x.Estado.Nombre == "Pagado") ||
+                    (checkBoxAnulados.Checked && x.Estado.Nombre == "Cancelado")
                 ).ToList();
             }
 
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = T;           
+            dataGridView1.DataSource = T;
         }
 
-    
-        
+
+
 
         void ActualizoGrilla()
         {
             var Tickets = ControladoraTicketsBase.Instancia.getAllTickets().Where(x => x.FechaHoraEmision.Date >= Desde.Value.Date && x.FechaHoraEmision.Date <= Hasta.Value.Date).ToList();
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = Tickets;          
+            dataGridView1.DataSource = Tickets;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -96,7 +96,7 @@ namespace Vista
                 if (ticket is Ticket)
                 {
                     var estado = ControladoraTicketsBase.Instancia.getAllEstados().FirstOrDefault(x => x.Nombre == "Cancelado") ?? new Estado_Ticket();
-                    var ok = ControladoraTicketsBase.Instancia.AnularTicket(ticket,estado);
+                    var ok = ControladoraTicketsBase.Instancia.AnularTicket(ticket, estado);
                     MessageBox.Show(ok);
                     ActualizoGrilla();
                 }
@@ -143,6 +143,11 @@ namespace Vista
         private void button3_Click(object sender, EventArgs e)
         {
             ActualizoGrillaFiltro();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

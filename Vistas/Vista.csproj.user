@@ -13,6 +13,9 @@
     <Compile Update="Estacionamiento\FormEspacio.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Estacionamiento\pruebaTicketForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Seguridad\FormClaveNueva.cs">
       <SubType>Form</SubType>
     </Compile>

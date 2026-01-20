@@ -28,206 +28,262 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.LbDni = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtDesc = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnaceptar = new System.Windows.Forms.Button();
-            this.BtnVolver = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            label4 = new Label();
+            txtNombre = new TextBox();
+            label3 = new Label();
+            checkBox1 = new CheckBox();
+            comboBox1 = new ComboBox();
+            LbDni = new Label();
+            label2 = new Label();
+            TxtDesc = new TextBox();
+            label1 = new Label();
+            btnaceptar = new Button();
+            BtnVolver = new Button();
+            btnEliminar = new Button();
+            btnModificar = new Button();
+            panelHeader = new Panel();
+            lblTitulo = new Label();
+            groupBox1.SuspendLayout();
+            panelHeader.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.LbDni);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.TxtDesc);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(569, 221);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Descuentos:";
+            groupBox1.BackColor = Color.FromArgb(37, 37, 38);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(txtNombre);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(checkBox1);
+            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(LbDni);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(TxtDesc);
+            groupBox1.Controls.Add(label1);
+            groupBox1.FlatStyle = FlatStyle.Flat;
+            groupBox1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox1.ForeColor = Color.FromArgb(0, 122, 204);
+            groupBox1.Location = new Point(30, 100);
+            groupBox1.Margin = new Padding(0);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(15);
+            groupBox1.Size = new Size(740, 280);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Datos del Descuento";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(18, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 19);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Nombre del descuento";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(20, 45);
+            label4.Name = "label4";
+            label4.Size = new Size(224, 28);
+            label4.TabIndex = 40;
+            label4.Text = "Nombre del Descuento";
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(22, 66);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(218, 26);
-            this.txtNombre.TabIndex = 39;
+            txtNombre.BackColor = Color.FromArgb(45, 45, 48);
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
+            txtNombre.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNombre.ForeColor = Color.White;
+            txtNombre.Location = new Point(20, 80);
+            txtNombre.Name = "txtNombre";
+            txtNombre.PlaceholderText = "Ej: Descuento Empleados";
+            txtNombre.Size = new Size(320, 37);
+            txtNombre.TabIndex = 39;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(18, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 19);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Descuento activo";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(20, 225);
+            label3.Name = "label3";
+            label3.Size = new Size(185, 28);
+            label3.TabIndex = 38;
+            label3.Text = "✓ Descuento Activo";
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Consolas", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(225, 177);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 37;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(210, 228);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(22, 21);
+            checkBox1.TabIndex = 37;
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(315, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(218, 27);
-            this.comboBox1.TabIndex = 36;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            comboBox1.BackColor = Color.FromArgb(45, 45, 48);
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FlatStyle = FlatStyle.Flat;
+            comboBox1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.ForeColor = Color.White;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(380, 80);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(340, 38);
+            comboBox1.TabIndex = 36;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // LbDni
             // 
-            this.LbDni.AutoSize = true;
-            this.LbDni.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbDni.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LbDni.Location = new System.Drawing.Point(311, 44);
-            this.LbDni.Name = "LbDni";
-            this.LbDni.Size = new System.Drawing.Size(207, 19);
-            this.LbDni.TabIndex = 23;
-            this.LbDni.Text = "Descuentos existentes:";
+            LbDni.AutoSize = true;
+            LbDni.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            LbDni.ForeColor = Color.White;
+            LbDni.Location = new Point(380, 45);
+            LbDni.Name = "LbDni";
+            LbDni.Size = new Size(221, 28);
+            LbDni.TabIndex = 23;
+            LbDni.Text = " Descuentos Existentes";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(246, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 22);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "%";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(0, 204, 153);
+            label2.Location = new Point(310, 170);
+            label2.Name = "label2";
+            label2.Size = new Size(35, 32);
+            label2.TabIndex = 27;
+            label2.Text = "%";
             // 
             // TxtDesc
             // 
-            this.TxtDesc.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDesc.Location = new System.Drawing.Point(22, 125);
-            this.TxtDesc.Name = "TxtDesc";
-            this.TxtDesc.Size = new System.Drawing.Size(218, 26);
-            this.TxtDesc.TabIndex = 26;
+            TxtDesc.BackColor = Color.FromArgb(45, 45, 48);
+            TxtDesc.BorderStyle = BorderStyle.FixedSingle;
+            TxtDesc.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            TxtDesc.ForeColor = Color.White;
+            TxtDesc.Location = new Point(20, 165);
+            TxtDesc.Name = "TxtDesc";
+            TxtDesc.PlaceholderText = "0";
+            TxtDesc.Size = new Size(280, 39);
+            TxtDesc.TabIndex = 26;
+            TxtDesc.TextAlign = HorizontalAlignment.Right;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(18, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 19);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Porcentaje";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(20, 130);
+            label1.Name = "label1";
+            label1.Size = new Size(190, 28);
+            label1.TabIndex = 25;
+            label1.Text = "Porcentaje de Desc.";
             // 
             // btnaceptar
             // 
-            this.btnaceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnaceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnaceptar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaceptar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnaceptar.Location = new System.Drawing.Point(12, 239);
-            this.btnaceptar.Name = "btnaceptar";
-            this.btnaceptar.Size = new System.Drawing.Size(126, 29);
-            this.btnaceptar.TabIndex = 14;
-            this.btnaceptar.Text = "Agregar";
-            this.btnaceptar.UseVisualStyleBackColor = false;
-            this.btnaceptar.Click += new System.EventHandler(this.btnaceptar_Click);
+            btnaceptar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnaceptar.BackColor = Color.FromArgb(40, 167, 69);
+            btnaceptar.FlatAppearance.BorderSize = 0;
+            btnaceptar.FlatStyle = FlatStyle.Flat;
+            btnaceptar.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnaceptar.ForeColor = Color.White;
+            btnaceptar.Location = new Point(30, 405);
+            btnaceptar.Name = "btnaceptar";
+            btnaceptar.Size = new Size(160, 45);
+            btnaceptar.TabIndex = 14;
+            btnaceptar.Text = "➕ Agregar";
+            btnaceptar.UseVisualStyleBackColor = false;
+            btnaceptar.Click += btnaceptar_Click;
             // 
             // BtnVolver
             // 
-            this.BtnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.BtnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnVolver.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVolver.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnVolver.Location = new System.Drawing.Point(455, 239);
-            this.BtnVolver.Name = "BtnVolver";
-            this.BtnVolver.Size = new System.Drawing.Size(126, 29);
-            this.BtnVolver.TabIndex = 15;
-            this.BtnVolver.Text = "Volver";
-            this.BtnVolver.UseVisualStyleBackColor = false;
-            this.BtnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
+            BtnVolver.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            BtnVolver.BackColor = Color.FromArgb(220, 53, 69);
+            BtnVolver.FlatAppearance.BorderSize = 0;
+            BtnVolver.FlatStyle = FlatStyle.Flat;
+            BtnVolver.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnVolver.ForeColor = Color.White;
+            BtnVolver.Location = new Point(610, 405);
+            BtnVolver.Name = "BtnVolver";
+            BtnVolver.Size = new Size(160, 45);
+            BtnVolver.TabIndex = 15;
+            BtnVolver.Text = "✖ Cancelar";
+            BtnVolver.UseVisualStyleBackColor = false;
+            BtnVolver.Click += BtnVolver_Click;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEliminar.Location = new System.Drawing.Point(276, 239);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(126, 29);
-            this.btnEliminar.TabIndex = 16;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            btnEliminar.Anchor = AnchorStyles.Bottom;
+            btnEliminar.BackColor = Color.FromArgb(220, 53, 69);
+            btnEliminar.FlatAppearance.BorderSize = 0;
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEliminar.ForeColor = Color.White;
+            btnEliminar.Location = new Point(415, 405);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(160, 45);
+            btnEliminar.TabIndex = 16;
+            btnEliminar.Text = "🗑️ Eliminar";
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnModificar.Location = new System.Drawing.Point(144, 239);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(126, 29);
-            this.btnModificar.TabIndex = 17;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            btnModificar.Anchor = AnchorStyles.Bottom;
+            btnModificar.BackColor = Color.FromArgb(0, 122, 204);
+            btnModificar.FlatAppearance.BorderSize = 0;
+            btnModificar.FlatStyle = FlatStyle.Flat;
+            btnModificar.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnModificar.ForeColor = Color.White;
+            btnModificar.Location = new Point(220, 405);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(160, 45);
+            btnModificar.TabIndex = 17;
+            btnModificar.Text = "✏️ Modificar";
+            btnModificar.UseVisualStyleBackColor = false;
+            btnModificar.Click += btnModificar_Click;
+            // 
+            // panelHeader
+            // 
+            panelHeader.BackColor = Color.FromArgb(0, 122, 204);
+            panelHeader.Controls.Add(lblTitulo);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(800, 70);
+            panelHeader.TabIndex = 18;
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(30, 15);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(344, 45);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Gestionar Descuentos";
             // 
             // formDescuentos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(594, 280);
-            this.ControlBox = false;
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.BtnVolver);
-            this.Controls.Add(this.btnaceptar);
-            this.Controls.Add(this.groupBox1);
-            this.MaximizeBox = false;
-            this.Name = "formDescuentos";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(30, 30, 30);
+            ClientSize = new Size(800, 475);
+            ControlBox = false;
+            Controls.Add(panelHeader);
+            Controls.Add(btnModificar);
+            Controls.Add(btnEliminar);
+            Controls.Add(BtnVolver);
+            Controls.Add(btnaceptar);
+            Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            Name = "formDescuentos";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            ResumeLayout(false);
 
         }
 
@@ -247,5 +303,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

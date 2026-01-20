@@ -20,13 +20,13 @@ namespace MODELO
         private int dni;
         private long telefono;
 
-           private List<Cuota> cuotas = new List<Cuota>();  // Relación con Cuotas
+        private List<Cuota> cuotas = new List<Cuota>(); 
 
-            public List<Cuota> Cuotas
-            {
-                get { return cuotas; }
-                set { cuotas = value; }
-            }
+        public List<Cuota> Cuotas
+        {
+            get { return cuotas; }
+            set { cuotas = value; }
+        }
 
   
 

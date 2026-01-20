@@ -27,6 +27,6 @@ namespace MODELO.seguridad
        
         public virtual ICollection<Accion> Acciones { get; set; }
    
-        public virtual Modulo Modulo { get; set; }
+        public Modulo Modulo { get; set; }
     }
 }

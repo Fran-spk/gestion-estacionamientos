@@ -529,3 +529,4 @@ C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\refint\Vista.dll
 C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.pdb
 C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.genruntimeconfig.cache
 C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\ref\Vista.dll
+C:\Proyecto Estacionamiento\Vistas\obj\Debug\net6.0-windows7.0\Vista.Estacionamiento.pruebaTicketForm1.resources

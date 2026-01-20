@@ -121,6 +121,21 @@ namespace ModeloIds.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Tipo_Servicios",
+                columns: table => new
+                {
+                    TipoServicioId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TiempoEstimado = table.Column<double>(type: "float", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Estado = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tipo_Servicios", x => x.TipoServicioId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Tipos_Vehiculos",
                 columns: table => new
                 {
@@ -256,24 +271,52 @@ namespace ModeloIds.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Tarifas",
+                name: "Tarifa_Servicios",
                 columns: table => new
                 {
-                    TarifaId = table.Column<int>(type: "int", nullable: false)
+                    TarifaServicioId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TipoVehiculoId = table.Column<int>(type: "int", nullable: false),
+                    Precio = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ServicioTipoServicioId = table.Column<int>(type: "int", nullable: true),
                     Vigente = table.Column<bool>(type: "bit", nullable: false),
+                    FechaHoraActualizacion = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TipoVehiculoId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tarifa_Servicios", x => x.TarifaServicioId);
+                    table.ForeignKey(
+                        name: "FK_Tarifa_Servicios_Tipo_Servicios_ServicioTipoServicioId",
+                        column: x => x.ServicioTipoServicioId,
+                        principalTable: "Tipo_Servicios",
+                        principalColumn: "TipoServicioId");
+                    table.ForeignKey(
+                        name: "FK_Tarifa_Servicios_Tipos_Vehiculos_TipoVehiculoId",
+                        column: x => x.TipoVehiculoId,
+                        principalTable: "Tipos_Vehiculos",
+                        principalColumn: "TipoVehiculoId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Tarifas_Estacionamiento",
+                columns: table => new
+                {
+                    TarifaEstacionamientoId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     PrecioMediaHora = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     PrecioHora = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     PrecioDia = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     PrecioMes = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    FechaHoraActualizacion = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Vigente = table.Column<bool>(type: "bit", nullable: false),
+                    FechaHoraActualizacion = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TipoVehiculoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tarifas", x => x.TarifaId);
+                    table.PrimaryKey("PK_Tarifas_Estacionamiento", x => x.TarifaEstacionamientoId);
                     table.ForeignKey(
-                        name: "FK_Tarifas_Tipos_Vehiculos_TipoVehiculoId",
+                        name: "FK_Tarifas_Estacionamiento_Tipos_Vehiculos_TipoVehiculoId",
                         column: x => x.TipoVehiculoId,
                         principalTable: "Tipos_Vehiculos",
                         principalColumn: "TipoVehiculoId",
@@ -332,6 +375,7 @@ namespace ModeloIds.Migrations
                     TarifaId = table.Column<int>(type: "int", nullable: false),
                     FechaHoraEmision = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Patente = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TarifaEstacionamientoId = table.Column<int>(type: "int", nullable: false),
                     EstadoId = table.Column<int>(type: "int", nullable: false),
                     EspacioId = table.Column<int>(type: "int", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -361,10 +405,10 @@ namespace ModeloIds.Migrations
                         principalColumn: "PER_ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Tickets_Base_Tarifas_TarifaId",
-                        column: x => x.TarifaId,
-                        principalTable: "Tarifas",
-                        principalColumn: "TarifaId",
+                        name: "FK_Tickets_Base_Tarifas_Estacionamiento_TarifaEstacionamientoId",
+                        column: x => x.TarifaEstacionamientoId,
+                        principalTable: "Tarifas_Estacionamiento",
+                        principalColumn: "TarifaEstacionamientoId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -424,7 +468,8 @@ namespace ModeloIds.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MetodoDePagoId = table.Column<int>(type: "int", nullable: false),
                     TicketBaseId = table.Column<int>(type: "int", nullable: false),
-                    Monto = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    MontoEstacionamiento = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    MontoServicios = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     MontoDescuento = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     MontoFinal = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     FechaHoraPago = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -444,6 +489,30 @@ namespace ModeloIds.Migrations
                         principalTable: "Tickets_Base",
                         principalColumn: "TicketBaseId",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TarifaServicioTicketBase",
+                columns: table => new
+                {
+                    TarifasAdicionalesTarifaServicioId = table.Column<int>(type: "int", nullable: false),
+                    TicketsTicketBaseId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TarifaServicioTicketBase", x => new { x.TarifasAdicionalesTarifaServicioId, x.TicketsTicketBaseId });
+                    table.ForeignKey(
+                        name: "FK_TarifaServicioTicketBase_Tarifa_Servicios_TarifasAdicionalesTarifaServicioId",
+                        column: x => x.TarifasAdicionalesTarifaServicioId,
+                        principalTable: "Tarifa_Servicios",
+                        principalColumn: "TarifaServicioId",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_TarifaServicioTicketBase_Tickets_Base_TicketsTicketBaseId",
+                        column: x => x.TicketsTicketBaseId,
+                        principalTable: "Tickets_Base",
+                        principalColumn: "TicketBaseId",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
@@ -497,9 +566,24 @@ namespace ModeloIds.Migrations
                 column: "DescuentoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tarifas_TipoVehiculoId",
-                table: "Tarifas",
+                name: "IX_Tarifa_Servicios_ServicioTipoServicioId",
+                table: "Tarifa_Servicios",
+                column: "ServicioTipoServicioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tarifa_Servicios_TipoVehiculoId",
+                table: "Tarifa_Servicios",
                 column: "TipoVehiculoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tarifas_Estacionamiento_TipoVehiculoId",
+                table: "Tarifas_Estacionamiento",
+                column: "TipoVehiculoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TarifaServicioTicketBase_TicketsTicketBaseId",
+                table: "TarifaServicioTicketBase",
+                column: "TicketsTicketBaseId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tickets_Base_EspacioId",
@@ -517,9 +601,9 @@ namespace ModeloIds.Migrations
                 column: "PlanId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tickets_Base_TarifaId",
+                name: "IX_Tickets_Base_TarifaEstacionamientoId",
                 table: "Tickets_Base",
-                column: "TarifaId");
+                column: "TarifaEstacionamientoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Usuarios_EST_USU_ID",
@@ -546,6 +630,9 @@ namespace ModeloIds.Migrations
                 name: "Pagos");
 
             migrationBuilder.DropTable(
+                name: "TarifaServicioTicketBase");
+
+            migrationBuilder.DropTable(
                 name: "Acciones");
 
             migrationBuilder.DropTable(
@@ -556,6 +643,9 @@ namespace ModeloIds.Migrations
 
             migrationBuilder.DropTable(
                 name: "Metodos_Pagos");
+
+            migrationBuilder.DropTable(
+                name: "Tarifa_Servicios");
 
             migrationBuilder.DropTable(
                 name: "Tickets_Base");
@@ -570,6 +660,9 @@ namespace ModeloIds.Migrations
                 name: "Estados_Usuarios");
 
             migrationBuilder.DropTable(
+                name: "Tipo_Servicios");
+
+            migrationBuilder.DropTable(
                 name: "Espacios");
 
             migrationBuilder.DropTable(
@@ -579,7 +672,7 @@ namespace ModeloIds.Migrations
                 name: "Planes");
 
             migrationBuilder.DropTable(
-                name: "Tarifas");
+                name: "Tarifas_Estacionamiento");
 
             migrationBuilder.DropTable(
                 name: "Modulos");

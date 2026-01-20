@@ -129,7 +129,7 @@ namespace Vista
                 var tarifa = ControladoraTarifas.Instancia.getAllTarifasActuales().FirstOrDefault(x => x.TipoVehiculo.NombreVehiculo == tipovehiculo.NombreVehiculo);
                 if (tarifa != null)
                 {
-                    ticket.Tarifa = tarifa;
+                    ticket.TarifaEstacionamiento = tarifa;
                 }
                 else
                 {

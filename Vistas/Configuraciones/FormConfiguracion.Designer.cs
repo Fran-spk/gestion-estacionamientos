@@ -30,195 +30,236 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConfiguracion));
             panel1 = new Panel();
-            button1 = new Button();
-            BtnTarifas = new Button();
+            panelHeader = new Panel();
+            lblTitulo = new Label();
             picCochera = new PictureBox();
-            TxtExplicacion = new RichTextBox();
-            BtnActividades = new Button();
-            BtnDescuentos = new Button();
-            btnModificar = new Button();
-            panel2 = new Panel();
             btnVolver = new Button();
-            label2 = new Label();
+            TxtExplicacion = new RichTextBox();
+            panelBotones = new Panel();
+            btnModificar = new Button();
+            BtnDescuentos = new Button();
+            BtnTarifas = new Button();
+            BtnActividades = new Button();
+            button1 = new Button();
             panel1.SuspendLayout();
+            panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picCochera).BeginInit();
+            panelBotones.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(32, 30, 45);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(BtnTarifas);
-            panel1.Controls.Add(picCochera);
+            panel1.BackColor = Color.FromArgb(30, 30, 30);
+            panel1.Controls.Add(panelHeader);
+            panel1.Controls.Add(btnVolver);
             panel1.Controls.Add(TxtExplicacion);
-            panel1.Controls.Add(BtnActividades);
-            panel1.Controls.Add(BtnDescuentos);
-            panel1.Controls.Add(btnModificar);
-            panel1.Controls.Add(panel2);
-            panel1.Location = new Point(14, 14);
-            panel1.Margin = new Padding(4, 3, 4, 3);
+            panel1.Controls.Add(panelBotones);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1065, 560);
+            panel1.Padding = new Padding(30);
+            panel1.Size = new Size(1920, 1080);
             panel1.TabIndex = 22;
+            panel1.Paint += panel1_Paint;
             panel1.MouseMove += panel1_MouseMove;
             // 
-            // button1
+            // panelHeader
             // 
-            button1.BackColor = Color.FromArgb(48, 30, 35);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(239, 377);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(784, 63);
-            button1.TabIndex = 35;
-            button1.Text = "gestionar tipos de Vehiculos";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            panelHeader.BackColor = Color.FromArgb(0, 122, 204);
+            panelHeader.Controls.Add(lblTitulo);
+            panelHeader.Controls.Add(picCochera);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(30, 30);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1860, 100);
+            panelHeader.TabIndex = 36;
             // 
-            // BtnTarifas
+            // lblTitulo
             // 
-            BtnTarifas.BackColor = Color.FromArgb(35, 32, 39);
-            BtnTarifas.FlatStyle = FlatStyle.Flat;
-            BtnTarifas.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnTarifas.ForeColor = SystemColors.ButtonFace;
-            BtnTarifas.Location = new Point(239, 217);
-            BtnTarifas.Margin = new Padding(4, 3, 4, 3);
-            BtnTarifas.Name = "BtnTarifas";
-            BtnTarifas.Size = new Size(784, 63);
-            BtnTarifas.TabIndex = 34;
-            BtnTarifas.Text = "Gestionar tarifas";
-            BtnTarifas.UseVisualStyleBackColor = false;
-            BtnTarifas.Click += BtnTarifas_Click;
-            BtnTarifas.MouseMove += BtnTarifas_MouseMove;
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(140, 28);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(526, 54);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "⚙️ Panel de Configuración";
             // 
             // picCochera
             // 
             picCochera.Image = (Image)resources.GetObject("picCochera.Image");
-            picCochera.Location = new Point(28, 35);
-            picCochera.Margin = new Padding(4, 3, 4, 3);
+            picCochera.Location = new Point(20, 10);
+            picCochera.Margin = new Padding(6, 5, 6, 5);
             picCochera.Name = "picCochera";
-            picCochera.Size = new Size(138, 122);
-            picCochera.SizeMode = PictureBoxSizeMode.StretchImage;
+            picCochera.Size = new Size(100, 80);
+            picCochera.SizeMode = PictureBoxSizeMode.Zoom;
             picCochera.TabIndex = 27;
             picCochera.TabStop = false;
-            picCochera.UseWaitCursor = true;
+            // 
+            // btnVolver
+            // 
+            btnVolver.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnVolver.BackColor = Color.FromArgb(220, 53, 69);
+            btnVolver.FlatAppearance.BorderSize = 0;
+            btnVolver.FlatStyle = FlatStyle.Flat;
+            btnVolver.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVolver.ForeColor = Color.White;
+            btnVolver.Location = new Point(1650, 990);
+            btnVolver.Margin = new Padding(6, 5, 6, 5);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(240, 60);
+            btnVolver.TabIndex = 33;
+            btnVolver.Text = "← Volver";
+            btnVolver.UseVisualStyleBackColor = false;
+            btnVolver.Click += btnVolver_Click;
             // 
             // TxtExplicacion
             // 
-            TxtExplicacion.Location = new Point(573, 485);
-            TxtExplicacion.Margin = new Padding(4, 3, 4, 3);
+            TxtExplicacion.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            TxtExplicacion.BackColor = Color.FromArgb(37, 37, 38);
+            TxtExplicacion.BorderStyle = BorderStyle.None;
+            TxtExplicacion.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtExplicacion.ForeColor = Color.FromArgb(200, 200, 200);
+            TxtExplicacion.Location = new Point(380, 870);
+            TxtExplicacion.Margin = new Padding(6, 5, 6, 5);
             TxtExplicacion.Name = "TxtExplicacion";
             TxtExplicacion.ReadOnly = true;
-            TxtExplicacion.Size = new Size(474, 50);
+            TxtExplicacion.Size = new Size(1510, 100);
             TxtExplicacion.TabIndex = 26;
-            TxtExplicacion.Text = "";
+            TxtExplicacion.Text = "💡 Seleccione una opción para ver más información";
             // 
-            // BtnActividades
+            // panelBotones
             // 
-            BtnActividades.BackColor = Color.FromArgb(48, 30, 35);
-            BtnActividades.FlatStyle = FlatStyle.Flat;
-            BtnActividades.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnActividades.ForeColor = SystemColors.ButtonFace;
-            BtnActividades.Location = new Point(239, 297);
-            BtnActividades.Margin = new Padding(4, 3, 4, 3);
-            BtnActividades.Name = "BtnActividades";
-            BtnActividades.Size = new Size(784, 63);
-            BtnActividades.TabIndex = 25;
-            BtnActividades.Text = "gestionar metodos de pago";
-            BtnActividades.UseVisualStyleBackColor = false;
-            BtnActividades.Click += BtnActividades_Click;
-            BtnActividades.MouseMove += BtnActividades_MouseMove;
-            // 
-            // BtnDescuentos
-            // 
-            BtnDescuentos.BackColor = Color.FromArgb(35, 32, 39);
-            BtnDescuentos.FlatStyle = FlatStyle.Flat;
-            BtnDescuentos.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnDescuentos.ForeColor = SystemColors.ButtonFace;
-            BtnDescuentos.Location = new Point(239, 139);
-            BtnDescuentos.Margin = new Padding(4, 3, 4, 3);
-            BtnDescuentos.Name = "BtnDescuentos";
-            BtnDescuentos.Size = new Size(784, 63);
-            BtnDescuentos.TabIndex = 19;
-            BtnDescuentos.Text = "Modificar descuentos";
-            BtnDescuentos.UseCompatibleTextRendering = true;
-            BtnDescuentos.UseVisualStyleBackColor = false;
-            BtnDescuentos.Click += BtnDescuentos_Click;
-            BtnDescuentos.MouseMove += BtnEliminar_MouseMove;
+            panelBotones.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelBotones.Controls.Add(btnModificar);
+            panelBotones.Controls.Add(BtnDescuentos);
+            panelBotones.Controls.Add(BtnTarifas);
+            panelBotones.Controls.Add(BtnActividades);
+            panelBotones.Controls.Add(button1);
+            panelBotones.Location = new Point(380, 160);
+            panelBotones.Name = "panelBotones";
+            panelBotones.Size = new Size(1510, 690);
+            panelBotones.TabIndex = 37;
             // 
             // btnModificar
             // 
-            btnModificar.BackColor = Color.FromArgb(35, 32, 39);
-            btnModificar.CausesValidation = false;
+            btnModificar.BackColor = Color.FromArgb(52, 58, 64);
+            btnModificar.Dock = DockStyle.Top;
+            btnModificar.FlatAppearance.BorderSize = 0;
             btnModificar.FlatStyle = FlatStyle.Flat;
-            btnModificar.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnModificar.ForeColor = SystemColors.ButtonFace;
-            btnModificar.Location = new Point(239, 58);
-            btnModificar.Margin = new Padding(4, 3, 4, 3);
+            btnModificar.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            btnModificar.ForeColor = Color.White;
+            btnModificar.Location = new Point(0, 480);
+            btnModificar.Margin = new Padding(0, 0, 0, 15);
             btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(784, 63);
+            btnModificar.Padding = new Padding(30, 0, 0, 0);
+            btnModificar.Size = new Size(1510, 120);
             btnModificar.TabIndex = 9;
-            btnModificar.Text = "Espacios de parqueo";
+            btnModificar.Text = "🅿️  Espacios de Parqueo";
+            btnModificar.TextAlign = ContentAlignment.MiddleLeft;
             btnModificar.UseVisualStyleBackColor = false;
             btnModificar.Click += btnModificar_Click;
             btnModificar.MouseMove += btnModificar_MouseMove;
             // 
-            // panel2
+            // BtnDescuentos
             // 
-            panel2.BackColor = Color.White;
-            panel2.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            panel2.Location = new Point(573, 460);
-            panel2.Margin = new Padding(4, 3, 4, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(475, 2);
-            panel2.TabIndex = 18;
+            BtnDescuentos.BackColor = Color.FromArgb(52, 58, 64);
+            BtnDescuentos.Dock = DockStyle.Top;
+            BtnDescuentos.FlatAppearance.BorderSize = 0;
+            BtnDescuentos.FlatStyle = FlatStyle.Flat;
+            BtnDescuentos.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnDescuentos.ForeColor = Color.White;
+            BtnDescuentos.Location = new Point(0, 360);
+            BtnDescuentos.Margin = new Padding(0, 0, 0, 15);
+            BtnDescuentos.Name = "BtnDescuentos";
+            BtnDescuentos.Padding = new Padding(30, 0, 0, 0);
+            BtnDescuentos.Size = new Size(1510, 120);
+            BtnDescuentos.TabIndex = 19;
+            BtnDescuentos.Text = "🏷️  Gestionar Descuentos";
+            BtnDescuentos.TextAlign = ContentAlignment.MiddleLeft;
+            BtnDescuentos.UseVisualStyleBackColor = false;
+            BtnDescuentos.Click += BtnDescuentos_Click;
+            BtnDescuentos.MouseMove += BtnEliminar_MouseMove;
             // 
-            // btnVolver
+            // BtnTarifas
             // 
-            btnVolver.BackColor = Color.FromArgb(32, 30, 45);
-            btnVolver.FlatStyle = FlatStyle.Flat;
-            btnVolver.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnVolver.ForeColor = SystemColors.ButtonFace;
-            btnVolver.Location = new Point(886, 582);
-            btnVolver.Margin = new Padding(4, 3, 4, 3);
-            btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(194, 47);
-            btnVolver.TabIndex = 33;
-            btnVolver.Text = "Volver";
-            btnVolver.UseVisualStyleBackColor = false;
-            btnVolver.Click += btnVolver_Click;
+            BtnTarifas.BackColor = Color.FromArgb(52, 58, 64);
+            BtnTarifas.Dock = DockStyle.Top;
+            BtnTarifas.FlatAppearance.BorderSize = 0;
+            BtnTarifas.FlatStyle = FlatStyle.Flat;
+            BtnTarifas.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnTarifas.ForeColor = Color.White;
+            BtnTarifas.Location = new Point(0, 240);
+            BtnTarifas.Margin = new Padding(0, 0, 0, 15);
+            BtnTarifas.Name = "BtnTarifas";
+            BtnTarifas.Padding = new Padding(30, 0, 0, 0);
+            BtnTarifas.Size = new Size(1510, 120);
+            BtnTarifas.TabIndex = 34;
+            BtnTarifas.Text = "💰  Gestionar Tarifas";
+            BtnTarifas.TextAlign = ContentAlignment.MiddleLeft;
+            BtnTarifas.UseVisualStyleBackColor = false;
+            BtnTarifas.Click += BtnTarifas_Click;
+            BtnTarifas.MouseMove += BtnTarifas_MouseMove;
             // 
-            // label2
+            // BtnActividades
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Juice ITC", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.RosyBrown;
-            label2.Location = new Point(952, 10);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(106, 21);
-            label2.TabIndex = 35;
-            label2.Text = "Configuracion:";
+            BtnActividades.BackColor = Color.FromArgb(52, 58, 64);
+            BtnActividades.Dock = DockStyle.Top;
+            BtnActividades.FlatAppearance.BorderSize = 0;
+            BtnActividades.FlatStyle = FlatStyle.Flat;
+            BtnActividades.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnActividades.ForeColor = Color.White;
+            BtnActividades.Location = new Point(0, 120);
+            BtnActividades.Margin = new Padding(0, 0, 0, 15);
+            BtnActividades.Name = "BtnActividades";
+            BtnActividades.Padding = new Padding(30, 0, 0, 0);
+            BtnActividades.Size = new Size(1510, 120);
+            BtnActividades.TabIndex = 25;
+            BtnActividades.Text = "💳  Gestionar Métodos de Pago";
+            BtnActividades.TextAlign = ContentAlignment.MiddleLeft;
+            BtnActividades.UseVisualStyleBackColor = false;
+            BtnActividades.Click += BtnActividades_Click;
+            BtnActividades.MouseMove += BtnActividades_MouseMove;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(52, 58, 64);
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 0);
+            button1.Margin = new Padding(0);
+            button1.Name = "button1";
+            button1.Padding = new Padding(30, 0, 0, 0);
+            button1.Size = new Size(1510, 120);
+            button1.TabIndex = 35;
+            button1.Text = "🚗  Gestionar Tipos de Vehículos";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // FormConfiguracion
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(35, 32, 39);
-            ClientSize = new Size(1093, 643);
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            BackColor = Color.FromArgb(30, 30, 30);
+            ClientSize = new Size(1920, 1080);
             ControlBox = false;
-            Controls.Add(label2);
             Controls.Add(panel1);
-            Controls.Add(btnVolver);
-            Margin = new Padding(4, 3, 4, 3);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(6, 5, 6, 5);
             Name = "FormConfiguracion";
             StartPosition = FormStartPosition.CenterScreen;
+            Text = "Configuración del Sistema";
             panel1.ResumeLayout(false);
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picCochera).EndInit();
+            panelBotones.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -226,13 +267,14 @@
         private Panel panel1;
         private Button BtnDescuentos;
         private Button btnModificar;
-        private Panel panel2;
         private RichTextBox TxtExplicacion;
         private Button BtnActividades;
         public PictureBox picCochera;
         private Button btnVolver;
         private Button BtnTarifas;
-        private Label label2;
         private Button button1;
+        private Panel panelHeader;
+        private Label lblTitulo;
+        private Panel panelBotones;
     }
 }

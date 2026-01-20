@@ -1,4 +1,6 @@
-﻿namespace Vista
+﻿using System.Windows.Forms;
+
+namespace Vista
 {
     partial class Menu
     {
@@ -37,10 +39,10 @@
             dataGridView1 = new DataGridView();
             fechaHoraEmisionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             patenteDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            tarifaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             estadiaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             estadoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             codigoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            TarifaEstacionamiento = new DataGridViewTextBoxColumn();
             ticketBindingSource = new BindingSource(components);
             btnsalida = new Button();
             txtcapacidad = new TextBox();
@@ -87,53 +89,59 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 192, 255);
-            dataGridViewCellStyle1.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(45, 45, 48);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
             dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridView1.BackgroundColor = Color.FromArgb(25, 42, 75);
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView1.BackgroundColor = Color.FromArgb(30, 30, 30);
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 192, 255);
-            dataGridViewCellStyle2.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(0, 122, 204);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 122, 204);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fechaHoraEmisionDataGridViewTextBoxColumn, patenteDataGridViewTextBoxColumn, tarifaDataGridViewTextBoxColumn, estadiaDataGridViewTextBoxColumn, estadoDataGridViewTextBoxColumn, codigoDataGridViewTextBoxColumn });
+            dataGridView1.ColumnHeadersHeight = 45;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fechaHoraEmisionDataGridViewTextBoxColumn, patenteDataGridViewTextBoxColumn, estadiaDataGridViewTextBoxColumn, estadoDataGridViewTextBoxColumn, codigoDataGridViewTextBoxColumn, TarifaEstacionamiento });
             dataGridView1.DataSource = ticketBindingSource;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 192, 255);
-            dataGridViewCellStyle3.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(37, 37, 38);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 122, 204);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.GridColor = SystemColors.ActiveBorder;
-            dataGridView1.Location = new Point(460, 56);
-            dataGridView1.Margin = new Padding(6, 5, 6, 5);
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.GridColor = Color.FromArgb(50, 50, 50);
+            dataGridView1.Location = new Point(295, 100);
+            dataGridView1.Margin = new Padding(0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(192, 192, 255);
-            dataGridViewCellStyle4.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(37, 37, 38);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.White;
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridView1.Size = new Size(1300, 866);
+            dataGridView1.RowTemplate.Height = 40;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(1465, 950);
             dataGridView1.TabIndex = 0;
             // 
             // fechaHoraEmisionDataGridViewTextBoxColumn
             // 
             fechaHoraEmisionDataGridViewTextBoxColumn.DataPropertyName = "FechaHoraEmision";
-            fechaHoraEmisionDataGridViewTextBoxColumn.HeaderText = "FechaHoraEmision";
+            fechaHoraEmisionDataGridViewTextBoxColumn.HeaderText = "Fecha/Hora";
             fechaHoraEmisionDataGridViewTextBoxColumn.MinimumWidth = 8;
             fechaHoraEmisionDataGridViewTextBoxColumn.Name = "fechaHoraEmisionDataGridViewTextBoxColumn";
             fechaHoraEmisionDataGridViewTextBoxColumn.ReadOnly = true;
@@ -146,18 +154,10 @@
             patenteDataGridViewTextBoxColumn.Name = "patenteDataGridViewTextBoxColumn";
             patenteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // tarifaDataGridViewTextBoxColumn
-            // 
-            tarifaDataGridViewTextBoxColumn.DataPropertyName = "Tarifa";
-            tarifaDataGridViewTextBoxColumn.HeaderText = "Tarifa";
-            tarifaDataGridViewTextBoxColumn.MinimumWidth = 8;
-            tarifaDataGridViewTextBoxColumn.Name = "tarifaDataGridViewTextBoxColumn";
-            tarifaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // estadiaDataGridViewTextBoxColumn
             // 
             estadiaDataGridViewTextBoxColumn.DataPropertyName = "Estadia";
-            estadiaDataGridViewTextBoxColumn.HeaderText = "Estadia";
+            estadiaDataGridViewTextBoxColumn.HeaderText = "Estadía";
             estadiaDataGridViewTextBoxColumn.MinimumWidth = 8;
             estadiaDataGridViewTextBoxColumn.Name = "estadiaDataGridViewTextBoxColumn";
             estadiaDataGridViewTextBoxColumn.ReadOnly = true;
@@ -173,10 +173,18 @@
             // codigoDataGridViewTextBoxColumn
             // 
             codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            codigoDataGridViewTextBoxColumn.HeaderText = "Código";
             codigoDataGridViewTextBoxColumn.MinimumWidth = 8;
             codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
             codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // TarifaEstacionamiento
+            // 
+            TarifaEstacionamiento.DataPropertyName = "TarifaEstacionamiento";
+            TarifaEstacionamiento.HeaderText = "Tipo de Vehículo";
+            TarifaEstacionamiento.MinimumWidth = 8;
+            TarifaEstacionamiento.Name = "TarifaEstacionamiento";
+            TarifaEstacionamiento.ReadOnly = true;
             // 
             // ticketBindingSource
             // 
@@ -184,91 +192,104 @@
             // 
             // btnsalida
             // 
-            btnsalida.BackColor = Color.FromArgb(75, 10, 30);
+            btnsalida.BackColor = Color.FromArgb(220, 53, 69);
+            btnsalida.FlatAppearance.BorderSize = 0;
             btnsalida.FlatStyle = FlatStyle.Flat;
-            btnsalida.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnsalida.ForeColor = SystemColors.ButtonFace;
-            btnsalida.Location = new Point(6, 306);
-            btnsalida.Margin = new Padding(6, 5, 6, 5);
+            btnsalida.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnsalida.ForeColor = Color.White;
+            btnsalida.ImageAlign = ContentAlignment.MiddleLeft;
+            btnsalida.Location = new Point(20, 320);
+            btnsalida.Margin = new Padding(0);
             btnsalida.Name = "btnsalida";
-            btnsalida.Size = new Size(436, 113);
+            btnsalida.Padding = new Padding(15, 0, 0, 0);
+            btnsalida.Size = new Size(240, 55);
             btnsalida.TabIndex = 2;
-            btnsalida.Text = "Salida";
+            btnsalida.Text = "    Salida";
+            btnsalida.TextAlign = ContentAlignment.MiddleLeft;
             btnsalida.UseVisualStyleBackColor = false;
             btnsalida.Click += btnsalida_Click;
             // 
             // txtcapacidad
             // 
-            txtcapacidad.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            txtcapacidad.ForeColor = Color.Maroon;
-            txtcapacidad.Location = new Point(194, 30);
+            txtcapacidad.BackColor = Color.FromArgb(37, 37, 38);
+            txtcapacidad.BorderStyle = BorderStyle.None;
+            txtcapacidad.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            txtcapacidad.ForeColor = Color.FromArgb(0, 204, 153);
+            txtcapacidad.Location = new Point(160, 35);
             txtcapacidad.Margin = new Padding(6, 5, 6, 5);
             txtcapacidad.Name = "txtcapacidad";
             txtcapacidad.ReadOnly = true;
-            txtcapacidad.Size = new Size(270, 36);
+            txtcapacidad.Size = new Size(150, 38);
             txtcapacidad.TabIndex = 5;
+            txtcapacidad.TextAlign = HorizontalAlignment.Center;
             // 
             // BtnTickets
             // 
-            BtnTickets.BackColor = Color.FromArgb(35, 32, 39);
+            BtnTickets.BackColor = Color.FromArgb(52, 58, 64);
+            BtnTickets.FlatAppearance.BorderSize = 0;
             BtnTickets.FlatStyle = FlatStyle.Flat;
-            BtnTickets.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnTickets.ForeColor = SystemColors.ButtonFace;
-            BtnTickets.Location = new Point(6, 540);
-            BtnTickets.Margin = new Padding(6, 5, 6, 5);
+            BtnTickets.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnTickets.ForeColor = Color.White;
+            BtnTickets.Location = new Point(20, 395);
+            BtnTickets.Margin = new Padding(0);
             BtnTickets.Name = "BtnTickets";
-            BtnTickets.Size = new Size(436, 113);
+            BtnTickets.Size = new Size(240, 55);
             BtnTickets.TabIndex = 7;
-            BtnTickets.Text = "Busqueda Tickets";
+            BtnTickets.Text = "🔍 Buscar Tickets";
+            BtnTickets.TextAlign = ContentAlignment.MiddleLeft;
             BtnTickets.UseVisualStyleBackColor = false;
             BtnTickets.Click += BtnTickets_Click;
             // 
             // txtconfiguracion
             // 
-            txtconfiguracion.BackColor = Color.FromArgb(35, 32, 39);
+            txtconfiguracion.BackColor = Color.FromArgb(52, 58, 64);
+            txtconfiguracion.FlatAppearance.BorderSize = 0;
             txtconfiguracion.FlatStyle = FlatStyle.Flat;
-            txtconfiguracion.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtconfiguracion.ForeColor = Color.Snow;
-            txtconfiguracion.Location = new Point(0, 663);
-            txtconfiguracion.Margin = new Padding(6, 5, 6, 5);
+            txtconfiguracion.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            txtconfiguracion.ForeColor = Color.White;
+            txtconfiguracion.Location = new Point(20, 470);
+            txtconfiguracion.Margin = new Padding(0);
             txtconfiguracion.Name = "txtconfiguracion";
-            txtconfiguracion.Size = new Size(442, 113);
+            txtconfiguracion.Size = new Size(240, 55);
             txtconfiguracion.TabIndex = 8;
-            txtconfiguracion.Text = "Actualizar tarifas";
+            txtconfiguracion.Text = "💰 Actualizar Tarifas";
+            txtconfiguracion.TextAlign = ContentAlignment.MiddleLeft;
             txtconfiguracion.UseVisualStyleBackColor = false;
             txtconfiguracion.Click += txtconfiguracion_Click;
             // 
             // btnentrada
             // 
-            btnentrada.BackColor = Color.FromArgb(20, 38, 44);
+            btnentrada.BackColor = Color.FromArgb(40, 167, 69);
             btnentrada.CausesValidation = false;
+            btnentrada.FlatAppearance.BorderSize = 0;
             btnentrada.FlatStyle = FlatStyle.Flat;
-            btnentrada.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnentrada.ForeColor = SystemColors.ButtonFace;
-            btnentrada.Location = new Point(6, 183);
-            btnentrada.Margin = new Padding(6, 5, 6, 5);
+            btnentrada.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnentrada.ForeColor = Color.White;
+            btnentrada.Location = new Point(20, 245);
+            btnentrada.Margin = new Padding(0);
             btnentrada.Name = "btnentrada";
-            btnentrada.Size = new Size(436, 113);
+            btnentrada.Size = new Size(240, 55);
             btnentrada.TabIndex = 9;
-            btnentrada.Text = "Entrada rapida";
+            btnentrada.Text = "✓ Entrada Rápida";
+            btnentrada.TextAlign = ContentAlignment.MiddleLeft;
             btnentrada.UseVisualStyleBackColor = false;
             btnentrada.Click += btnentrada_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(6, 37);
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(20, 38);
             label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(155, 28);
+            label1.Size = new Size(119, 30);
             label1.TabIndex = 11;
-            label1.Text = "Capacidad :";
+            label1.Text = "Capacidad:";
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(25, 42, 75);
+            panel1.BackColor = Color.FromArgb(28, 28, 30);
             panel1.Controls.Add(BtnAbonados);
             panel1.Controls.Add(btnConfiguracion);
             panel1.Controls.Add(picCochera);
@@ -276,249 +297,265 @@
             panel1.Controls.Add(btnsalida);
             panel1.Controls.Add(BtnTickets);
             panel1.Controls.Add(txtconfiguracion);
-            panel1.ForeColor = Color.Aquamarine;
-            panel1.Location = new Point(-9, -3);
-            panel1.Margin = new Padding(6, 5, 6, 5);
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(435, 1300);
+            panel1.Size = new Size(280, 1080);
             panel1.TabIndex = 12;
             // 
             // BtnAbonados
             // 
-            BtnAbonados.BackColor = Color.FromArgb(35, 32, 39);
+            BtnAbonados.BackColor = Color.FromArgb(52, 58, 64);
+            BtnAbonados.FlatAppearance.BorderSize = 0;
             BtnAbonados.FlatStyle = FlatStyle.Flat;
-            BtnAbonados.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnAbonados.ForeColor = Color.Snow;
-            BtnAbonados.Location = new Point(-1, 786);
-            BtnAbonados.Margin = new Padding(6, 5, 6, 5);
+            BtnAbonados.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnAbonados.ForeColor = Color.White;
+            BtnAbonados.Location = new Point(20, 545);
+            BtnAbonados.Margin = new Padding(0);
             BtnAbonados.Name = "BtnAbonados";
-            BtnAbonados.Size = new Size(443, 113);
+            BtnAbonados.Size = new Size(240, 55);
             BtnAbonados.TabIndex = 18;
-            BtnAbonados.Text = "Planes mensuales";
+            BtnAbonados.Text = "📅 Planes Mensuales";
+            BtnAbonados.TextAlign = ContentAlignment.MiddleLeft;
             BtnAbonados.UseVisualStyleBackColor = false;
             BtnAbonados.Click += BtnAbonados_Click;
             // 
             // btnConfiguracion
             // 
-            btnConfiguracion.BackColor = Color.FromArgb(48, 30, 35);
+            btnConfiguracion.BackColor = Color.FromArgb(52, 58, 64);
+            btnConfiguracion.FlatAppearance.BorderSize = 0;
             btnConfiguracion.FlatStyle = FlatStyle.Flat;
-            btnConfiguracion.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnConfiguracion.ForeColor = Color.Snow;
-            btnConfiguracion.Location = new Point(6, 909);
-            btnConfiguracion.Margin = new Padding(6, 5, 6, 5);
+            btnConfiguracion.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConfiguracion.ForeColor = Color.White;
+            btnConfiguracion.Location = new Point(20, 620);
+            btnConfiguracion.Margin = new Padding(0);
             btnConfiguracion.Name = "btnConfiguracion";
-            btnConfiguracion.Size = new Size(436, 113);
+            btnConfiguracion.Size = new Size(240, 55);
             btnConfiguracion.TabIndex = 17;
-            btnConfiguracion.Text = "Configuracion";
+            btnConfiguracion.Text = "⚙️ Configuración";
+            btnConfiguracion.TextAlign = ContentAlignment.MiddleLeft;
             btnConfiguracion.UseVisualStyleBackColor = false;
             btnConfiguracion.Click += btnConfiguracion_Click;
             // 
             // picCochera
             // 
             picCochera.Image = (Image)resources.GetObject("picCochera.Image");
-            picCochera.Location = new Point(145, 17);
+            picCochera.Location = new Point(65, 30);
             picCochera.Margin = new Padding(6, 5, 6, 5);
             picCochera.Name = "picCochera";
             picCochera.Size = new Size(150, 140);
-            picCochera.SizeMode = PictureBoxSizeMode.StretchImage;
+            picCochera.SizeMode = PictureBoxSizeMode.Zoom;
             picCochera.TabIndex = 15;
             picCochera.TabStop = false;
-            picCochera.UseWaitCursor = true;
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.FromArgb(37, 37, 38);
             groupBox1.Controls.Add(txtcapacidad);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(460, 932);
+            groupBox1.FlatStyle = FlatStyle.Flat;
+            groupBox1.ForeColor = Color.White;
+            groupBox1.Location = new Point(1237, 5);
             groupBox1.Margin = new Padding(6, 5, 6, 5);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(6, 5, 6, 5);
-            groupBox1.Size = new Size(1303, 243);
+            groupBox1.Size = new Size(450, 90);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
+            groupBox1.Text = "Estado del Estacionamiento";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.RosyBrown;
-            label3.Location = new Point(1663, 19);
+            label3.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(300, 30);
             label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(100, 33);
+            label3.Size = new Size(271, 45);
             label3.TabIndex = 17;
-            label3.Text = "Menu:";
+            label3.Text = "Panel de Control ";
             // 
             // tarifaBindingSource
             // 
-            tarifaBindingSource.DataSource = typeof(MODELO.Tarifa);
+            tarifaBindingSource.DataSource = typeof(MODELO.TarifaEstacionamiento);
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.FromArgb(48, 30, 35);
+            menuStrip1.BackColor = Color.FromArgb(28, 28, 30);
             menuStrip1.Dock = DockStyle.Bottom;
-            menuStrip1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            menuStrip1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip1.ImageScalingSize = new Size(24, 24);
             menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, editarToolStripMenuItem, herramientasToolStripMenuItem, ayudaToolStripMenuItem, verReportesToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 1162);
+            menuStrip1.Location = new Point(0, 1050);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(9, 3, 0, 3);
-            menuStrip1.Size = new Size(1778, 42);
+            menuStrip1.RenderMode = ToolStripRenderMode.Professional;
+            menuStrip1.Size = new Size(1920, 38);
             menuStrip1.TabIndex = 18;
             menuStrip1.Text = "menuStrip1";
             // 
             // archivoToolStripMenuItem
             // 
-            archivoToolStripMenuItem.CheckOnClick = true;
             archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tiposDeVehiculoToolStripMenuItem, metodoDePagoToolStripMenuItem, tarifasToolStripMenuItem, descuentosToolStripMenuItem, espaciosDeParqueoToolStripMenuItem });
-            archivoToolStripMenuItem.ForeColor = SystemColors.ButtonShadow;
+            archivoToolStripMenuItem.ForeColor = Color.White;
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            archivoToolStripMenuItem.Size = new Size(203, 36);
-            archivoToolStripMenuItem.Text = "&Configuraciones";
+            archivoToolStripMenuItem.Size = new Size(183, 32);
+            archivoToolStripMenuItem.Text = "⚙️ Configuración";
             // 
             // tiposDeVehiculoToolStripMenuItem
             // 
-            tiposDeVehiculoToolStripMenuItem.BackColor = SystemColors.HighlightText;
+            tiposDeVehiculoToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            tiposDeVehiculoToolStripMenuItem.ForeColor = Color.White;
             tiposDeVehiculoToolStripMenuItem.Name = "tiposDeVehiculoToolStripMenuItem";
-            tiposDeVehiculoToolStripMenuItem.Size = new Size(337, 40);
-            tiposDeVehiculoToolStripMenuItem.Text = "Tipos de vehiculo";
+            tiposDeVehiculoToolStripMenuItem.Size = new Size(292, 36);
+            tiposDeVehiculoToolStripMenuItem.Text = "Tipos de Vehículo";
             tiposDeVehiculoToolStripMenuItem.Click += tiposDeVehiculoToolStripMenuItem_Click;
             // 
             // metodoDePagoToolStripMenuItem
             // 
-            metodoDePagoToolStripMenuItem.BackColor = SystemColors.HighlightText;
+            metodoDePagoToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            metodoDePagoToolStripMenuItem.ForeColor = Color.White;
             metodoDePagoToolStripMenuItem.Name = "metodoDePagoToolStripMenuItem";
-            metodoDePagoToolStripMenuItem.Size = new Size(337, 40);
-            metodoDePagoToolStripMenuItem.Text = "Metodos de pago";
+            metodoDePagoToolStripMenuItem.Size = new Size(292, 36);
+            metodoDePagoToolStripMenuItem.Text = "Métodos de Pago";
             metodoDePagoToolStripMenuItem.Click += metodoDePagoToolStripMenuItem_Click;
             // 
             // tarifasToolStripMenuItem
             // 
-            tarifasToolStripMenuItem.BackColor = SystemColors.HighlightText;
+            tarifasToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            tarifasToolStripMenuItem.ForeColor = Color.White;
             tarifasToolStripMenuItem.Name = "tarifasToolStripMenuItem";
-            tarifasToolStripMenuItem.Size = new Size(337, 40);
+            tarifasToolStripMenuItem.Size = new Size(292, 36);
             tarifasToolStripMenuItem.Text = "Tarifas";
             tarifasToolStripMenuItem.Click += tarifasToolStripMenuItem_Click;
             // 
             // descuentosToolStripMenuItem
             // 
-            descuentosToolStripMenuItem.BackColor = SystemColors.HighlightText;
+            descuentosToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            descuentosToolStripMenuItem.ForeColor = Color.White;
             descuentosToolStripMenuItem.Name = "descuentosToolStripMenuItem";
-            descuentosToolStripMenuItem.Size = new Size(337, 40);
+            descuentosToolStripMenuItem.Size = new Size(292, 36);
             descuentosToolStripMenuItem.Text = "Descuentos";
             descuentosToolStripMenuItem.Click += descuentosToolStripMenuItem_Click;
             // 
             // espaciosDeParqueoToolStripMenuItem
             // 
-            espaciosDeParqueoToolStripMenuItem.BackColor = SystemColors.HighlightText;
+            espaciosDeParqueoToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            espaciosDeParqueoToolStripMenuItem.ForeColor = Color.White;
             espaciosDeParqueoToolStripMenuItem.Name = "espaciosDeParqueoToolStripMenuItem";
-            espaciosDeParqueoToolStripMenuItem.Size = new Size(337, 40);
-            espaciosDeParqueoToolStripMenuItem.Text = "Espacios de parqueo";
+            espaciosDeParqueoToolStripMenuItem.Size = new Size(292, 36);
+            espaciosDeParqueoToolStripMenuItem.Text = "Espacios de Parqueo";
             espaciosDeParqueoToolStripMenuItem.Click += espaciosDeParqueoToolStripMenuItem_Click;
             // 
             // editarToolStripMenuItem
             // 
-            editarToolStripMenuItem.CheckOnClick = true;
             editarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gruposToolStripMenuItem, usuariosToolStripMenuItem });
-            editarToolStripMenuItem.ForeColor = SystemColors.AppWorkspace;
+            editarToolStripMenuItem.ForeColor = Color.White;
             editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            editarToolStripMenuItem.Size = new Size(138, 36);
-            editarToolStripMenuItem.Text = "Seguridad";
+            editarToolStripMenuItem.Size = new Size(150, 32);
+            editarToolStripMenuItem.Text = "🔒 Seguridad";
             // 
             // gruposToolStripMenuItem
             // 
+            gruposToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            gruposToolStripMenuItem.ForeColor = Color.White;
             gruposToolStripMenuItem.Name = "gruposToolStripMenuItem";
-            gruposToolStripMenuItem.Size = new Size(208, 40);
+            gruposToolStripMenuItem.Size = new Size(189, 36);
             gruposToolStripMenuItem.Text = "Grupos";
             gruposToolStripMenuItem.Click += gruposToolStripMenuItem_Click;
             // 
             // usuariosToolStripMenuItem
             // 
+            usuariosToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            usuariosToolStripMenuItem.ForeColor = Color.White;
             usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            usuariosToolStripMenuItem.Size = new Size(208, 40);
+            usuariosToolStripMenuItem.Size = new Size(189, 36);
             usuariosToolStripMenuItem.Text = "Usuarios";
             usuariosToolStripMenuItem.Click += usuariosToolStripMenuItem_Click;
             // 
             // herramientasToolStripMenuItem
             // 
-            herramientasToolStripMenuItem.CheckOnClick = true;
-            herramientasToolStripMenuItem.ForeColor = SystemColors.ButtonShadow;
+            herramientasToolStripMenuItem.ForeColor = Color.FromArgb(220, 53, 69);
             herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
-            herramientasToolStripMenuItem.ShowShortcutKeys = false;
-            herramientasToolStripMenuItem.Size = new Size(202, 36);
-            herramientasToolStripMenuItem.Text = "&Salir del sistema";
+            herramientasToolStripMenuItem.Size = new Size(139, 32);
+            herramientasToolStripMenuItem.Text = "Salir Sistema";
             herramientasToolStripMenuItem.Click += herramientasToolStripMenuItem_Click;
             // 
             // ayudaToolStripMenuItem
             // 
-            ayudaToolStripMenuItem.CheckOnClick = true;
             ayudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cerrarSesionToolStripMenuItem, cambiarClaveToolStripMenuItem, misDatosToolStripMenuItem });
-            ayudaToolStripMenuItem.ForeColor = SystemColors.ButtonShadow;
+            ayudaToolStripMenuItem.ForeColor = Color.White;
             ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            ayudaToolStripMenuItem.Size = new Size(120, 36);
-            ayudaToolStripMenuItem.Text = "Mi perfil";
+            ayudaToolStripMenuItem.Size = new Size(131, 32);
+            ayudaToolStripMenuItem.Text = "👤 Mi Perfil";
             // 
             // cerrarSesionToolStripMenuItem
             // 
+            cerrarSesionToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            cerrarSesionToolStripMenuItem.ForeColor = Color.White;
             cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            cerrarSesionToolStripMenuItem.Size = new Size(267, 40);
-            cerrarSesionToolStripMenuItem.Text = "Cerrar sesión";
+            cerrarSesionToolStripMenuItem.Size = new Size(239, 36);
+            cerrarSesionToolStripMenuItem.Text = "Cerrar Sesión";
             cerrarSesionToolStripMenuItem.Click += cerrarSesionToolStripMenuItem_Click;
             // 
             // cambiarClaveToolStripMenuItem
             // 
+            cambiarClaveToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            cambiarClaveToolStripMenuItem.ForeColor = Color.White;
             cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
-            cambiarClaveToolStripMenuItem.Size = new Size(267, 40);
-            cambiarClaveToolStripMenuItem.Text = "Cambiar clave";
+            cambiarClaveToolStripMenuItem.Size = new Size(239, 36);
+            cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
             cambiarClaveToolStripMenuItem.Click += cambiarClaveToolStripMenuItem_Click;
             // 
             // misDatosToolStripMenuItem
             // 
+            misDatosToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            misDatosToolStripMenuItem.ForeColor = Color.White;
             misDatosToolStripMenuItem.Name = "misDatosToolStripMenuItem";
-            misDatosToolStripMenuItem.Size = new Size(267, 40);
-            misDatosToolStripMenuItem.Text = "Mis datos";
+            misDatosToolStripMenuItem.Size = new Size(239, 36);
+            misDatosToolStripMenuItem.Text = "Mis Datos";
             misDatosToolStripMenuItem.Click += misDatosToolStripMenuItem_Click;
             // 
             // verReportesToolStripMenuItem
             // 
-            verReportesToolStripMenuItem.ForeColor = SystemColors.ButtonShadow;
+            verReportesToolStripMenuItem.ForeColor = Color.White;
             verReportesToolStripMenuItem.Name = "verReportesToolStripMenuItem";
-            verReportesToolStripMenuItem.Size = new Size(159, 36);
-            verReportesToolStripMenuItem.Text = "Ver reportes";
+            verReportesToolStripMenuItem.Size = new Size(137, 32);
+            verReportesToolStripMenuItem.Text = "📊 Reportes";
             verReportesToolStripMenuItem.Click += verReportesToolStripMenuItem_Click;
             // 
             // Fecha_Usuario
             // 
             Fecha_Usuario.AutoSize = true;
-            Fecha_Usuario.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            Fecha_Usuario.ForeColor = SystemColors.Control;
-            Fecha_Usuario.Location = new Point(460, 23);
+            Fecha_Usuario.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            Fecha_Usuario.ForeColor = Color.FromArgb(200, 200, 200);
+            Fecha_Usuario.Location = new Point(650, 40);
             Fecha_Usuario.Margin = new Padding(4, 0, 4, 0);
             Fecha_Usuario.Name = "Fecha_Usuario";
-            Fecha_Usuario.Size = new Size(146, 28);
+            Fecha_Usuario.Size = new Size(151, 28);
             Fecha_Usuario.TabIndex = 12;
-            Fecha_Usuario.Text = "Fecha y usuario";
+            Fecha_Usuario.Text = "Fecha y usuario ";
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(35, 32, 39);
-            ClientSize = new Size(1778, 1204);
+            BackColor = Color.FromArgb(30, 30, 30);
+            ClientSize = new Size(1920, 1088);
             ControlBox = false;
             Controls.Add(menuStrip1);
             Controls.Add(Fecha_Usuario);
             Controls.Add(label3);
+            Controls.Add(groupBox1);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
-            Controls.Add(groupBox1);
-            MainMenuStrip = menuStrip1;
             Margin = new Padding(6, 5, 6, 5);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Menu";
             StartPosition = FormStartPosition.CenterScreen;
-            WindowState = FormWindowState.Maximized;
+            Text = "Sistema de Estacionamiento";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource).EndInit();
             panel1.ResumeLayout(false);
@@ -531,7 +568,6 @@
             ResumeLayout(false);
             PerformLayout();
         }
-
         #endregion
 
         private DataGridView dataGridView1;
@@ -549,12 +585,7 @@
         private Label label3;
         private DataGridViewTextBoxColumn tipoVehiculoDataGridViewTextBoxColumn;
         private BindingSource ticketBindingSource;
-        private DataGridViewTextBoxColumn fechaHoraEmisionDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn patenteDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tarifaDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn estadiaDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private BindingSource tarifaBindingSource;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem archivoToolStripMenuItem;
@@ -573,6 +604,11 @@
         private ToolStripMenuItem usuariosToolStripMenuItem;
         private ToolStripMenuItem verReportesToolStripMenuItem;
         private Label Fecha_Usuario;
+        private DataGridViewTextBoxColumn fechaHoraEmisionDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn patenteDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn estadiaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn TarifaEstacionamiento;
     }
 }
-

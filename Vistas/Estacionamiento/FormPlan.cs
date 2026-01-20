@@ -35,7 +35,7 @@ namespace Vista
             dateTimePicker1.Value = Plan.FechaHoraAlta;
             txtPatente.Enabled = false;
             var cuota = Plan.Cuotas;
-            txttipoVehiculo.Text = cuota.FirstOrDefault().Tarifa.TipoVehiculo.ToString();
+            txttipoVehiculo.Text = cuota.FirstOrDefault().TarifaEstacionamiento.TipoVehiculo.ToString();
             txttipoVehiculo.Enabled = false;
             plan = Plan;
             dataGridView1.Enabled = false;
@@ -114,7 +114,7 @@ namespace Vista
                     var tarifa = ControladoraTarifas.Instancia.getAllTarifasActuales().FirstOrDefault(x => x.TipoVehiculo == (TipoVehiculo)txttipoVehiculo.SelectedItem);
                     if (tarifa != null)
                     {
-                        cuota.Tarifa = tarifa;
+                        cuota.TarifaEstacionamiento = tarifa;
                     }
                     else
                     {

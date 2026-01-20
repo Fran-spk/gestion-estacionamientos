@@ -35,103 +35,105 @@
             groupBox1 = new GroupBox();
             label3 = new Label();
             Hasta = new DateTimePicker();
-            label12 = new Label();
             btnsalir = new Button();
             ticketBindingSource1 = new BindingSource(components);
             BtnFiltrar = new Button();
             colorDialog1 = new ColorDialog();
             ticketBindingSource = new BindingSource(components);
             repositorioTarifasBindingSource = new BindingSource(components);
-            panel1 = new Panel();
+            panelHeader = new Panel();
+            lblTitulo = new Label();
             ((System.ComponentModel.ISupportInitialize)vehiculoBindingSource).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repositorioTarifasBindingSource).BeginInit();
-            panel1.SuspendLayout();
+            panelHeader.SuspendLayout();
             SuspendLayout();
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(10, 52);
+            label2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(20, 50);
             label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(90, 28);
+            label2.Size = new Size(161, 28);
             label2.TabIndex = 25;
-            label2.Text = "Desde:";
+            label2.Text = "📅 Fecha Desde";
             // 
             // Desde
             // 
-            Desde.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Desde.Location = new Point(112, 50);
+            Desde.CalendarMonthBackground = Color.FromArgb(45, 45, 48);
+            Desde.CalendarTitleBackColor = Color.FromArgb(0, 122, 204);
+            Desde.CalendarTitleForeColor = Color.White;
+            Desde.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            Desde.Format = DateTimePickerFormat.Short;
+            Desde.Location = new Point(193, 47);
             Desde.Margin = new Padding(6, 5, 6, 5);
             Desde.Name = "Desde";
-            Desde.Size = new Size(277, 36);
+            Desde.Size = new Size(280, 37);
             Desde.TabIndex = 23;
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.FromArgb(37, 37, 38);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(Desde);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(Hasta);
-            groupBox1.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(21, 77);
-            groupBox1.Margin = new Padding(6, 5, 6, 5);
+            groupBox1.FlatStyle = FlatStyle.Flat;
+            groupBox1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox1.ForeColor = Color.FromArgb(0, 122, 204);
+            groupBox1.Location = new Point(30, 100);
+            groupBox1.Margin = new Padding(0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(6, 5, 6, 5);
-            groupBox1.Size = new Size(997, 112);
+            groupBox1.Padding = new Padding(15);
+            groupBox1.Size = new Size(940, 140);
             groupBox1.TabIndex = 35;
             groupBox1.TabStop = false;
+            groupBox1.Text = "Rango de Fechas";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(541, 50);
+            label3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(485, 50);
             label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(90, 28);
+            label3.Size = new Size(155, 28);
             label3.TabIndex = 26;
-            label3.Text = "Hasta:";
+            label3.Text = "📅 Fecha Hasta";
             // 
             // Hasta
             // 
-            Hasta.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Hasta.Location = new Point(657, 50);
+            Hasta.CalendarMonthBackground = Color.FromArgb(45, 45, 48);
+            Hasta.CalendarTitleBackColor = Color.FromArgb(0, 122, 204);
+            Hasta.CalendarTitleForeColor = Color.White;
+            Hasta.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            Hasta.Format = DateTimePickerFormat.Short;
+            Hasta.Location = new Point(652, 44);
             Hasta.Margin = new Padding(6, 5, 6, 5);
             Hasta.Name = "Hasta";
-            Hasta.Size = new Size(277, 36);
+            Hasta.Size = new Size(280, 37);
             Hasta.TabIndex = 24;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.ForeColor = SystemColors.ButtonFace;
-            label12.Location = new Point(453, 24);
-            label12.Margin = new Padding(6, 0, 6, 0);
-            label12.Name = "label12";
-            label12.Size = new Size(116, 28);
-            label12.TabIndex = 47;
-            label12.Text = "Reportes";
             // 
             // btnsalir
             // 
-            btnsalir.BackColor = Color.FromArgb(25, 42, 75);
+            btnsalir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnsalir.BackColor = Color.FromArgb(220, 53, 69);
+            btnsalir.FlatAppearance.BorderSize = 0;
             btnsalir.FlatStyle = FlatStyle.Flat;
-            btnsalir.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnsalir.ForeColor = SystemColors.ButtonFace;
-            btnsalir.Location = new Point(339, 332);
+            btnsalir.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnsalir.ForeColor = Color.White;
+            btnsalir.Location = new Point(540, 350);
             btnsalir.Margin = new Padding(6, 5, 6, 5);
             btnsalir.Name = "btnsalir";
-            btnsalir.Size = new Size(377, 60);
+            btnsalir.Size = new Size(200, 55);
             btnsalir.TabIndex = 10;
-            btnsalir.Text = "Volver";
+            btnsalir.Text = "✖ Cancelar";
             btnsalir.UseVisualStyleBackColor = false;
             btnsalir.Click += btnsalir_Click;
             // 
@@ -141,16 +143,18 @@
             // 
             // BtnFiltrar
             // 
-            BtnFiltrar.BackColor = Color.FromArgb(25, 42, 75);
+            BtnFiltrar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            BtnFiltrar.BackColor = Color.FromArgb(0, 122, 204);
+            BtnFiltrar.FlatAppearance.BorderSize = 0;
             BtnFiltrar.FlatStyle = FlatStyle.Flat;
-            BtnFiltrar.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnFiltrar.ForeColor = SystemColors.ButtonFace;
-            BtnFiltrar.Location = new Point(339, 248);
+            BtnFiltrar.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnFiltrar.ForeColor = Color.White;
+            BtnFiltrar.Location = new Point(260, 350);
             BtnFiltrar.Margin = new Padding(6, 5, 6, 5);
             BtnFiltrar.Name = "BtnFiltrar";
-            BtnFiltrar.Size = new Size(377, 60);
+            BtnFiltrar.Size = new Size(260, 55);
             BtnFiltrar.TabIndex = 51;
-            BtnFiltrar.Text = "Generar reporte";
+            BtnFiltrar.Text = "📊 Generar Reporte";
             BtnFiltrar.UseVisualStyleBackColor = false;
             BtnFiltrar.Click += BtnFiltrar_Click;
             // 
@@ -162,28 +166,44 @@
             // 
             repositorioTarifasBindingSource.DataSource = typeof(Controladora.ControladoraTarifas);
             // 
-            // panel1
+            // panelHeader
             // 
-            panel1.BackColor = Color.FromArgb(25, 42, 75);
-            panel1.Controls.Add(label12);
-            panel1.Location = new Point(-10, -4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1059, 73);
-            panel1.TabIndex = 52;
+            panelHeader.AutoSize = true;
+            panelHeader.BackColor = Color.FromArgb(0, 122, 204);
+            panelHeader.Controls.Add(lblTitulo);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1000, 60);
+            panelHeader.TabIndex = 52;
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(30, 15);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(282, 45);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Generar Reportes";
             // 
             // FormReportes
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(35, 32, 39);
-            ClientSize = new Size(1039, 441);
+            BackColor = Color.FromArgb(30, 30, 30);
+            ClientSize = new Size(1000, 430);
             ControlBox = false;
             Controls.Add(groupBox1);
-            Controls.Add(panel1);
+            Controls.Add(panelHeader);
             Controls.Add(BtnFiltrar);
             Controls.Add(btnsalir);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(6, 5, 6, 5);
             Name = "FormReportes";
+            ShowIcon = false;
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)vehiculoBindingSource).EndInit();
             groupBox1.ResumeLayout(false);
@@ -191,9 +211,10 @@
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)repositorioTarifasBindingSource).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -204,12 +225,12 @@
         private GroupBox groupBox1;
         private Label label3;
         public DateTimePicker Hasta;
-        private Label label12;
         private Button btnsalir;
         private Button BtnFiltrar;
         private ColorDialog colorDialog1;
         private BindingSource ticketBindingSource;
         private BindingSource ticketBindingSource1;
-        private Panel panel1;
+        private Panel panelHeader;
+        private Label lblTitulo;
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using Modelo_Ids;
 
 namespace MODELO
 {
@@ -13,10 +14,10 @@ namespace MODELO
         private int pagoId;
         private TicketBase ticketBase;
         private int ticketbaseId;
-        private decimal monto;
-        private decimal montodescuento;
+        private decimal montoEstacionamiento;
+        private decimal montoServicios;
+        private decimal montoDescuento;
         private decimal montofinal;
-        private string tipo;
         private DateTime fechahorapago;
         private MetodoDePago metododepago;
         private int metododepagoid;
@@ -46,15 +47,22 @@ namespace MODELO
             set { ticketBase = value; }
         }
 
-        public decimal Monto
+        public decimal MontoEstacionamiento
         {
-            get { return monto; }
-            private set { monto = value; }
+            get { return montoEstacionamiento; }
+            set { montoEstacionamiento = value; }
+        }
+
+        public decimal MontoServicios
+        {
+            get { return montoServicios; }
+            set { montoServicios = value; }
         }
 
         public decimal MontoDescuento
         {
-            get { return montodescuento; }
+            get { return montoDescuento; }
+            set {  montoDescuento = value; }
         }
 
         public decimal MontoFinal
@@ -75,43 +83,36 @@ namespace MODELO
             set { metododepago = value; }
         }
 
-        public void RealizarPago()
+        private CalculadorPago ObtenerCalculador()
         {
+            if (ticketBase is Cuota)
+            {
+                return new CalculadorMensual();
+            }
+
             if (ticketBase is Ticket ticket)
             {
-                if (ticket.Estadia is Estadia_Media_Hora)
-                {
-                    monto += ticket.Tarifa.PrecioMediaHora;
-                }
-                else if (ticket.Estadia is Estadia_Hora)
-                {
-                    monto += (Decimal)ticket.Horas * ticket.Tarifa.PrecioHora;
+                if (ticket.Estadia is Estadia_Dia)
+                    return new CalculadorDia();
 
-                    if (ticket.Minutos < 30 && ticket.Minutos > 0)
-                    {
-                        monto += ticket.Tarifa.PrecioMediaHora;
-                    }
-                    else if (ticket.Minutos >= 30)
-                    {
-                        monto += ticket.Tarifa.PrecioHora;
-                    }
-                }
-                else if (ticket.Estadia is Estadia_Dia)
-                {
-                    monto = ticket.Tarifa.PrecioDia;
-                }
-            }
-            else if (ticketBase is Cuota cuota)
-            {
-                monto = cuota.Tarifa.PrecioMes;
-
-                if (cuota.Plan?.Descuento != null)
-                {
-                    montodescuento = monto * (cuota.Plan.Descuento.Porcentaje / 100);
-                }
+                return new CalculadorHoras();
             }
 
-            montofinal = Monto - MontoDescuento;
+            throw new InvalidOperationException("Tipo de ticket no válido");
+        }
+
+        void CalculoPagoAdicionales()
+        {
+            var Servicios = ticketBase.TarifasAdicionales.Select(a => a.Precio);
+            this.montoServicios = Servicios.Sum();
+        }
+        public void RealizarPago()
+        {
+            CalculadorPago calculador = ObtenerCalculador();
+            calculador.CalcularMonto(this);
+            CalculoPagoAdicionales();
+            //Totales
+            montofinal = montoServicios + montoEstacionamiento - montoDescuento;
             fechahorapago = DateTime.Now;
         }
 
@@ -125,31 +126,54 @@ namespace MODELO
             sb.AppendLine("--------------------------------");
             sb.AppendLine("Datos del Vehículo");
             sb.AppendLine($"Patente: {Ticket.Patente}");
-            sb.AppendLine($"Tipo de vehículo: {Ticket.Tarifa.TipoVehiculo}");
+            sb.AppendLine($"Tipo de vehículo: {Ticket.TarifaEstacionamiento.TipoVehiculo}");
+
             if (Ticket is Cuota cuota)
             {
                 sb.AppendLine("--------------------------------");
                 sb.AppendLine("Datos del Plan");
                 sb.AppendLine($"Nombre: {cuota.Plan.PER_NOMBRE}");
                 sb.AppendLine($"DNI: {cuota.Plan.Dni}");
-                sb.AppendLine($"Telefono: {cuota.Plan.Dni}");   
+                sb.AppendLine($"Telefono: {cuota.Plan.Telefono}");
                 sb.AppendLine($"Estadía: {Ticket.Estadia}");
                 sb.AppendLine("--------------------------------");
-                sb.AppendLine($"Fecha emision: {Ticket.FechaHoraEmision}");
-                sb.AppendLine($"Fecha de Pago: {FechaHoraPago}");
+                sb.AppendLine($"Emision: {Ticket.FechaHoraEmision.ToString("d/M/yy HH:mm")}");
+                sb.AppendLine($"Fecha de Pago: {FechaHoraPago.ToString("d/M/yy HH:mm")}");
             }
             else
             {
                 sb.AppendLine($"Estadía: {Ticket.Estadia}");
                 sb.AppendLine("--------------------------------");
-                sb.AppendLine($"Fecha de ingreso: {Ticket.FechaHoraEmision}");
-                sb.AppendLine($"Fecha de salida: {FechaHoraPago}");
+                sb.AppendLine($"Ingreso: {Ticket.FechaHoraEmision.ToString("d/M/yy HH:mm")}");
+                sb.AppendLine($"Salida: {FechaHoraPago.ToString("d/M/yy HH:mm")}");
             }
-            sb.AppendLine($"Método de Pago: {MetodoDePago}");
-            sb.AppendLine($"Monto: {Monto}");
-            sb.AppendLine($"Descuento: {MontoDescuento}");
-            sb.AppendLine($"Monto Final: {MontoFinal}");
+
             sb.AppendLine("--------------------------------");
+            sb.AppendLine("Detalle de Costos");
+            sb.AppendLine($"Estacionamiento: ${MontoEstacionamiento:F2}");
+
+            // Mostrar servicios adicionales si existen
+            if (Ticket.TarifasAdicionales != null && Ticket.TarifasAdicionales.Count > 0)
+            {
+                sb.AppendLine("Servicios Adicionales:");
+                foreach (var servicio in Ticket.TarifasAdicionales)
+                {
+                    sb.AppendLine($"  - {servicio.Servicio.Descripcion}: ${servicio.Precio:F2}");
+                }
+                sb.AppendLine($"Subtotal Servicios: ${montoServicios:F2}");
+            }
+
+            if (MontoDescuento > 0)
+            {
+                sb.AppendLine($"Descuento: -${MontoDescuento:F2}");
+            }
+
+            sb.AppendLine("--------------------------------");
+            sb.AppendLine($"Forma Pago: {MetodoDePago}");
+            sb.AppendLine($"TOTAL A PAGAR: ${MontoFinal:F2}");
+            sb.AppendLine("--------------------------------");
+            sb.AppendLine("Gracias por su visita");
+
             return sb.ToString();
         }
     }

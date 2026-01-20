@@ -28,403 +28,440 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            txttipoVehiculo = new ComboBox();
-            groupBox1 = new GroupBox();
-            checkDesc = new CheckBox();
-            dateTimePicker1 = new DateTimePicker();
-            label10 = new Label();
-            TxtDescuento = new ComboBox();
-            label11 = new Label();
-            panel2 = new Panel();
-            label7 = new Label();
-            txttelefono = new TextBox();
-            label6 = new Label();
-            txtPatente = new TextBox();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            panelHeader = new Panel();
+            lblTitulo = new Label();
+            groupBoxCliente = new GroupBox();
+            label5 = new Label();
+            txtNombre = new TextBox();
             label4 = new Label();
             txtdni = new TextBox();
-            label5 = new Label();
+            label7 = new Label();
+            txttelefono = new TextBox();
+            groupBoxPlan = new GroupBox();
             label1 = new Label();
-            txtNombre = new TextBox();
-            label3 = new Label();
+            txttipoVehiculo = new ComboBox();
+            label6 = new Label();
+            txtPatente = new TextBox();
+            checkDesc = new CheckBox();
+            label11 = new Label();
+            TxtDescuento = new ComboBox();
+            label10 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            groupBoxEspacios = new GroupBox();
+            LabelNoLugar = new Label();
+            dataGridView1 = new DataGridView();
             btnaceptar = new Button();
             btncancelar = new Button();
-            label2 = new Label();
-            label9 = new Label();
-            label8 = new Label();
-            dataGridView1 = new DataGridView();
-            LabelNoLugar = new Label();
-            groupBox1.SuspendLayout();
+            panelHeader.SuspendLayout();
+            groupBoxCliente.SuspendLayout();
+            groupBoxPlan.SuspendLayout();
+            groupBoxEspacios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // txttipoVehiculo
+            // panelHeader
             // 
-            txttipoVehiculo.BackColor = Color.Gray;
-            txttipoVehiculo.DropDownStyle = ComboBoxStyle.DropDownList;
-            txttipoVehiculo.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txttipoVehiculo.FormattingEnabled = true;
-            txttipoVehiculo.Items.AddRange(new object[] { "Auto", "Moto", "Camion" });
-            txttipoVehiculo.Location = new Point(443, 52);
-            txttipoVehiculo.Margin = new Padding(4, 3, 4, 3);
-            txttipoVehiculo.Name = "txttipoVehiculo";
-            txttipoVehiculo.Size = new Size(248, 27);
-            txttipoVehiculo.TabIndex = 14;
-            txttipoVehiculo.SelectedIndexChanged += txttipoVehiculo_SelectedIndexChanged;
+            panelHeader.BackColor = Color.FromArgb(0, 122, 204);
+            panelHeader.Controls.Add(lblTitulo);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1350, 60);
+            panelHeader.TabIndex = 0;
             // 
-            // groupBox1
+            // lblTitulo
             // 
-            groupBox1.Controls.Add(checkDesc);
-            groupBox1.Controls.Add(dateTimePicker1);
-            groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(TxtDescuento);
-            groupBox1.Controls.Add(label11);
-            groupBox1.Controls.Add(panel2);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(txttelefono);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(txtPatente);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(txtdni);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(txtNombre);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(txttipoVehiculo);
-            groupBox1.Location = new Point(14, 36);
-            groupBox1.Margin = new Padding(4, 3, 4, 3);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(728, 418);
-            groupBox1.TabIndex = 16;
-            groupBox1.TabStop = false;
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(30, 15);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(270, 38);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Crear Plan Mensual";
             // 
-            // checkDesc
+            // groupBoxCliente
             // 
-            checkDesc.AutoSize = true;
-            checkDesc.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            checkDesc.ForeColor = SystemColors.ButtonFace;
-            checkDesc.Location = new Point(443, 192);
-            checkDesc.Margin = new Padding(4, 3, 4, 3);
-            checkDesc.Name = "checkDesc";
-            checkDesc.Size = new Size(181, 23);
-            checkDesc.TabIndex = 34;
-            checkDesc.Text = "Agregar descuento";
-            checkDesc.UseVisualStyleBackColor = true;
-            checkDesc.CheckedChanged += checkDesc_CheckedChanged;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(331, 348);
-            dateTimePicker1.Margin = new Padding(4, 3, 4, 3);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(360, 28);
-            dateTimePicker1.TabIndex = 33;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.ForeColor = SystemColors.ButtonFace;
-            label10.Location = new Point(42, 355);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(153, 19);
-            label10.TabIndex = 30;
-            label10.Text = "Fecha de Inicio:";
-            // 
-            // TxtDescuento
-            // 
-            TxtDescuento.BackColor = Color.Gray;
-            TxtDescuento.DropDownStyle = ComboBoxStyle.DropDownList;
-            TxtDescuento.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDescuento.FormattingEnabled = true;
-            TxtDescuento.Items.AddRange(new object[] { "Auto", "Moto", "Camion" });
-            TxtDescuento.Location = new Point(443, 261);
-            TxtDescuento.Margin = new Padding(4, 3, 4, 3);
-            TxtDescuento.Name = "TxtDescuento";
-            TxtDescuento.Size = new Size(248, 27);
-            TxtDescuento.TabIndex = 32;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.ForeColor = SystemColors.ButtonFace;
-            label11.Location = new Point(439, 235);
-            label11.Margin = new Padding(4, 0, 4, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(99, 19);
-            label11.TabIndex = 31;
-            label11.Text = "Descuento:";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.White;
-            panel2.Location = new Point(372, 22);
-            panel2.Margin = new Padding(4, 3, 4, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(2, 270);
-            panel2.TabIndex = 29;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.ButtonFace;
-            label7.Location = new Point(42, 163);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(90, 19);
-            label7.TabIndex = 26;
-            label7.Text = "Telefono:";
-            // 
-            // txttelefono
-            // 
-            txttelefono.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txttelefono.Location = new Point(47, 188);
-            txttelefono.Margin = new Padding(4, 3, 4, 3);
-            txttelefono.Name = "txttelefono";
-            txttelefono.Size = new Size(248, 26);
-            txttelefono.TabIndex = 25;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(439, 95);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(81, 19);
-            label6.TabIndex = 24;
-            label6.Text = "Patente:";
-            // 
-            // txtPatente
-            // 
-            txtPatente.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPatente.Location = new Point(443, 127);
-            txtPatente.Margin = new Padding(4, 3, 4, 3);
-            txtPatente.Name = "txtPatente";
-            txtPatente.Size = new Size(248, 26);
-            txtPatente.TabIndex = 23;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(42, 96);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(45, 19);
-            label4.TabIndex = 22;
-            label4.Text = "DNI:";
-            // 
-            // txtdni
-            // 
-            txtdni.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtdni.Location = new Point(47, 121);
-            txtdni.Margin = new Padding(4, 3, 4, 3);
-            txtdni.Name = "txtdni";
-            txtdni.Size = new Size(248, 26);
-            txtdni.TabIndex = 21;
+            groupBoxCliente.BackColor = Color.FromArgb(37, 37, 38);
+            groupBoxCliente.Controls.Add(label5);
+            groupBoxCliente.Controls.Add(txtNombre);
+            groupBoxCliente.Controls.Add(label4);
+            groupBoxCliente.Controls.Add(txtdni);
+            groupBoxCliente.Controls.Add(label7);
+            groupBoxCliente.Controls.Add(txttelefono);
+            groupBoxCliente.FlatStyle = FlatStyle.Flat;
+            groupBoxCliente.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBoxCliente.ForeColor = Color.FromArgb(0, 122, 204);
+            groupBoxCliente.Location = new Point(30, 80);
+            groupBoxCliente.Margin = new Padding(0);
+            groupBoxCliente.Name = "groupBoxCliente";
+            groupBoxCliente.Padding = new Padding(15);
+            groupBoxCliente.Size = new Size(380, 380);
+            groupBoxCliente.TabIndex = 1;
+            groupBoxCliente.TabStop = false;
+            groupBoxCliente.Text = "👤 Datos del Cliente";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(42, 28);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(20, 40);
             label5.Name = "label5";
-            label5.Size = new Size(72, 19);
-            label5.TabIndex = 9;
-            label5.Text = "Nombre:";
+            label5.Size = new Size(168, 28);
+            label5.TabIndex = 0;
+            label5.Text = "Nombre Apellido";
+            // 
+            // txtNombre
+            // 
+            txtNombre.BackColor = Color.FromArgb(45, 45, 48);
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
+            txtNombre.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNombre.ForeColor = Color.White;
+            txtNombre.Location = new Point(20, 75);
+            txtNombre.Name = "txtNombre";
+            txtNombre.PlaceholderText = "Ingrese nombre completo";
+            txtNombre.Size = new Size(340, 37);
+            txtNombre.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(20, 130);
+            label4.Name = "label4";
+            label4.Size = new Size(47, 28);
+            label4.TabIndex = 2;
+            label4.Text = "DNI";
+            // 
+            // txtdni
+            // 
+            txtdni.BackColor = Color.FromArgb(45, 45, 48);
+            txtdni.BorderStyle = BorderStyle.FixedSingle;
+            txtdni.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            txtdni.ForeColor = Color.White;
+            txtdni.Location = new Point(20, 165);
+            txtdni.Name = "txtdni";
+            txtdni.PlaceholderText = "Número de documento";
+            txtdni.Size = new Size(340, 37);
+            txtdni.TabIndex = 3;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(20, 220);
+            label7.Name = "label7";
+            label7.Size = new Size(91, 28);
+            label7.TabIndex = 4;
+            label7.Text = "Teléfono";
+            // 
+            // txttelefono
+            // 
+            txttelefono.BackColor = Color.FromArgb(45, 45, 48);
+            txttelefono.BorderStyle = BorderStyle.FixedSingle;
+            txttelefono.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            txttelefono.ForeColor = Color.White;
+            txttelefono.Location = new Point(20, 255);
+            txttelefono.Name = "txttelefono";
+            txttelefono.PlaceholderText = "Número de contacto";
+            txttelefono.Size = new Size(340, 37);
+            txttelefono.TabIndex = 5;
+            // 
+            // groupBoxPlan
+            // 
+            groupBoxPlan.BackColor = Color.FromArgb(37, 37, 38);
+            groupBoxPlan.Controls.Add(label1);
+            groupBoxPlan.Controls.Add(txttipoVehiculo);
+            groupBoxPlan.Controls.Add(label6);
+            groupBoxPlan.Controls.Add(txtPatente);
+            groupBoxPlan.Controls.Add(checkDesc);
+            groupBoxPlan.Controls.Add(label11);
+            groupBoxPlan.Controls.Add(TxtDescuento);
+            groupBoxPlan.Controls.Add(label10);
+            groupBoxPlan.Controls.Add(dateTimePicker1);
+            groupBoxPlan.FlatStyle = FlatStyle.Flat;
+            groupBoxPlan.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBoxPlan.ForeColor = Color.FromArgb(0, 122, 204);
+            groupBoxPlan.Location = new Point(430, 80);
+            groupBoxPlan.Margin = new Padding(0);
+            groupBoxPlan.Name = "groupBoxPlan";
+            groupBoxPlan.Padding = new Padding(15);
+            groupBoxPlan.Size = new Size(380, 380);
+            groupBoxPlan.TabIndex = 2;
+            groupBoxPlan.TabStop = false;
+            groupBoxPlan.Text = "📋 Datos del Plan";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(439, 27);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(20, 40);
             label1.Name = "label1";
-            label1.Size = new Size(162, 19);
-            label1.TabIndex = 15;
-            label1.Text = "Tipo de vehiculo:";
+            label1.Size = new Size(163, 28);
+            label1.TabIndex = 0;
+            label1.Text = "Tipo de vehículo";
             // 
-            // txtNombre
+            // txttipoVehiculo
             // 
-            txtNombre.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNombre.Location = new Point(47, 53);
-            txtNombre.Margin = new Padding(4, 3, 4, 3);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(248, 26);
-            txtNombre.TabIndex = 1;
+            txttipoVehiculo.BackColor = Color.FromArgb(45, 45, 48);
+            txttipoVehiculo.DropDownStyle = ComboBoxStyle.DropDownList;
+            txttipoVehiculo.FlatStyle = FlatStyle.Flat;
+            txttipoVehiculo.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            txttipoVehiculo.ForeColor = Color.White;
+            txttipoVehiculo.FormattingEnabled = true;
+            txttipoVehiculo.Items.AddRange(new object[] { "Auto", "Moto", "Camion" });
+            txttipoVehiculo.Location = new Point(20, 75);
+            txttipoVehiculo.Name = "txttipoVehiculo";
+            txttipoVehiculo.Size = new Size(340, 38);
+            txttipoVehiculo.TabIndex = 1;
+            txttipoVehiculo.SelectedIndexChanged += txttipoVehiculo_SelectedIndexChanged;
             // 
-            // label3
+            // label6
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(562, -25);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(144, 19);
-            label3.TabIndex = 20;
-            label3.Text = "Datos del plan:";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(20, 130);
+            label6.Name = "label6";
+            label6.Size = new Size(81, 28);
+            label6.TabIndex = 2;
+            label6.Text = "Patente";
             // 
-            // btnaceptar
+            // txtPatente
             // 
-            btnaceptar.BackColor = Color.FromArgb(48, 30, 35);
-            btnaceptar.FlatStyle = FlatStyle.Flat;
-            btnaceptar.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnaceptar.ForeColor = SystemColors.ButtonFace;
-            btnaceptar.Location = new Point(14, 460);
-            btnaceptar.Margin = new Padding(4, 3, 4, 3);
-            btnaceptar.Name = "btnaceptar";
-            btnaceptar.Size = new Size(147, 44);
-            btnaceptar.TabIndex = 18;
-            btnaceptar.Text = "Aceptar";
-            btnaceptar.UseVisualStyleBackColor = false;
-            btnaceptar.Click += btnaceptar_Click;
+            txtPatente.BackColor = Color.FromArgb(45, 45, 48);
+            txtPatente.BorderStyle = BorderStyle.FixedSingle;
+            txtPatente.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPatente.ForeColor = Color.White;
+            txtPatente.Location = new Point(20, 165);
+            txtPatente.Name = "txtPatente";
+            txtPatente.PlaceholderText = "Ej: ABC123";
+            txtPatente.Size = new Size(340, 37);
+            txtPatente.TabIndex = 3;
             // 
-            // btncancelar
+            // checkDesc
             // 
-            btncancelar.BackColor = Color.FromArgb(32, 30, 45);
-            btncancelar.FlatStyle = FlatStyle.Flat;
-            btncancelar.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btncancelar.ForeColor = SystemColors.ButtonFace;
-            btncancelar.Location = new Point(595, 460);
-            btncancelar.Margin = new Padding(4, 3, 4, 3);
-            btncancelar.Name = "btncancelar";
-            btncancelar.Size = new Size(147, 44);
-            btncancelar.TabIndex = 17;
-            btncancelar.Text = "Cancelar";
-            btncancelar.UseVisualStyleBackColor = false;
-            btncancelar.Click += btncancelar_Click;
+            checkDesc.AutoSize = true;
+            checkDesc.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            checkDesc.ForeColor = Color.White;
+            checkDesc.Location = new Point(20, 220);
+            checkDesc.Name = "checkDesc";
+            checkDesc.Size = new Size(204, 32);
+            checkDesc.TabIndex = 4;
+            checkDesc.Text = "Agregar descuento";
+            checkDesc.UseVisualStyleBackColor = true;
+            checkDesc.CheckedChanged += checkDesc_CheckedChanged;
             // 
-            // label2
+            // label11
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(9, 10);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(162, 19);
-            label2.TabIndex = 19;
-            label2.Text = "Datos del cliente";
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(20, 255);
+            label11.Name = "label11";
+            label11.Size = new Size(109, 28);
+            label11.TabIndex = 5;
+            label11.Text = "Descuento";
             // 
-            // label9
+            // TxtDescuento
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(382, 10);
-            label9.Margin = new Padding(4, 0, 4, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(135, 19);
-            label9.TabIndex = 20;
-            label9.Text = "Datos del plan";
+            TxtDescuento.BackColor = Color.FromArgb(45, 45, 48);
+            TxtDescuento.DropDownStyle = ComboBoxStyle.DropDownList;
+            TxtDescuento.FlatStyle = FlatStyle.Flat;
+            TxtDescuento.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtDescuento.ForeColor = Color.White;
+            TxtDescuento.FormattingEnabled = true;
+            TxtDescuento.Location = new Point(20, 290);
+            TxtDescuento.Name = "TxtDescuento";
+            TxtDescuento.Size = new Size(150, 38);
+            TxtDescuento.TabIndex = 6;
             // 
-            // label8
+            // label10
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = SystemColors.ButtonFace;
-            label8.Location = new Point(750, 24);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(180, 19);
-            label8.TabIndex = 38;
-            label8.Text = "Espacio de parqueo:";
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(190, 255);
+            label10.Name = "label10";
+            label10.Size = new Size(119, 28);
+            label10.TabIndex = 7;
+            label10.Text = "Fecha Inicio";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.CalendarMonthBackground = Color.FromArgb(45, 45, 48);
+            dateTimePicker1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker1.Location = new Point(190, 291);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(170, 37);
+            dateTimePicker1.TabIndex = 8;
+            // 
+            // groupBoxEspacios
+            // 
+            groupBoxEspacios.BackColor = Color.FromArgb(37, 37, 38);
+            groupBoxEspacios.Controls.Add(LabelNoLugar);
+            groupBoxEspacios.Controls.Add(dataGridView1);
+            groupBoxEspacios.FlatStyle = FlatStyle.Flat;
+            groupBoxEspacios.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBoxEspacios.ForeColor = Color.FromArgb(0, 122, 204);
+            groupBoxEspacios.Location = new Point(830, 80);
+            groupBoxEspacios.Margin = new Padding(0);
+            groupBoxEspacios.Name = "groupBoxEspacios";
+            groupBoxEspacios.Padding = new Padding(15);
+            groupBoxEspacios.Size = new Size(490, 380);
+            groupBoxEspacios.TabIndex = 3;
+            groupBoxEspacios.TabStop = false;
+            groupBoxEspacios.Text = "🅿️ Espacios de Parqueo";
+            // 
+            // LabelNoLugar
+            // 
+            LabelNoLugar.AutoSize = true;
+            LabelNoLugar.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            LabelNoLugar.ForeColor = Color.FromArgb(220, 53, 69);
+            LabelNoLugar.Location = new Point(246, 27);
+            LabelNoLugar.Name = "LabelNoLugar";
+            LabelNoLugar.Size = new Size(224, 30);
+            LabelNoLugar.TabIndex = 1;
+            LabelNoLugar.Text = "⚠ No hay espacios!";
+            LabelNoLugar.Visible = false;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 192, 192);
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.FromArgb(32, 30, 45);
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.GridColor = SystemColors.ActiveCaptionText;
-            dataGridView1.Location = new Point(750, 46);
-            dataGridView1.Margin = new Padding(4, 3, 4, 3);
+            dataGridView1.BackgroundColor = Color.FromArgb(45, 45, 48);
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 122, 204);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 122, 204);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.ColumnHeadersHeight = 40;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(37, 37, 38);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(0, 122, 204);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 122, 204);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.GridColor = Color.FromArgb(50, 50, 50);
+            dataGridView1.Location = new Point(20, 60);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridView1.Size = new Size(484, 408);
-            dataGridView1.TabIndex = 37;
+            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(37, 37, 38);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView1.RowTemplate.Height = 35;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(450, 300);
+            dataGridView1.TabIndex = 0;
             // 
-            // LabelNoLugar
+            // btnaceptar
             // 
-            LabelNoLugar.AutoSize = true;
-            LabelNoLugar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            LabelNoLugar.ForeColor = Color.Red;
-            LabelNoLugar.Location = new Point(937, 24);
-            LabelNoLugar.Name = "LabelNoLugar";
-            LabelNoLugar.Size = new Size(120, 20);
-            LabelNoLugar.TabIndex = 36;
-            LabelNoLugar.Text = "No hay espacio!";
-            LabelNoLugar.Visible = false;
+            btnaceptar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnaceptar.BackColor = Color.FromArgb(40, 167, 69);
+            btnaceptar.FlatAppearance.BorderSize = 0;
+            btnaceptar.FlatStyle = FlatStyle.Flat;
+            btnaceptar.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnaceptar.ForeColor = Color.White;
+            btnaceptar.Location = new Point(30, 480);
+            btnaceptar.Name = "btnaceptar";
+            btnaceptar.Size = new Size(180, 50);
+            btnaceptar.TabIndex = 4;
+            btnaceptar.Text = "✓ Crear Plan";
+            btnaceptar.UseVisualStyleBackColor = false;
+            btnaceptar.Click += btnaceptar_Click;
+            // 
+            // btncancelar
+            // 
+            btncancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btncancelar.BackColor = Color.FromArgb(220, 53, 69);
+            btncancelar.FlatAppearance.BorderSize = 0;
+            btncancelar.FlatStyle = FlatStyle.Flat;
+            btncancelar.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btncancelar.ForeColor = Color.White;
+            btncancelar.Location = new Point(1140, 480);
+            btncancelar.Name = "btncancelar";
+            btncancelar.Size = new Size(180, 50);
+            btncancelar.TabIndex = 5;
+            btncancelar.Text = "✖ Cancelar";
+            btncancelar.UseVisualStyleBackColor = false;
+            btncancelar.Click += btncancelar_Click;
             // 
             // FormPlan
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(35, 32, 39);
-            ClientSize = new Size(1247, 522);
+            BackColor = Color.FromArgb(30, 30, 30);
+            ClientSize = new Size(1350, 550);
             ControlBox = false;
-            Controls.Add(label8);
-            Controls.Add(dataGridView1);
-            Controls.Add(LabelNoLugar);
-            Controls.Add(label9);
-            Controls.Add(label2);
-            Controls.Add(btnaceptar);
             Controls.Add(btncancelar);
-            Controls.Add(groupBox1);
-            Margin = new Padding(4, 3, 4, 3);
+            Controls.Add(btnaceptar);
+            Controls.Add(groupBoxEspacios);
+            Controls.Add(groupBoxPlan);
+            Controls.Add(groupBoxCliente);
+            Controls.Add(panelHeader);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "FormPlan";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            groupBoxCliente.ResumeLayout(false);
+            groupBoxCliente.PerformLayout();
+            groupBoxPlan.ResumeLayout(false);
+            groupBoxPlan.PerformLayout();
+            groupBoxEspacios.ResumeLayout(false);
+            groupBoxEspacios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private ComboBox txttipoVehiculo;
-        private GroupBox groupBox1;
+        private Panel panelHeader;
+        private Label lblTitulo;
+        private GroupBox groupBoxCliente;
         private Label label5;
         private TextBox txtNombre;
-        private Label label1;
-        private Button btnaceptar;
-        private Button btncancelar;
-        private Label label2;
-        private Label label3;
-        private Label label6;
-        private TextBox txtPatente;
         private Label label4;
         private TextBox txtdni;
         private Label label7;
         private TextBox txttelefono;
-        private Panel panel2;
-        private Label label9;
-        private Label label10;
+        private GroupBox groupBoxPlan;
+        private Label label1;
+        private ComboBox txttipoVehiculo;
+        private Label label6;
+        private TextBox txtPatente;
+        private CheckBox checkDesc;
         private Label label11;
         private ComboBox TxtDescuento;
+        private Label label10;
         private DateTimePicker dateTimePicker1;
-        private CheckBox checkDesc;
-        private Label label8;
-        private DataGridView dataGridView1;
+        private GroupBox groupBoxEspacios;
         private Label LabelNoLugar;
+        private DataGridView dataGridView1;
+        private Button btnaceptar;
+        private Button btncancelar;
     }
 }

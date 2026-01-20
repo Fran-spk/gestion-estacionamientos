@@ -5,18 +5,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Modelo_Ids;
 
 namespace Vista
 {
     public partial class formTarifa : Form
     {
         char Modo = 'A';
-        Tarifa Tarifa;
+        TarifaEstacionamiento Tarifa;
         public formTarifa()
         {
             InitializeComponent();
             llenarComboTipos();
-            Tarifa = new Tarifa();
+            Tarifa = new TarifaEstacionamiento();
         }
 
 
@@ -27,7 +28,7 @@ namespace Vista
             comboBox1.DataSource = ControladoraTiposVehiculo.Instancia.getAllTiposVehiculo();
         }
 
-        void LlenarTxt(Tarifa tarifa)
+        void LlenarTxt(TarifaEstacionamiento tarifa)
         {
             if (tarifa != null)
             {
@@ -49,7 +50,7 @@ namespace Vista
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var tipovehiculo = (TipoVehiculo)comboBox1.SelectedItem;
-            var tarifa = ControladoraTarifas.Instancia.getAllTarifasActuales().FirstOrDefault(x => x.TipoVehiculo.NombreVehiculo == tipovehiculo.NombreVehiculo);
+            var tarifa = ControladoraTarifasEstacionamiento.Instancia.getAllTarifasActuales().FirstOrDefault(x => x.TipoVehiculo.NombreVehiculo == tipovehiculo.NombreVehiculo);
             LlenarTxt(tarifa);
         }
 
@@ -68,15 +69,16 @@ namespace Vista
             }
             try
             {
-                Tarifa.PrecioMediaHora = decimal.Parse(txtMedHora.Text);
-                Tarifa.PrecioHora = decimal.Parse(txtHora.Text);
-                Tarifa.PrecioDia = decimal.Parse(txtDia.Text);
-                Tarifa.PrecioMes = decimal.Parse(textMes.Text);
+                var tarifa = TarifaFactory.CrearTarifa(
+                    tipoVehiculo: (TipoVehiculo)comboBox1.SelectedItem,
+                    precio: 0,
+                    precioHora: decimal.Parse(txtHora.Text),
+                    precioDia: decimal.Parse(txtDia.Text),
+                    precioMes: decimal.Parse(textMes.Text)
+                );
 
-                Tarifa.TipoVehiculo = (TipoVehiculo)comboBox1.SelectedItem;
-                Tarifa.FechaHoraActualizacion = DateTime.Now;
-                Tarifa.Vigente = true;
-                var msj = ControladoraTarifas.Instancia.ActualizarTarifa(Tarifa);
+                var msj = ControladoraTarifasEstacionamiento.Instancia.ActualizarTarifa(tarifa as TarifaEstacionamiento);
+
                 MessageBox.Show(msj, "Atencion");
 
                 this.Close();

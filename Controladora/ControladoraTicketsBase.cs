@@ -36,7 +36,7 @@ namespace Controladora
 
         public ReadOnlyCollection<TicketBase> getAllTickets()
         {
-            return Estacionamiento.Contexto.Tickets_Base.Include(x => x.Tarifa).Include(x=>x.Estado).ToList().ToList().AsReadOnly();
+            return Estacionamiento.Contexto.Tickets_Base.Include(x => x.TarifaEstacionamiento).Include(x=>x.Estado).ToList().ToList().AsReadOnly();
         }
 
         public ReadOnlyCollection<Estado_Ticket> getAllEstados()
@@ -46,7 +46,7 @@ namespace Controladora
 
         public ReadOnlyCollection<Ticket> getAllTicketsPendientes()
         {
-            return Estacionamiento.Contexto.Tickets_Base.Include(x=>x.Tarifa).Include(x => x.Estado)     
+            return Estacionamiento.Contexto.Tickets_Base.Include(x=>x.TarifaEstacionamiento).Include(x => x.Estado)     
                 .OfType<Ticket>().Where(x=>x.Estado.Nombre == "Pendiente").ToList().AsReadOnly();          
         }
 

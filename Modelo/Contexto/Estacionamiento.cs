@@ -37,12 +37,14 @@ namespace MODELO.contexto
         public virtual DbSet<Ticket> Tickets { get; set; }
         public virtual DbSet<Cuota> Cuotas { get; set; }
         public virtual DbSet<TicketBase> Tickets_Base { get; set; }
-        public virtual DbSet<Tarifa> Tarifas { get; set; }
+        public virtual DbSet<TarifaEstacionamiento> Tarifas_Estacionamiento { get; set; }
+        public virtual DbSet<TarifaServicio> Tarifa_Servicios { get; set; }
         public virtual DbSet<Plan> Planes { get; set; }
         public virtual DbSet<Descuento> Descuentos { get; set; }
         public virtual DbSet<MetodoDePago> Metodos_Pagos { get; set; }
         public virtual DbSet<Pago> Pagos { get; set; }
         public virtual DbSet<TipoVehiculo> Tipos_Vehiculos { get; set; }
+        public virtual DbSet<TipoServicio> Tipo_Servicios { get; set; }
         public virtual DbSet<Espacio> Espacios { get; set; }
         public virtual DbSet<Estado_Ticket> Estados_Tickets { get; set; }
 
@@ -68,12 +70,16 @@ namespace MODELO.contexto
                 .HasBaseType<Persona>();
 
             modelBuilder.Entity<Pago>()
-    .Property(nameof(Pago.Monto))
-    .HasField("monto");
+            .Property(nameof(Pago.MontoEstacionamiento))
+            .HasField("montoEstacionamiento");
+
+            modelBuilder.Entity<Pago>()
+            .Property(nameof(Pago.MontoServicios))
+            .HasField("montoServicios");
 
             modelBuilder.Entity<Pago>()
                 .Property(nameof(Pago.MontoDescuento))
-                .HasField("montodescuento");
+                .HasField("montoDescuento");
 
             modelBuilder.Entity<Pago>()
                 .Property(nameof(Pago.MontoFinal))
@@ -83,8 +89,34 @@ namespace MODELO.contexto
                 .Property(nameof(Pago.FechaHoraPago))
                 .HasField("fechahorapago");
 
+            modelBuilder.Entity<TicketBase>()
+                .ToTable("Tickets_Base")
+                .HasDiscriminator<string>("Discriminator")
+                .HasValue<Ticket>("Ticket")
+                .HasValue<Cuota>("Cuota");
 
+            modelBuilder.Entity<TicketBase>()
+                .HasMany(t => t.TarifasAdicionales)
+                .WithMany(s => s.Tickets)
+                .UsingEntity<Dictionary<string, object>>(
+                    "TicketTarifaServicio", 
+                    j => j
+                        .HasOne<TarifaServicio>() 
+                        .WithMany()
+                        .HasForeignKey("TarifaServicioId")
+                        .OnDelete(DeleteBehavior.NoAction),
+                    j => j
+                        .HasOne<TicketBase>() 
+                        .WithMany()
+                        .HasForeignKey("TicketBaseId") 
+                        .OnDelete(DeleteBehavior.NoAction),
+                    j =>
+                    {
+                        j.HasKey("TicketBaseId", "TarifaServicioId"); 
+                        j.ToTable("TicketTarifaServicio"); 
+                    });
         }
+
     }
 
 }

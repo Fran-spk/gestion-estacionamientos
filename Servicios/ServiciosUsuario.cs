@@ -25,13 +25,13 @@ namespace Servicios
                     return instancia;
                 }
             }
-            public bool SendMail(Usuario usuario)
+            public bool SendMail(Usuario usuario, string claveNueva)
             {
 
                 string Body = $@"
                  <h1 style=""color: dodgerblue;"">¡Bienvenido a Nuestro Servicio!</h1>
                  <h1 style=""color: darkorange;"">Sistema de estacionamiento</h1>
-                 <h2 style=""color: dodgerblue;"">Su contraseña de ingreso es: {usuario.USU_CLAVE}</h2>
+                 <h2 style=""color: dodgerblue;"">Su contraseña de ingreso es: {claveNueva}</h2>
                  <h2 style=""color: dodgerblue;"">Gracias por unirte a nuestra comunidad.</h2>";
 
                 string from = "softwareestacionamiento@gmail.com";
