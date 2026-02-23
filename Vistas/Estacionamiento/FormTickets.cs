@@ -16,6 +16,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using Vista.Configuraciones;
+using Servicios;
 
 
 namespace Vista
@@ -33,8 +35,7 @@ namespace Vista
 
         private void FormVehiculo_Load(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Gestionar Tickets");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Gestionar Tickets"))
             {
                 MessageBox.Show("Necesita permisos");
                 this.Close();
@@ -59,8 +60,15 @@ namespace Vista
 
         void ActualizoGrillaFiltro()
         {
-            var Tickets = ControladoraTicketsBase.Instancia.getAllTickets().Where(x => x.FechaHoraEmision.Date >= Desde.Value.Date && x.FechaHoraEmision.Date <= Hasta.Value.Date).ToList();
-            var T = Tickets.Where(x => x.Estadia.GetType() == comboBox1.SelectedItem.GetType()).ToList();
+            ControladoraTicketsDiarios.Instancia.ActualizarTicketsVencidos();
+            var Tickets = ControladoraTicketsDiarios.Instancia.getAllTickets()
+                 .Where(x => x.FechaHoraEmision.Date >= Desde.Value.Date && x.FechaHoraEmision.Date <= Hasta.Value.Date).ToList();
+            var cuotas = ControladoraCuotas.Instancia.getAllCuotas()
+                .Where(x => x.FechaHoraEmision.Date >= Desde.Value.Date && x.FechaHoraEmision.Date <= Hasta.Value.Date).ToList();
+            List<TicketBase> todos = Tickets.Cast<TicketBase>()
+            .Concat(cuotas.Cast<TicketBase>())
+            .ToList();
+            var T = todos.Where(x => x.Estadia.GetType() == comboBox1.SelectedItem.GetType()).ToList();
             if (checkBox1.Checked || checkBoxAnulados.Checked)
             {
                 T = T.Where(x =>
@@ -78,9 +86,16 @@ namespace Vista
 
         void ActualizoGrilla()
         {
-            var Tickets = ControladoraTicketsBase.Instancia.getAllTickets().Where(x => x.FechaHoraEmision.Date >= Desde.Value.Date && x.FechaHoraEmision.Date <= Hasta.Value.Date).ToList();
+            ControladoraTicketsDiarios.Instancia.ActualizarTicketsVencidos();
+            var Tickets = ControladoraTicketsDiarios.Instancia.getAllTickets()
+                .Where(x => x.FechaHoraEmision.Date >= Desde.Value.Date && x.FechaHoraEmision.Date <= Hasta.Value.Date).ToList();
+            var cuotas = ControladoraCuotas.Instancia.getAllCuotas()
+                .Where(x => x.FechaHoraEmision.Date >= Desde.Value.Date && x.FechaHoraEmision.Date <= Hasta.Value.Date).ToList();
+            List<TicketBase> todos = Tickets.Cast<TicketBase>()
+            .Concat(cuotas.Cast<TicketBase>())
+            .ToList();
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = Tickets;
+            dataGridView1.DataSource = todos;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -93,10 +108,10 @@ namespace Vista
             if (dataGridView1.CurrentRow != null)
             {
                 var ticket = (TicketBase)dataGridView1.CurrentRow.DataBoundItem;
-                if (ticket is Ticket)
+                if (ticket is Ticket_Diario ticketDiario)
                 {
-                    var estado = ControladoraTicketsBase.Instancia.getAllEstados().FirstOrDefault(x => x.Nombre == "Cancelado") ?? new Estado_Ticket();
-                    var ok = ControladoraTicketsBase.Instancia.AnularTicket(ticket, estado);
+                    var estado = ControladoraCuotas.Instancia.getAllEstados().FirstOrDefault(x => x.Nombre == "Cancelado") ?? new Estado_Ticket();
+                    var ok = ControladoraTicketsDiarios.Instancia.AnularTicket(ticketDiario, estado, Sesion.Instancia.Perfil.PER_ID);
                     MessageBox.Show(ok);
                     ActualizoGrilla();
                 }
@@ -132,6 +147,7 @@ namespace Vista
                 {
                     var form = new FormPagoDetalle(pago);
                     form.ShowDialog();
+                    ActualizoGrilla();
                 }
                 else
                 {
@@ -148,6 +164,33 @@ namespace Vista
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un ticket.");
+                return;
+            }
+
+            var ticket = dataGridView1.CurrentRow.DataBoundItem as TicketBase;
+
+            if (ticket == null)
+            {
+                MessageBox.Show("No se pudo obtener el ticket seleccionado.");
+                return;
+            }
+
+            if (ticket is Ticket_Diario t)
+            {
+                var form = new FormTrazabilidadTicket(t);
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un ticket diario.");
+            }
         }
     }
 }

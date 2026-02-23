@@ -42,7 +42,7 @@ namespace MODELO
 
         public override string ToString()
         {
-            return NombreDescuento;
+            return NombreDescuento + "-"+porcentaje+"%";
         }
     }
 }

@@ -9,23 +9,10 @@ using MODELO.seguridad;
 
 namespace Servicios
 {
-    public class ServiciosUsuario
+    public static class ServiciosUsuario
     {
-        
-            private static ServiciosUsuario instancia;
-            private ServiciosUsuario() { }
-            public static ServiciosUsuario Instancia
-            {
-                get
-                {
-                    if (instancia == null)
-                    {
-                        instancia = new ServiciosUsuario();
-                    }
-                    return instancia;
-                }
-            }
-            public bool SendMail(Usuario usuario, string claveNueva)
+       
+            public static  bool SendMail(Usuario usuario, string claveNueva)
             {
 
                 string Body = $@"
@@ -59,9 +46,12 @@ namespace Servicios
                 }
                 return true;
             }
-
-
-            public string EncriptarClave(string clave)
+        public static string GenerarPassword()
+        {
+            var random = new Random();
+            return string.Concat(Enumerable.Range(0, 5).Select(_ => random.Next(0, 9).ToString()));
+        }
+        public static string EncriptarClave(string clave)
             {
                 StringBuilder sb = new StringBuilder();
                 using (SHA256 sha256 = SHA256.Create())

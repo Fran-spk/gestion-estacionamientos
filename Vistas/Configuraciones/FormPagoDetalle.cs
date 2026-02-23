@@ -3,222 +3,288 @@ using Controladora;
 using System;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.Text;
+using System.Linq;
 using System.Windows.Forms;
 using MODELO.seguridad;
+using Modelo_Ids;
+using Servicios;
 
 namespace Vista
 {
     public partial class FormPagoDetalle : Form
     {
-        PrintDocument pd = new PrintDocument(); 
-        PrintPreviewDialog ppd = new PrintPreviewDialog();
-        int longpaper;
-        Pago Pago;
+   
+        private readonly PrintDocument _pd = new PrintDocument();
+        private readonly PrintPreviewDialog _ppd = new PrintPreviewDialog();
+        private readonly ReciboService _reciboService = new ReciboService();
+        private readonly Pago _pago;
+        private int _longPaper;
+
+
+        private const int MargenIzq = 15;
+        private const int AnchoRecibo = 300;
+
+        private static readonly Font FontTitulo = new Font("Arial", 12, FontStyle.Bold);
+        private static readonly Font FontSubtitulo = new Font("Arial", 9, FontStyle.Bold);
+        private static readonly Font FontNormal = new Font("Arial", 8);
+        private static readonly Font FontPequeño = new Font("Arial", 7);
+
+      
         public FormPagoDetalle(Pago pago)
         {
             InitializeComponent();
-            LlenarDatos(pago);
-            Pago = pago;          
-            changelongerpaper();
+            _pago = pago;
+            CalcularLongitudPapel();
+            _pd.BeginPrint += PD_BeginPrint;
+            _pd.PrintPage += PD_PrintPage;
+            _ppd.Document = _pd;
+            _ppd.ShowDialog();
+            LlenarDatos();
         }
 
-        public FormPagoDetalle(Pago pago, String Salida)
+        // ─── Inicialización del form ─────────────────────────────────────
+        void CalcularLongitudPapel()
         {
-            InitializeComponent();
-            if (!ValidarPermisoImprimir())
+            string recibo = _reciboService.GenerarRecibo(_pago);
+            int cantLineas = recibo.Split(new[] { Environment.NewLine }, StringSplitOptions.None).Length;
+
+            // 15px por línea + margen generoso para encabezado y pie
+            _longPaper = (cantLineas * 15) + 120;
+        }
+
+        void LlenarDatos()
+        {
+            Txtpatente.Text = _pago.Patente;
+            TxtDescuento.Text = _pago.MontoDescuento.ToString("N2");
+            TxtMontoFinal.Text = _pago.MontoTotal.ToString("N2");
+            TxtFecha.Text = _pago.FechaHoraPago.ToShortTimeString();
+            lbMetodo.Text = _pago.MetodoDePago?.ToString() ?? "No especificado";
+            labelSelectorPago.Text = $"💳 Nro de pago {_pago.PagoId}";
+
+            var montoBase = _pago.Detalles.Where(d => d.Ticket != null).Sum(d => d.Monto);
+            TxtMonto.Text = montoBase.ToString("N2");
+
+            var ticketDiario = _pago.Detalles.Select(d => d.Ticket).OfType<Ticket_Diario>().FirstOrDefault();
+            TxtEstadia.Text = ticketDiario?.Estadia.ToString() ?? "Sin estadía";
+
+            CargarServiciosAdicionales();
+        }
+
+        void CargarServiciosAdicionales()
+        {
+            flowLayoutServicios.Controls.Clear();
+
+            var servicios = _pago.Detalles
+                .Where(d => d.ServicioConsumido != null)
+                .Select(d => d.ServicioConsumido!)
+                .ToList();
+
+            if (!servicios.Any())
             {
-                this.Close();
+                flowLayoutServicios.Controls.Add(new Label
+                {
+                    Text = "Sin servicios adicionales",
+                    ForeColor = Color.FromArgb(150, 150, 150),
+                    Font = new Font("Segoe UI", 8F, FontStyle.Italic),
+                    AutoSize = true,
+                    Padding = new Padding(5, 2, 5, 2)
+                });
                 return;
             }
-            Pago = pago;
-            changelongerpaper();
-            ppd.Document = pd;
-            ppd.ShowDialog();
-        }
-        private bool ValidarPermisoImprimir()
-        {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Imprimir tickets");
-            if (Accion == null)
+
+            foreach (var servicio in servicios)
             {
-                MessageBox.Show("Necesita permisos");
-                return false;
+                var panel = new Panel
+                {
+                    Width = 310,
+                    Height = 25,
+                    Margin = new Padding(1),
+                    BackColor = Color.FromArgb(45, 45, 48)
+                };
+
+                string descripcion =
+                    servicio.TarifaServicio.ServicioVehiculo.Servicio.Descripcion +
+                    " para " +
+                    servicio.TarifaServicio.ServicioVehiculo.Vehiculo.NombreVehiculo;
+
+                var lblNombre = new Label
+                {
+                    Text = descripcion,
+                    ForeColor = Color.White,
+                    Font = new Font("Segoe UI", 8F),
+                    AutoSize = true,
+                    Location = new Point(5, 2)
+                };
+                panel.Controls.Add(lblNombre);
+
+                Label lblEstado;
+                if (servicio.Anulado)
+                    lblEstado = new Label { Text = "ANULADO", ForeColor = Color.FromArgb(220, 53, 69), Font = new Font("Segoe UI", 8F, FontStyle.Bold) };
+                else if (servicio.Pagado)
+                    lblEstado = new Label { Text = $"${servicio.TarifaServicio.Precio:N2}", ForeColor = Color.FromArgb(76, 175, 80), Font = new Font("Segoe UI", 8F, FontStyle.Bold) };
+                else
+                    lblEstado = new Label { Text = "PENDIENTE", ForeColor = Color.FromArgb(255, 193, 7), Font = new Font("Segoe UI", 8F, FontStyle.Italic) };
+
+                lblEstado.AutoSize = true;
+                lblEstado.Location = new Point(lblNombre.Right + 8, 2);
+                panel.Controls.Add(lblEstado);
+                flowLayoutServicios.Controls.Add(panel);
             }
-            return true;
         }
 
-       
-
-        void changelongerpaper()
+        // ─── Impresión ───────────────────────────────────────────────────
+        void PD_BeginPrint(object sender, PrintEventArgs e)
         {
-            pd.BeginPrint += new PrintEventHandler(PD_BeginPrint);
-            pd.PrintPage += new PrintPageEventHandler(PD_PrintPage);
-            if (Pago.Ticket is Cuota)
+            _pd.DefaultPageSettings = new PageSettings
             {
-                longpaper = 15 * 17 + 230;
-            }
-            else
-            {
-                longpaper = 15 * 12 + 230;
-            }
-                
+                PaperSize = new PaperSize("Custom", 330, _longPaper) 
+            };
         }
 
-        void LlenarDatos(Pago pago)
+        void PD_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Txtpatente.Text = pago.Ticket.Patente.ToString();
-            TxtEstadia.Text = pago.Ticket.Estadia.ToString();
-            TxtMonto.Text = pago.MontoEstacionamiento.ToString();
-            TxtDescuento.Text = pago.MontoDescuento.ToString();
-            TxtMontoFinal.Text = pago.MontoFinal.ToString();
-            TxtFecha.Text = pago.FechaHoraPago.ToShortTimeString();
-            lbMetodo.Text = pago.MetodoDePago != null ? pago.MetodoDePago.ToString() : "No especificado";
-        }
-
-        private void BtnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        void PD_BeginPrint(object sender, PrintEventArgs e) //valores del papel
-        {
-            PageSettings page = new PageSettings();
-            page.PaperSize = new PaperSize("Custom", 250, longpaper);
-            pd.DefaultPageSettings = page;
-        }
-
-        private void PD_PrintPage(object sender, PrintPageEventArgs e)
-        {
+            string recibo = _reciboService.GenerarRecibo(_pago);
             Graphics g = e.Graphics;
 
-            // Fuentes mejoradas
-            Font fontTitulo = new Font("Arial", 14, FontStyle.Bold);
-            Font fontSubtitulo = new Font("Arial", 11, FontStyle.Bold);
-            Font fontNormal = new Font("Arial", 10);
-            Font fontPequeño = new Font("Arial", 8);
-
-            // Colores y brochas
-            Brush brushNegro = Brushes.Black;
-            Brush brushGris = Brushes.DarkGray;
-            Pen penLinea = new Pen(Color.Black, 1);
-            Pen penLineaPunteada = new Pen(Color.Gray, 1);
+            using var penLinea = new Pen(Color.Black, 1);
+            using var penLineaPunteada = new Pen(Color.Gray, 1);
             penLineaPunteada.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
 
-            int y = 20;
-            int margenIzq = 15;
-            int anchoRecibo = 220;
-            int separacionColumna = 120; // Ajustado para mejor separación
+            int y = 15;
 
-            // Encabezado - Logo/Nombre del estacionamiento
-            g.DrawString("ESTACIONAMIENTO", fontTitulo, brushNegro, new PointF(margenIzq + 25, y));
-            y += 25;
-            g.DrawString("Sistema de Gestión", fontPequeño, brushGris, new PointF(margenIzq + 55, y));
-            y += 20;
+            // Encabezado fijo del ticket físico
+            DibujarCentrado(g, "ESTACIONAMIENTO", FontTitulo, Brushes.Black, ref y, 18);
+            DibujarCentrado(g, "Sistema de Gestión", FontPequeño, Brushes.DarkGray, ref y, 15);
+            g.DrawLine(penLinea, MargenIzq, y, MargenIzq + AnchoRecibo, y);
+            y += 12;
 
-            // Línea separadora
-            g.DrawLine(penLinea, margenIzq, y, margenIzq + anchoRecibo, y);
-            y += 15;
+            foreach (var linea in recibo.Split(new[] { Environment.NewLine }, StringSplitOptions.None))
+                RenderizarLinea(g, linea, penLinea, penLineaPunteada, ref y);
 
-            // Información del recibo
-            string recibo = Pago.GenerarRecibo();
-            string[] lineas = recibo.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            // Pie
+            y += 8;
+            g.DrawLine(penLineaPunteada, MargenIzq, y, MargenIzq + AnchoRecibo, y);
+            y += 12;
+            DibujarCentrado(g, "¡Gracias por su visita!", FontPequeño, Brushes.DarkGray, ref y, 12);
+            DibujarCentrado(g, DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"), FontPequeño, Brushes.DarkGray, ref y, 0);
+        }
 
-            foreach (string linea in lineas)
+        // ─── Renderizado de cada línea del recibo ────────────────────────
+        void RenderizarLinea(Graphics g, string linea, Pen penLinea, Pen penPunteada, ref int y)
+        {
+            if (string.IsNullOrWhiteSpace(linea))
             {
-                if (string.IsNullOrWhiteSpace(linea))
-                {
-                    // Línea punteada para separadores vacíos
-                    y += 5;
-                    g.DrawLine(penLineaPunteada, margenIzq, y, margenIzq + anchoRecibo, y);
-                    y += 10;
-                }
-                else if (linea.Contains("TOTAL") || linea.Contains("Total") || linea.Contains("MONTO FINAL"))
-                {
-                    // Destacar totales
-                    y += 5;
-                    g.DrawLine(penLinea, margenIzq, y, margenIzq + anchoRecibo, y);
-                    y += 10;
-                    g.DrawString(linea, fontSubtitulo, brushNegro, new PointF(margenIzq, y));
-                    y += 25;
-                    g.DrawLine(penLinea, margenIzq, y, margenIzq + anchoRecibo, y);
-                    y += 5;
-                }
-                else if (linea.Contains(":"))
-                {
-                    // Formato clave: valor con alineación
-                    string[] partes = linea.Split(new[] { ':' }, 2);
-                    if (partes.Length == 2)
-                    {
-                        // Dibujar etiqueta (clave)
-                        g.DrawString(partes[0] + ":", fontNormal, brushGris, new PointF(margenIzq, y));
-
-                        // Dibujar valor alineado a la derecha del recibo
-                        string valor = partes[1].Trim();
-                        SizeF tamañoValor = g.MeasureString(valor, fontNormal);
-                        float posicionValor = margenIzq + anchoRecibo - tamañoValor.Width;
-                        g.DrawString(valor, fontNormal, brushNegro, new PointF(posicionValor, y));
-                    }
-                    else
-                    {
-                        g.DrawString(linea, fontNormal, brushNegro, new PointF(margenIzq, y));
-                    }
-                    y += 22;
-                }
-                else
-                {
-                    // Líneas normales centradas o alineadas a la izquierda
-                    if (linea.Contains("*") || linea.StartsWith("Software") || linea.StartsWith("Calle"))
-                    {
-                        // Centrar estas líneas
-                        SizeF tamañoLinea = g.MeasureString(linea, fontNormal);
-                        float posicionCentro = margenIzq + (anchoRecibo - tamañoLinea.Width) / 2;
-                        g.DrawString(linea, fontNormal, brushNegro, new PointF(posicionCentro, y));
-                    }
-                    else
-                    {
-                        g.DrawString(linea, fontNormal, brushNegro, new PointF(margenIzq, y));
-                    }
-                    y += 22;
-                }
+                y += 3;
+                g.DrawLine(penPunteada, MargenIzq, y, MargenIzq + AnchoRecibo, y);
+                y += 6;
+                return;
             }
 
-            // Pie de página
-            y += 10;
-            g.DrawLine(penLineaPunteada, margenIzq, y, margenIzq + anchoRecibo, y);
+            if (linea.Contains("--------------------------------"))
+            {
+                y += 2;
+                g.DrawLine(penPunteada, MargenIzq, y, MargenIzq + AnchoRecibo, y);
+                y += 6;
+                return;
+            }
+
+            if (linea.Contains("TOTAL PAGADO"))
+            {
+                y += 3;
+                g.DrawLine(penLinea, MargenIzq, y, MargenIzq + AnchoRecibo, y);
+                y += 8;
+                g.DrawString(linea, FontSubtitulo, Brushes.Black, new PointF(MargenIzq, y));
+                y += 18;
+                g.DrawLine(penLinea, MargenIzq, y, MargenIzq + AnchoRecibo, y);
+                y += 3;
+                return;
+            }
+
+            if (linea.Contains("*") || EsLineaCentrada(linea))
+            {
+                var fuente = linea.Contains("*") ? FontSubtitulo : FontPequeño;
+                DibujarCentrado(g, linea, fuente,
+                    linea.Contains("*") ? Brushes.Black : Brushes.DarkGray,
+                    ref y, linea.Contains("*") ? 18 : 15);
+                return;
+            }
+
+            if (EsEncabezadoSeccion(linea))
+            {
+                g.DrawString(linea, FontSubtitulo, Brushes.Black, new PointF(MargenIzq, y));
+                y += 16;
+                return;
+            }
+
+            if (linea.Contains(":"))
+            {
+                RenderizarLineaClave(g, linea, ref y);
+                return;
+            }
+
+            // Línea genérica
+            g.DrawString(linea, FontNormal, Brushes.Black, new PointF(MargenIzq, y));
             y += 15;
-
-            string mensajeFinal = "¡Gracias por su visita!";
-            SizeF tamañoMensaje = g.MeasureString(mensajeFinal, fontPequeño);
-            float posicionMensaje = margenIzq + (anchoRecibo - tamañoMensaje.Width) / 2;
-            g.DrawString(mensajeFinal, fontPequeño, brushGris, new PointF(posicionMensaje, y));
-
-            y += 15;
-            string fecha = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-            SizeF tamañoFecha = g.MeasureString(fecha, fontPequeño);
-            float posicionFecha = margenIzq + (anchoRecibo - tamañoFecha.Width) / 2;
-            g.DrawString(fecha, fontPequeño, brushGris, new PointF(posicionFecha, y));
-
-            // Liberar recursos
-            fontTitulo.Dispose();
-            fontSubtitulo.Dispose();
-            fontNormal.Dispose();
-            fontPequeño.Dispose();
-            penLinea.Dispose();
-            penLineaPunteada.Dispose();
         }
+
+        void RenderizarLineaClave(Graphics g, string linea, ref int y)
+        {
+            var partes = linea.Split(new[] { ':' }, 2);
+
+            // Sin valor a la derecha → encabezado de sección ("Servicios Adicionales:")
+            if (partes.Length < 2 || string.IsNullOrWhiteSpace(partes[1]))
+            {
+                g.DrawString(linea, FontSubtitulo, Brushes.Black, new PointF(MargenIzq, y));
+                y += 16;
+                return;
+            }
+
+            string clave = partes[0].Trim();
+            string valor = partes[1].Trim();
+            bool esDetalle = linea.StartsWith("  "); // indentada = línea de detalle
+
+            Font fuente = esDetalle ? FontPequeño : FontNormal;
+            float xClave = esDetalle ? MargenIzq + 15 : MargenIzq;
+
+            g.DrawString(clave + ":", fuente, Brushes.DarkGray, new PointF(xClave, y));
+
+            SizeF tamValor = g.MeasureString(valor, fuente);
+            float xValor = MargenIzq + AnchoRecibo - tamValor.Width;
+            g.DrawString(valor, fuente, Brushes.Black, new PointF(xValor, y));
+
+            y += 15;
+        }
+
+        void DibujarCentrado(Graphics g, string texto, Font fuente, Brush brush, ref int y, int espaciadoPost)
+        {
+            SizeF tam = g.MeasureString(texto, fuente);
+            float x = MargenIzq + (AnchoRecibo - tam.Width) / 2;
+            g.DrawString(texto, fuente, brush, new PointF(x, y));
+            y += espaciadoPost;
+        }
+
+        bool EsEncabezadoSeccion(string linea)
+        {
+            string[] encabezados =
+            {
+                "Detalle", "Forma", "Datos del", "Servicios", "Plan Mensual",
+                "Cuota", "Ticket Nro", "Hora llegada", "Estadía", "Patente"
+            };
+            return encabezados.Any(e => linea.TrimStart().StartsWith(e));
+        }
+
+        bool EsLineaCentrada(string linea) =>
+            linea.StartsWith("Software") ||
+            linea.StartsWith("Calle") ||
+            linea.Contains("Gracias");
+
 
         private void BtnImprimir_Click(object sender, EventArgs e)
         {
-            if(ValidarPermisoImprimir())
-            {
-                ppd.Document = pd;
-                ppd.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Necesita permisos");
-            }
+            _ppd.Document = _pd;
+            _ppd.ShowDialog();
         }
 
+        private void BtnSalir_Click(object sender, EventArgs e) => Close();
     }
 }

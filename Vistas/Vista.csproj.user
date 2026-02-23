@@ -7,13 +7,40 @@
     <Compile Update="Configuraciones\formDescuentos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Configuraciones\FormPagoDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\FormPagoPlanes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\FormPagoServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Configuraciones\FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\FormSalidaPorPatente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuraciones\FormTrazabilidadTicket.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Estacionamiento\FormEspacio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Estacionamiento\pruebaTicketForm1.cs">
+    <Compile Update="Estacionamiento\FormAsignacionServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormGestionServiciosPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormTarifaServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormTarifasServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estacionamiento\FormTiposServicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Seguridad\FormClaveNueva.cs">
@@ -37,22 +64,10 @@
     <Compile Update="Seguridad\FormUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Servicios\FormPagoServicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Servicios\FormServicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Servicios\FormServiciosEnEspera.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Configuraciones\FormTiposVehiculos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Configuraciones\FormMetodosDepago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Configuraciones\FormPago.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Configuraciones\FormPagoDetalle.cs">
@@ -80,9 +95,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Configuraciones\Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Servicios\MenuServiciosForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

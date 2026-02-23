@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MODELO.seguridad;
+using Servicios;
 
 namespace Vista
 {
@@ -25,8 +26,7 @@ namespace Vista
 
         private void FormMetodosDepago_Load(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Gestionar Tipos de vehículos");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Gestionar Tipos de vehículos"))
             {
                 MessageBox.Show("Necesita permisos");
                 this.Close();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modelo_Ids;
 
 namespace MODELO
 {
@@ -11,21 +12,28 @@ namespace MODELO
   
         private decimal precio;
         private int tarifaServicioId;
-        private TipoServicio ?servicio;
-        private List<TicketBase> ?tickets = new List<TicketBase>();
+        private ServicioVehiculo servicioVehiculo;
+        private int servicioVehiculoId;
         public override string ToString()
         {
-            return base.TipoVehiculo.NombreVehiculo;
+            return servicioVehiculo.Servicio.Descripcion;
+        }
+
+        public ServicioVehiculo ServicioVehiculo 
+        { 
+            get { return servicioVehiculo; }
+            set { servicioVehiculo = value; }
+        }
+
+        public int ServicioVehiculoId
+        {
+            get { return servicioVehiculoId; }
+            set { servicioVehiculoId = value; }
         }
         public int TarifaServicioId
         {
             get { return tarifaServicioId; }
             set { tarifaServicioId = value; }
-        }
-
-        public List<TicketBase> Tickets
-        {
-            get { return tickets; }
         }
         public decimal Precio
         {
@@ -33,11 +41,7 @@ namespace MODELO
             set { precio = value; }
         }
 
-        public TipoServicio ? Servicio
-        { 
-            get { return servicio; }
-            set { servicio = value; }
-        }
+      
     }
 }
 

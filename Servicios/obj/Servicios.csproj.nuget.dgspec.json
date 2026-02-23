@@ -73,6 +73,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "ZXing.Net.Bindings.Windows.Compatibility": {
+              "target": "Package",
+              "version": "[0.16.14, )"
             }
           },
           "imports": [
@@ -145,6 +149,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.VisualStudio.OLE.Interop": {
+              "target": "Package",
+              "version": "[17.14.40260, )"
+            },
             "ScottPlot": {
               "target": "Package",
               "version": "[5.0.55, )"
@@ -156,6 +164,10 @@
             "SixLabors.ImageSharp": {
               "target": "Package",
               "version": "[3.1.10, )"
+            },
+            "ZXing.Net.Bindings.Windows.Compatibility": {
+              "target": "Package",
+              "version": "[0.16.14, )"
             },
             "iTextSharp": {
               "target": "Package",

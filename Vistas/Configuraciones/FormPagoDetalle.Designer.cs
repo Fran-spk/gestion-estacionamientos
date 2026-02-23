@@ -52,10 +52,16 @@
             lblTitulo = new Label();
             groupBoxDatos = new GroupBox();
             panelSeparador = new Panel();
+            groupBoxServicios = new GroupBox();
+            flowLayoutServicios = new FlowLayoutPanel();
+            panelSelectorPago = new Panel();
+            labelSelectorPago = new Label();
             ((System.ComponentModel.ISupportInitialize)vehiculoBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vehiculoBindingSource1).BeginInit();
             panelHeader.SuspendLayout();
             groupBoxDatos.SuspendLayout();
+            groupBoxServicios.SuspendLayout();
+            panelSelectorPago.SuspendLayout();
             SuspendLayout();
             // 
             // TxtMontoFinal
@@ -63,7 +69,7 @@
             TxtMontoFinal.AutoSize = true;
             TxtMontoFinal.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             TxtMontoFinal.ForeColor = Color.FromArgb(0, 204, 153);
-            TxtMontoFinal.Location = new Point(280, 253);
+            TxtMontoFinal.Location = new Point(316, 217);
             TxtMontoFinal.Margin = new Padding(4, 0, 4, 0);
             TxtMontoFinal.Name = "TxtMontoFinal";
             TxtMontoFinal.Size = new Size(89, 38);
@@ -75,7 +81,7 @@
             TxtFecha.AutoSize = true;
             TxtFecha.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             TxtFecha.ForeColor = Color.White;
-            TxtFecha.Location = new Point(280, 313);
+            TxtFecha.Location = new Point(273, 273);
             TxtFecha.Margin = new Padding(4, 0, 4, 0);
             TxtFecha.Name = "TxtFecha";
             TxtFecha.Size = new Size(186, 30);
@@ -87,7 +93,7 @@
             TxtDescuento.AutoSize = true;
             TxtDescuento.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             TxtDescuento.ForeColor = Color.FromArgb(40, 167, 69);
-            TxtDescuento.Location = new Point(280, 203);
+            TxtDescuento.Location = new Point(316, 173);
             TxtDescuento.Margin = new Padding(4, 0, 4, 0);
             TxtDescuento.Name = "TxtDescuento";
             TxtDescuento.Size = new Size(66, 30);
@@ -99,7 +105,7 @@
             TxtMonto.AutoSize = true;
             TxtMonto.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             TxtMonto.ForeColor = Color.White;
-            TxtMonto.Location = new Point(280, 153);
+            TxtMonto.Location = new Point(316, 128);
             TxtMonto.Margin = new Padding(4, 0, 4, 0);
             TxtMonto.Name = "TxtMonto";
             TxtMonto.Size = new Size(66, 30);
@@ -111,7 +117,7 @@
             TxtEstadia.AutoSize = true;
             TxtEstadia.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             TxtEstadia.ForeColor = Color.White;
-            TxtEstadia.Location = new Point(280, 103);
+            TxtEstadia.Location = new Point(316, 83);
             TxtEstadia.Margin = new Padding(4, 0, 4, 0);
             TxtEstadia.Name = "TxtEstadia";
             TxtEstadia.Size = new Size(125, 30);
@@ -123,7 +129,7 @@
             Txtpatente.AutoSize = true;
             Txtpatente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Txtpatente.ForeColor = Color.FromArgb(0, 122, 204);
-            Txtpatente.Location = new Point(280, 53);
+            Txtpatente.Location = new Point(316, 39);
             Txtpatente.Margin = new Padding(4, 0, 4, 0);
             Txtpatente.Name = "Txtpatente";
             Txtpatente.Size = new Size(103, 32);
@@ -138,7 +144,7 @@
             BtnSalir.FlatStyle = FlatStyle.Flat;
             BtnSalir.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             BtnSalir.ForeColor = Color.White;
-            BtnSalir.Location = new Point(430, 505);
+            BtnSalir.Location = new Point(854, 540);
             BtnSalir.Margin = new Padding(4, 3, 4, 3);
             BtnSalir.Name = "BtnSalir";
             BtnSalir.Size = new Size(180, 50);
@@ -152,7 +158,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(30, 313);
+            label8.Location = new Point(30, 273);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new Size(197, 28);
@@ -164,7 +170,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(30, 203);
+            label7.Location = new Point(30, 173);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(143, 28);
@@ -176,7 +182,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(0, 204, 153);
-            label6.Location = new Point(30, 258);
+            label6.Location = new Point(30, 223);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(133, 32);
@@ -188,7 +194,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(30, 103);
+            label4.Location = new Point(30, 83);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(109, 28);
@@ -200,7 +206,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(30, 58);
+            label2.Location = new Point(30, 43);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(115, 28);
@@ -212,12 +218,12 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(30, 153);
+            label5.Location = new Point(30, 128);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(122, 28);
+            label5.Size = new Size(278, 28);
             label5.TabIndex = 57;
-            label5.Text = "💵 Subtotal";
+            label5.Text = "💵 Subtotal estacionamiento";
             // 
             // label1
             // 
@@ -235,7 +241,7 @@
             lbMetodo.AutoSize = true;
             lbMetodo.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             lbMetodo.ForeColor = Color.White;
-            lbMetodo.Location = new Point(280, 376);
+            lbMetodo.Location = new Point(316, 316);
             lbMetodo.Margin = new Padding(4, 0, 4, 0);
             lbMetodo.Name = "lbMetodo";
             lbMetodo.Size = new Size(89, 30);
@@ -247,7 +253,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(30, 376);
+            label9.Location = new Point(30, 318);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
             label9.Size = new Size(198, 28);
@@ -262,7 +268,7 @@
             BtnImprimir.FlatStyle = FlatStyle.Flat;
             BtnImprimir.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             BtnImprimir.ForeColor = Color.White;
-            BtnImprimir.Location = new Point(30, 505);
+            BtnImprimir.Location = new Point(30, 540);
             BtnImprimir.Margin = new Padding(4, 3, 4, 3);
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(180, 50);
@@ -278,7 +284,7 @@
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Location = new Point(0, 0);
             panelHeader.Name = "panelHeader";
-            panelHeader.Size = new Size(640, 70);
+            panelHeader.Size = new Size(1064, 70);
             panelHeader.TabIndex = 72;
             // 
             // lblTitulo
@@ -313,10 +319,10 @@
             groupBoxDatos.FlatStyle = FlatStyle.Flat;
             groupBoxDatos.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             groupBoxDatos.ForeColor = Color.FromArgb(0, 122, 204);
-            groupBoxDatos.Location = new Point(30, 90);
+            groupBoxDatos.Location = new Point(30, 160);
             groupBoxDatos.Name = "groupBoxDatos";
             groupBoxDatos.Padding = new Padding(15);
-            groupBoxDatos.Size = new Size(580, 409);
+            groupBoxDatos.Size = new Size(491, 365);
             groupBoxDatos.TabIndex = 73;
             groupBoxDatos.TabStop = false;
             groupBoxDatos.Text = "Detalles de la Transacción";
@@ -324,18 +330,68 @@
             // panelSeparador
             // 
             panelSeparador.BackColor = Color.FromArgb(0, 122, 204);
-            panelSeparador.Location = new Point(30, 248);
+            panelSeparador.Location = new Point(30, 212);
             panelSeparador.Name = "panelSeparador";
-            panelSeparador.Size = new Size(520, 2);
+            panelSeparador.Size = new Size(429, 2);
             panelSeparador.TabIndex = 71;
+            // 
+            // groupBoxServicios
+            // 
+            groupBoxServicios.BackColor = Color.FromArgb(37, 37, 38);
+            groupBoxServicios.Controls.Add(flowLayoutServicios);
+            groupBoxServicios.FlatStyle = FlatStyle.Flat;
+            groupBoxServicios.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBoxServicios.ForeColor = Color.FromArgb(0, 122, 204);
+            groupBoxServicios.Location = new Point(558, 160);
+            groupBoxServicios.Name = "groupBoxServicios";
+            groupBoxServicios.Padding = new Padding(10, 5, 10, 10);
+            groupBoxServicios.Size = new Size(476, 365);
+            groupBoxServicios.TabIndex = 74;
+            groupBoxServicios.TabStop = false;
+            groupBoxServicios.Text = "✨ Servicios Adicionales";
+            // 
+            // flowLayoutServicios
+            // 
+            flowLayoutServicios.AutoScroll = true;
+            flowLayoutServicios.BackColor = Color.FromArgb(37, 37, 38);
+            flowLayoutServicios.Dock = DockStyle.Fill;
+            flowLayoutServicios.FlowDirection = FlowDirection.TopDown;
+            flowLayoutServicios.Location = new Point(10, 32);
+            flowLayoutServicios.Name = "flowLayoutServicios";
+            flowLayoutServicios.Padding = new Padding(5);
+            flowLayoutServicios.Size = new Size(456, 323);
+            flowLayoutServicios.TabIndex = 0;
+            flowLayoutServicios.WrapContents = false;
+            // 
+            // panelSelectorPago
+            // 
+            panelSelectorPago.BackColor = Color.FromArgb(37, 37, 38);
+            panelSelectorPago.Controls.Add(labelSelectorPago);
+            panelSelectorPago.Location = new Point(30, 85);
+            panelSelectorPago.Name = "panelSelectorPago";
+            panelSelectorPago.Size = new Size(1004, 60);
+            panelSelectorPago.TabIndex = 75;
+            // 
+            // labelSelectorPago
+            // 
+            labelSelectorPago.AutoSize = true;
+            labelSelectorPago.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSelectorPago.ForeColor = Color.White;
+            labelSelectorPago.Location = new Point(15, 16);
+            labelSelectorPago.Name = "labelSelectorPago";
+            labelSelectorPago.Size = new Size(199, 28);
+            labelSelectorPago.TabIndex = 0;
+            labelSelectorPago.Text = "💳 Seleccionar Pago";
             // 
             // FormPagoDetalle
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(640, 565);
+            ClientSize = new Size(1064, 610);
             ControlBox = false;
+            Controls.Add(panelSelectorPago);
+            Controls.Add(groupBoxServicios);
             Controls.Add(groupBoxDatos);
             Controls.Add(panelHeader);
             Controls.Add(BtnImprimir);
@@ -353,6 +409,9 @@
             panelHeader.PerformLayout();
             groupBoxDatos.ResumeLayout(false);
             groupBoxDatos.PerformLayout();
+            groupBoxServicios.ResumeLayout(false);
+            panelSelectorPago.ResumeLayout(false);
+            panelSelectorPago.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -382,5 +441,9 @@
         private Label lblTitulo;
         private GroupBox groupBoxDatos;
         private Panel panelSeparador;
+        private GroupBox groupBoxServicios;
+        private FlowLayoutPanel flowLayoutServicios;
+        private Panel panelSelectorPago;
+        private Label labelSelectorPago;
     }
 }

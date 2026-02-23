@@ -60,9 +60,9 @@ namespace Controladora
             var UsuarioExistente = Estacionamiento.Contexto.Usuarios.ToList().FirstOrDefault(x => x.USU_MAIL == usuario.USU_MAIL);
             if (UsuarioExistente == null)
             {
-                if (ServiciosUsuario.Instancia.SendMail(usuario,usuario.USU_CLAVE))
+                if (ServiciosUsuario.SendMail(usuario,usuario.USU_CLAVE))
                 {
-                    usuario.USU_CLAVE = ServiciosUsuario.Instancia.EncriptarClave(usuario.USU_CLAVE);
+                    usuario.USU_CLAVE = ServiciosUsuario.EncriptarClave(usuario.USU_CLAVE);
                     Estacionamiento.Contexto.Usuarios.Add(usuario);
                     Estacionamiento.Contexto.SaveChanges();
                     return "Usuario agregado correctamente";
@@ -114,7 +114,7 @@ namespace Controladora
 
         public Usuario? IniciarSesion(string Usuario, string Clave)
         {
-            Clave = ServiciosUsuario.Instancia.EncriptarClave(Clave);
+            Clave = ServiciosUsuario.EncriptarClave(Clave);
             var usuario = getAllUsuarios().Where(x => x.USU_USUARIO.Equals(Usuario) && x.USU_CLAVE.Equals(Clave)).FirstOrDefault();
             if (usuario == null)
             {
@@ -140,9 +140,9 @@ namespace Controladora
             var usuario = getAllUsuarios().Where(x => x.USU_USUARIO.Equals(Usuario) && x.USU_MAIL.Equals(mail)).FirstOrDefault();
             if (usuario != null)
             {
-                if (Servicios.ServiciosUsuario.Instancia.SendMail(usuario,claveNueva))
+                if (Servicios.ServiciosUsuario.SendMail(usuario,claveNueva))
                 {
-                    claveNueva = ServiciosUsuario.Instancia.EncriptarClave(claveNueva);
+                    claveNueva = ServiciosUsuario.EncriptarClave(claveNueva);
                     usuario.USU_CLAVE = claveNueva;
                     Estacionamiento.Contexto.Usuarios.Update(usuario);
                     Estacionamiento.Contexto.SaveChanges();

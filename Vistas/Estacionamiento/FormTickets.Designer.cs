@@ -34,6 +34,7 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panelSidebar = new Panel();
+            button2 = new Button();
             lblFiltro = new Label();
             comboBox1 = new ComboBox();
             button3 = new Button();
@@ -50,19 +51,20 @@
             Hasta = new DateTimePicker();
             label3 = new Label();
             dataGridView1 = new DataGridView();
-            fechaHoraEmisionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            TarifaEstacionamiento = new DataGridViewTextBoxColumn();
-            patenteDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            estadiaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            estadoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            ticketDiarioBindingSource = new BindingSource(components);
             ticketBindingSource2 = new BindingSource(components);
             ticketBindingSource = new BindingSource(components);
             formTicketBindingSource = new BindingSource(components);
             ticketBindingSource1 = new BindingSource(components);
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            tarifaEstacionamientoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             panelSidebar.SuspendLayout();
             groupBoxFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ticketDiarioBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)formTicketBindingSource).BeginInit();
@@ -72,6 +74,7 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.FromArgb(28, 28, 30);
+            panelSidebar.Controls.Add(button2);
             panelSidebar.Controls.Add(lblFiltro);
             panelSidebar.Controls.Add(comboBox1);
             panelSidebar.Controls.Add(button3);
@@ -86,6 +89,22 @@
             panelSidebar.Padding = new Padding(15);
             panelSidebar.Size = new Size(280, 887);
             panelSidebar.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(108, 117, 125);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(20, 436);
+            button2.Margin = new Padding(0);
+            button2.Name = "button2";
+            button2.Size = new Size(240, 55);
+            button2.TabIndex = 7;
+            button2.Text = "Ver trazabilidad";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // lblFiltro
             // 
@@ -312,8 +331,8 @@
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeight = 45;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fechaHoraEmisionDataGridViewTextBoxColumn, TarifaEstacionamiento, patenteDataGridViewTextBoxColumn, estadiaDataGridViewTextBoxColumn, estadoDataGridViewTextBoxColumn, dataGridViewTextBoxColumn1 });
-            dataGridView1.DataSource = ticketBindingSource2;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, tarifaEstacionamientoDataGridViewTextBoxColumn, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
+            dataGridView1.DataSource = ticketDiarioBindingSource;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(37, 37, 38);
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
@@ -339,57 +358,49 @@
             dataGridView1.Size = new Size(1101, 668);
             dataGridView1.TabIndex = 3;
             // 
-            // fechaHoraEmisionDataGridViewTextBoxColumn
+            // ticketDiarioBindingSource
             // 
-            fechaHoraEmisionDataGridViewTextBoxColumn.DataPropertyName = "FechaHoraEmision";
-            fechaHoraEmisionDataGridViewTextBoxColumn.HeaderText = "Fecha/Hora";
-            fechaHoraEmisionDataGridViewTextBoxColumn.MinimumWidth = 8;
-            fechaHoraEmisionDataGridViewTextBoxColumn.Name = "fechaHoraEmisionDataGridViewTextBoxColumn";
-            fechaHoraEmisionDataGridViewTextBoxColumn.ReadOnly = true;
+            ticketDiarioBindingSource.DataSource = typeof(MODELO.Ticket_Diario);
             // 
-            // TarifaEstacionamiento
+            // dataGridViewTextBoxColumn2
             // 
-            TarifaEstacionamiento.DataPropertyName = "TarifaEstacionamiento";
-            TarifaEstacionamiento.HeaderText = "Tipo Vehículo";
-            TarifaEstacionamiento.MinimumWidth = 8;
-            TarifaEstacionamiento.Name = "TarifaEstacionamiento";
-            TarifaEstacionamiento.ReadOnly = true;
+            dataGridViewTextBoxColumn2.DataPropertyName = "FechaHoraEmision";
+            dataGridViewTextBoxColumn2.HeaderText = "FechaHoraEmision";
+            dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // patenteDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            patenteDataGridViewTextBoxColumn.DataPropertyName = "Patente";
-            patenteDataGridViewTextBoxColumn.HeaderText = "Patente";
-            patenteDataGridViewTextBoxColumn.MinimumWidth = 8;
-            patenteDataGridViewTextBoxColumn.Name = "patenteDataGridViewTextBoxColumn";
-            patenteDataGridViewTextBoxColumn.ReadOnly = true;
+            dataGridViewTextBoxColumn3.DataPropertyName = "Patente";
+            dataGridViewTextBoxColumn3.HeaderText = "Patente";
+            dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // estadiaDataGridViewTextBoxColumn
+            // tarifaEstacionamientoDataGridViewTextBoxColumn
             // 
-            estadiaDataGridViewTextBoxColumn.DataPropertyName = "Estadia";
-            estadiaDataGridViewTextBoxColumn.HeaderText = "Estadía";
-            estadiaDataGridViewTextBoxColumn.MinimumWidth = 8;
-            estadiaDataGridViewTextBoxColumn.Name = "estadiaDataGridViewTextBoxColumn";
-            estadiaDataGridViewTextBoxColumn.ReadOnly = true;
+            tarifaEstacionamientoDataGridViewTextBoxColumn.DataPropertyName = "TarifaEstacionamiento";
+            tarifaEstacionamientoDataGridViewTextBoxColumn.HeaderText = "TarifaEstacionamiento";
+            tarifaEstacionamientoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            tarifaEstacionamientoDataGridViewTextBoxColumn.Name = "tarifaEstacionamientoDataGridViewTextBoxColumn";
+            tarifaEstacionamientoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // estadoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
-            estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
-            estadoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            estadoDataGridViewTextBoxColumn.ReadOnly = true;
+            dataGridViewTextBoxColumn4.DataPropertyName = "Estadia";
+            dataGridViewTextBoxColumn4.HeaderText = "Estadia";
+            dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn5
             // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "Codigo";
-            dataGridViewTextBoxColumn1.HeaderText = "Código";
-            dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // ticketBindingSource2
-            // 
-            ticketBindingSource2.DataSource = typeof(MODELO.Ticket);
+            dataGridViewTextBoxColumn5.DataPropertyName = "Estado";
+            dataGridViewTextBoxColumn5.HeaderText = "Estado";
+            dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // FormTickets
             // 
@@ -414,6 +425,7 @@
             groupBoxFiltros.ResumeLayout(false);
             groupBoxFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ticketDiarioBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource2).EndInit();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)formTicketBindingSource).EndInit();
@@ -442,7 +454,6 @@
         private Label label3;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn fechaHoraEmisionDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn TarifaEstacionamiento;
         private DataGridViewTextBoxColumn patenteDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn estadiaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
@@ -451,5 +462,12 @@
         private BindingSource ticketBindingSource;
         private BindingSource formTicketBindingSource;
         private BindingSource ticketBindingSource1;
+        private Button button2;
+        private BindingSource ticketDiarioBindingSource;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn tarifaEstacionamientoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

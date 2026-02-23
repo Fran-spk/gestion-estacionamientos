@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Modelo_Ids;
+using Servicios;
 
 namespace Vista
 {
@@ -56,8 +57,7 @@ namespace Vista
 
         private void btnaceptar_Click(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Gestionar Tarifas");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Gestionar Tarifas"))
             {
                 MessageBox.Show("Necesita permisos");
                 return;
@@ -71,7 +71,7 @@ namespace Vista
             {
                 var tarifa = TarifaFactory.CrearTarifa(
                     tipoVehiculo: (TipoVehiculo)comboBox1.SelectedItem,
-                    precio: 0,
+                    precioMediaHora: decimal.Parse(txtMedHora.Text),
                     precioHora: decimal.Parse(txtHora.Text),
                     precioDia: decimal.Parse(txtDia.Text),
                     precioMes: decimal.Parse(textMes.Text)

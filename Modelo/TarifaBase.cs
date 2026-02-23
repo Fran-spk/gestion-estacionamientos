@@ -12,9 +12,8 @@ namespace MODELO
     public abstract class TarifaBase
     {
         [NotMapped]
-        private int tipovehiculoId;
+        
         private bool vigente;
-        private TipoVehiculo tipovehiculo;
         private DateTime fechahoraactualizacion;
 
         public bool Vigente
@@ -23,26 +22,12 @@ namespace MODELO
             set { vigente = value; }
         }
 
-        public TipoVehiculo TipoVehiculo
-        {
-            get { return tipovehiculo; }
-            set { tipovehiculo = value; }
-        }
-
         public DateTime FechaHoraActualizacion
         {
             get { return fechahoraactualizacion; }
             set { fechahoraactualizacion = value; }
         }
 
-        public override string ToString()
-        {
-            return tipovehiculo.NombreVehiculo;
-        }
-        public int TipoVehiculoId
-        {
-            get { return tipovehiculoId; }
-            set { tipovehiculoId = value; }
-        }
+
     }
 }

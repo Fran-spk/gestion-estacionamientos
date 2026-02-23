@@ -32,22 +32,14 @@ namespace Controladora
             var espacios = Estacionamiento.Contexto.Espacios
                 .Include(e => e.Vehiculos)
                 .Include(e => e.Tickets)
-                    .ThenInclude(t => t.Estado) 
+                    .ThenInclude(t => t.Estado)
+                .Include(e => e.Tickets)
+                    .ThenInclude(t => (t as Cuota).Plan)
                 .ToList();
-
-            foreach (var espacio in espacios)
-            {
-                foreach (var ticket in espacio.Tickets)
-                {
-                    if (ticket is Cuota cuota)
-                    {
-                        cuota.Plan = Estacionamiento.Contexto.Planes.Find(cuota.PlanId);
-                    }
-                }
-            }
 
             return espacios.AsReadOnly();
         }
+
 
 
         public ReadOnlyCollection<Espacio> getAllEspaciosByTipoVehiculo(TipoVehiculo tipo)
@@ -89,8 +81,9 @@ namespace Controladora
             var espacioExistente = Estacionamiento.Contexto.Espacios.FirstOrDefault(x => x.EspacioId == espacio.EspacioId);
             if (espacioExistente != null)
             {
-                var Ticket = ControladoraTicketsBase.Instancia.getAllTickets().FirstOrDefault(x => x.EspacioId == espacio.EspacioId);
-                if (Ticket == null)
+                var Cuotas = ControladoraCuotas.Instancia.getAllCuotas().FirstOrDefault(x => x.EspacioId == espacio.EspacioId);
+                var Tickets = ControladoraTicketsDiarios.Instancia.getAllTickets().FirstOrDefault(x => x.EspacioId == espacio.EspacioId);
+                if (Tickets == null && Cuotas==null)
                 {
                     Estacionamiento.Contexto.Espacios.Remove(espacio);
                     Estacionamiento.Contexto.SaveChanges(true);

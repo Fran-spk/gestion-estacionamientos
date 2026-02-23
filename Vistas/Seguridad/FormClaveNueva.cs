@@ -23,7 +23,7 @@ namespace Vista.Seguridad
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             var clave = txtClaveActual.Text;
-            clave = ServiciosUsuario.Instancia.EncriptarClave(clave);
+            clave = ServiciosUsuario.EncriptarClave(clave);
             if (!ValidarCampos())
             {
                 MessageBox.Show("Debe completar todos los campos");
@@ -33,7 +33,7 @@ namespace Vista.Seguridad
             {
                 if (txtClaveNueva.Text == txtConfirmar.Text)
                 {
-                    var claveNueva = ServiciosUsuario.Instancia.EncriptarClave(txtClaveNueva.Text);
+                    var claveNueva = ServiciosUsuario.EncriptarClave(txtClaveNueva.Text);
                     Sesion.Instancia.Perfil.USU_CLAVE = claveNueva;
                     var ok = ControladoraUsuarios.Instancia.ModificarUsuario(Sesion.Instancia.Perfil);
                     if (ok)

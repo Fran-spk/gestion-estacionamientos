@@ -34,7 +34,7 @@ namespace MODELO.seguridad
 
         public virtual ICollection<Accion> Acciones { get; set; }
 
-        
+        public virtual ICollection<AuditoriaTicket> AuditoriaTickets { get; set; }
         public virtual ICollection<Grupo> Grupos { get; set; }
 
         public bool AgregarAccion(Accion accion)
@@ -107,6 +107,11 @@ namespace MODELO.seguridad
         public ReadOnlyCollection<Accion> getAllAcciones()
         {
             return Acciones.ToList().AsReadOnly();
+        }
+
+        public override string ToString()
+        {
+            return USU_USUARIO.ToString();
         }
 
     }

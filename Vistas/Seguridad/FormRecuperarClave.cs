@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Servicios;
 
 namespace Vista.Seguridad
 {
@@ -28,7 +29,7 @@ namespace Vista.Seguridad
             }
             else
             {
-                string claveNueva = FormUsuario.GenerarPasword();
+                string claveNueva = ServiciosUsuario.GenerarPassword();
                 var ok = ControladoraUsuarios.Instancia.RecuperarClave(txtUsuario.Text,txtEmail.Text,claveNueva);
                 if (ok)
                 {

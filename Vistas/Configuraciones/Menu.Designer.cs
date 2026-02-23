@@ -37,12 +37,11 @@ namespace Vista
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             dataGridView1 = new DataGridView();
-            fechaHoraEmisionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            patenteDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            estadiaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            estadoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            codigoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             TarifaEstacionamiento = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            ticketDiarioBindingSource = new BindingSource(components);
             ticketBindingSource = new BindingSource(components);
             btnsalida = new Button();
             txtcapacidad = new TextBox();
@@ -51,6 +50,9 @@ namespace Vista
             btnentrada = new Button();
             label1 = new Label();
             panel1 = new Panel();
+            button2 = new Button();
+            btnAsignarServicios = new Button();
+            button1 = new Button();
             BtnAbonados = new Button();
             btnConfiguracion = new Button();
             picCochera = new PictureBox();
@@ -64,6 +66,11 @@ namespace Vista
             tarifasToolStripMenuItem = new ToolStripMenuItem();
             descuentosToolStripMenuItem = new ToolStripMenuItem();
             espaciosDeParqueoToolStripMenuItem = new ToolStripMenuItem();
+            tarifasDeServiciosToolStripMenuItem = new ToolStripMenuItem();
+            tiposDeServiciosDispToolStripMenuItem = new ToolStripMenuItem();
+            backUpLbl = new ToolStripMenuItem();
+            reestaurarToolStripMenuItem = new ToolStripMenuItem();
+            generarBackUpToolStripMenuItem = new ToolStripMenuItem();
             editarToolStripMenuItem = new ToolStripMenuItem();
             gruposToolStripMenuItem = new ToolStripMenuItem();
             usuariosToolStripMenuItem = new ToolStripMenuItem();
@@ -75,6 +82,7 @@ namespace Vista
             verReportesToolStripMenuItem = new ToolStripMenuItem();
             Fecha_Usuario = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ticketDiarioBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picCochera).BeginInit();
@@ -110,8 +118,8 @@ namespace Vista
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeight = 45;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fechaHoraEmisionDataGridViewTextBoxColumn, patenteDataGridViewTextBoxColumn, estadiaDataGridViewTextBoxColumn, estadoDataGridViewTextBoxColumn, codigoDataGridViewTextBoxColumn, TarifaEstacionamiento });
-            dataGridView1.DataSource = ticketBindingSource;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { TarifaEstacionamiento, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3 });
+            dataGridView1.DataSource = ticketDiarioBindingSource;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(37, 37, 38);
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
@@ -138,46 +146,6 @@ namespace Vista
             dataGridView1.Size = new Size(1465, 950);
             dataGridView1.TabIndex = 0;
             // 
-            // fechaHoraEmisionDataGridViewTextBoxColumn
-            // 
-            fechaHoraEmisionDataGridViewTextBoxColumn.DataPropertyName = "FechaHoraEmision";
-            fechaHoraEmisionDataGridViewTextBoxColumn.HeaderText = "Fecha/Hora";
-            fechaHoraEmisionDataGridViewTextBoxColumn.MinimumWidth = 8;
-            fechaHoraEmisionDataGridViewTextBoxColumn.Name = "fechaHoraEmisionDataGridViewTextBoxColumn";
-            fechaHoraEmisionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // patenteDataGridViewTextBoxColumn
-            // 
-            patenteDataGridViewTextBoxColumn.DataPropertyName = "Patente";
-            patenteDataGridViewTextBoxColumn.HeaderText = "Patente";
-            patenteDataGridViewTextBoxColumn.MinimumWidth = 8;
-            patenteDataGridViewTextBoxColumn.Name = "patenteDataGridViewTextBoxColumn";
-            patenteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estadiaDataGridViewTextBoxColumn
-            // 
-            estadiaDataGridViewTextBoxColumn.DataPropertyName = "Estadia";
-            estadiaDataGridViewTextBoxColumn.HeaderText = "Estadía";
-            estadiaDataGridViewTextBoxColumn.MinimumWidth = 8;
-            estadiaDataGridViewTextBoxColumn.Name = "estadiaDataGridViewTextBoxColumn";
-            estadiaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
-            estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
-            estadoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            estadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            codigoDataGridViewTextBoxColumn.HeaderText = "Código";
-            codigoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            codigoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // TarifaEstacionamiento
             // 
             TarifaEstacionamiento.DataPropertyName = "TarifaEstacionamiento";
@@ -186,9 +154,33 @@ namespace Vista
             TarifaEstacionamiento.Name = "TarifaEstacionamiento";
             TarifaEstacionamiento.ReadOnly = true;
             // 
-            // ticketBindingSource
+            // dataGridViewTextBoxColumn1
             // 
-            ticketBindingSource.DataSource = typeof(MODELO.Ticket);
+            dataGridViewTextBoxColumn1.DataPropertyName = "FechaHoraEmision";
+            dataGridViewTextBoxColumn1.HeaderText = "Fecha hora ingreso";
+            dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.DataPropertyName = "Patente";
+            dataGridViewTextBoxColumn2.HeaderText = "Patente";
+            dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.DataPropertyName = "Estadia";
+            dataGridViewTextBoxColumn3.HeaderText = "Estadia";
+            dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // ticketDiarioBindingSource
+            // 
+            ticketDiarioBindingSource.DataSource = typeof(MODELO.Ticket_Diario);
             // 
             // btnsalida
             // 
@@ -204,7 +196,7 @@ namespace Vista
             btnsalida.Padding = new Padding(15, 0, 0, 0);
             btnsalida.Size = new Size(240, 55);
             btnsalida.TabIndex = 2;
-            btnsalida.Text = "    Salida";
+            btnsalida.Text = "       🚗 Salida";
             btnsalida.TextAlign = ContentAlignment.MiddleLeft;
             btnsalida.UseVisualStyleBackColor = false;
             btnsalida.Click += btnsalida_Click;
@@ -230,7 +222,7 @@ namespace Vista
             BtnTickets.FlatStyle = FlatStyle.Flat;
             BtnTickets.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             BtnTickets.ForeColor = Color.White;
-            BtnTickets.Location = new Point(20, 395);
+            BtnTickets.Location = new Point(20, 773);
             BtnTickets.Margin = new Padding(0);
             BtnTickets.Name = "BtnTickets";
             BtnTickets.Size = new Size(240, 55);
@@ -290,6 +282,9 @@ namespace Vista
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(28, 28, 30);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btnAsignarServicios);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(BtnAbonados);
             panel1.Controls.Add(btnConfiguracion);
             panel1.Controls.Add(picCochera);
@@ -303,6 +298,59 @@ namespace Vista
             panel1.Size = new Size(280, 1080);
             panel1.TabIndex = 12;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(220, 53, 69);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(20, 849);
+            button2.Margin = new Padding(0);
+            button2.Name = "button2";
+            button2.Padding = new Padding(15, 0, 0, 0);
+            button2.Size = new Size(240, 55);
+            button2.TabIndex = 21;
+            button2.Text = "Salida por patente";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += btnSalidaByPatente_Click;
+            // 
+            // btnAsignarServicios
+            // 
+            btnAsignarServicios.BackColor = Color.FromArgb(52, 58, 64);
+            btnAsignarServicios.FlatAppearance.BorderSize = 0;
+            btnAsignarServicios.FlatStyle = FlatStyle.Flat;
+            btnAsignarServicios.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAsignarServicios.ForeColor = Color.White;
+            btnAsignarServicios.Location = new Point(20, 396);
+            btnAsignarServicios.Margin = new Padding(0);
+            btnAsignarServicios.Name = "btnAsignarServicios";
+            btnAsignarServicios.Size = new Size(240, 55);
+            btnAsignarServicios.TabIndex = 20;
+            btnAsignarServicios.Text = " 🔧 Asignar servicios";
+            btnAsignarServicios.TextAlign = ContentAlignment.MiddleLeft;
+            btnAsignarServicios.UseVisualStyleBackColor = false;
+            btnAsignarServicios.Click += btnServicios_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(52, 58, 64);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(20, 547);
+            button1.Margin = new Padding(0);
+            button1.Name = "button1";
+            button1.Size = new Size(240, 55);
+            button1.TabIndex = 19;
+            button1.Text = "💰  Tarifas servicios";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += btnTarifasServicios_Click;
+            // 
             // BtnAbonados
             // 
             BtnAbonados.BackColor = Color.FromArgb(52, 58, 64);
@@ -310,7 +358,7 @@ namespace Vista
             BtnAbonados.FlatStyle = FlatStyle.Flat;
             BtnAbonados.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             BtnAbonados.ForeColor = Color.White;
-            BtnAbonados.Location = new Point(20, 545);
+            BtnAbonados.Location = new Point(20, 695);
             BtnAbonados.Margin = new Padding(0);
             BtnAbonados.Name = "BtnAbonados";
             BtnAbonados.Size = new Size(240, 55);
@@ -397,7 +445,7 @@ namespace Vista
             // 
             // archivoToolStripMenuItem
             // 
-            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tiposDeVehiculoToolStripMenuItem, metodoDePagoToolStripMenuItem, tarifasToolStripMenuItem, descuentosToolStripMenuItem, espaciosDeParqueoToolStripMenuItem });
+            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tiposDeVehiculoToolStripMenuItem, metodoDePagoToolStripMenuItem, tarifasToolStripMenuItem, descuentosToolStripMenuItem, espaciosDeParqueoToolStripMenuItem, tarifasDeServiciosToolStripMenuItem, tiposDeServiciosDispToolStripMenuItem, backUpLbl });
             archivoToolStripMenuItem.ForeColor = Color.White;
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             archivoToolStripMenuItem.Size = new Size(183, 32);
@@ -408,7 +456,7 @@ namespace Vista
             tiposDeVehiculoToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
             tiposDeVehiculoToolStripMenuItem.ForeColor = Color.White;
             tiposDeVehiculoToolStripMenuItem.Name = "tiposDeVehiculoToolStripMenuItem";
-            tiposDeVehiculoToolStripMenuItem.Size = new Size(292, 36);
+            tiposDeVehiculoToolStripMenuItem.Size = new Size(312, 36);
             tiposDeVehiculoToolStripMenuItem.Text = "Tipos de Vehículo";
             tiposDeVehiculoToolStripMenuItem.Click += tiposDeVehiculoToolStripMenuItem_Click;
             // 
@@ -417,7 +465,7 @@ namespace Vista
             metodoDePagoToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
             metodoDePagoToolStripMenuItem.ForeColor = Color.White;
             metodoDePagoToolStripMenuItem.Name = "metodoDePagoToolStripMenuItem";
-            metodoDePagoToolStripMenuItem.Size = new Size(292, 36);
+            metodoDePagoToolStripMenuItem.Size = new Size(312, 36);
             metodoDePagoToolStripMenuItem.Text = "Métodos de Pago";
             metodoDePagoToolStripMenuItem.Click += metodoDePagoToolStripMenuItem_Click;
             // 
@@ -426,7 +474,7 @@ namespace Vista
             tarifasToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
             tarifasToolStripMenuItem.ForeColor = Color.White;
             tarifasToolStripMenuItem.Name = "tarifasToolStripMenuItem";
-            tarifasToolStripMenuItem.Size = new Size(292, 36);
+            tarifasToolStripMenuItem.Size = new Size(312, 36);
             tarifasToolStripMenuItem.Text = "Tarifas";
             tarifasToolStripMenuItem.Click += tarifasToolStripMenuItem_Click;
             // 
@@ -435,7 +483,7 @@ namespace Vista
             descuentosToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
             descuentosToolStripMenuItem.ForeColor = Color.White;
             descuentosToolStripMenuItem.Name = "descuentosToolStripMenuItem";
-            descuentosToolStripMenuItem.Size = new Size(292, 36);
+            descuentosToolStripMenuItem.Size = new Size(312, 36);
             descuentosToolStripMenuItem.Text = "Descuentos";
             descuentosToolStripMenuItem.Click += descuentosToolStripMenuItem_Click;
             // 
@@ -444,9 +492,54 @@ namespace Vista
             espaciosDeParqueoToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
             espaciosDeParqueoToolStripMenuItem.ForeColor = Color.White;
             espaciosDeParqueoToolStripMenuItem.Name = "espaciosDeParqueoToolStripMenuItem";
-            espaciosDeParqueoToolStripMenuItem.Size = new Size(292, 36);
+            espaciosDeParqueoToolStripMenuItem.Size = new Size(312, 36);
             espaciosDeParqueoToolStripMenuItem.Text = "Espacios de Parqueo";
             espaciosDeParqueoToolStripMenuItem.Click += espaciosDeParqueoToolStripMenuItem_Click;
+            // 
+            // tarifasDeServiciosToolStripMenuItem
+            // 
+            tarifasDeServiciosToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            tarifasDeServiciosToolStripMenuItem.ForeColor = Color.White;
+            tarifasDeServiciosToolStripMenuItem.Name = "tarifasDeServiciosToolStripMenuItem";
+            tarifasDeServiciosToolStripMenuItem.Size = new Size(312, 36);
+            tarifasDeServiciosToolStripMenuItem.Text = "Tarifas de servicios";
+            tarifasDeServiciosToolStripMenuItem.Click += tarifasDeServiciosToolStripMenuItem_Click;
+            // 
+            // tiposDeServiciosDispToolStripMenuItem
+            // 
+            tiposDeServiciosDispToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            tiposDeServiciosDispToolStripMenuItem.ForeColor = Color.White;
+            tiposDeServiciosDispToolStripMenuItem.Name = "tiposDeServiciosDispToolStripMenuItem";
+            tiposDeServiciosDispToolStripMenuItem.Size = new Size(312, 36);
+            tiposDeServiciosDispToolStripMenuItem.Text = "Tipos de Servicios disp";
+            tiposDeServiciosDispToolStripMenuItem.Click += tiposDeServiciosToolStripMenuItem_Click;
+            // 
+            // backUpLbl
+            // 
+            backUpLbl.BackColor = Color.FromArgb(45, 45, 48);
+            backUpLbl.DropDownItems.AddRange(new ToolStripItem[] { reestaurarToolStripMenuItem, generarBackUpToolStripMenuItem });
+            backUpLbl.ForeColor = Color.White;
+            backUpLbl.Name = "backUpLbl";
+            backUpLbl.Size = new Size(312, 36);
+            backUpLbl.Text = "Back up";
+            // 
+            // reestaurarToolStripMenuItem
+            // 
+            reestaurarToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            reestaurarToolStripMenuItem.ForeColor = Color.White;
+            reestaurarToolStripMenuItem.Name = "reestaurarToolStripMenuItem";
+            reestaurarToolStripMenuItem.Size = new Size(270, 36);
+            reestaurarToolStripMenuItem.Text = "Reestaurar";
+            reestaurarToolStripMenuItem.Click += reestaurarToolStripMenuItem_Click;
+            // 
+            // generarBackUpToolStripMenuItem
+            // 
+            generarBackUpToolStripMenuItem.BackColor = Color.FromArgb(45, 45, 48);
+            generarBackUpToolStripMenuItem.ForeColor = Color.White;
+            generarBackUpToolStripMenuItem.Name = "generarBackUpToolStripMenuItem";
+            generarBackUpToolStripMenuItem.Size = new Size(270, 36);
+            generarBackUpToolStripMenuItem.Text = "Generar Back up";
+            generarBackUpToolStripMenuItem.Click += generarBackUpToolStripMenuItem_Click;
             // 
             // editarToolStripMenuItem
             // 
@@ -557,6 +650,7 @@ namespace Vista
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sistema de Estacionamiento";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ticketDiarioBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picCochera).EndInit();
@@ -609,6 +703,18 @@ namespace Vista
         private DataGridViewTextBoxColumn estadiaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private Button btnAsignarServicios;
+        private Button button1;
+        private ToolStripMenuItem tarifasDeServiciosToolStripMenuItem;
+        private ToolStripMenuItem tiposDeServiciosDispToolStripMenuItem;
+        private Button button2;
         private DataGridViewTextBoxColumn TarifaEstacionamiento;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private BindingSource ticketDiarioBindingSource;
+        private ToolStripMenuItem backUpLbl;
+        private ToolStripMenuItem reestaurarToolStripMenuItem;
+        private ToolStripMenuItem generarBackUpToolStripMenuItem;
     }
 }

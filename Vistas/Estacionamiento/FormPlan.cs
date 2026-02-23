@@ -1,6 +1,7 @@
 ﻿using Controladora;
 using MODELO;
 using MODELO.seguridad;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,161 +19,178 @@ namespace Vista
     public partial class FormPlan : Form
     {
         private Plan plan;
+
         public FormPlan()
         {
             InitializeComponent();
             LlenarCom();
             this.Load += FormPlan_Load;
         }
+
         public FormPlan(Plan Plan)
         {
             InitializeComponent();
             LlenarCom();
-            txtNombre.Text = Plan.NombreCliente.ToString();
+            plan = Plan;
+            txtNombre.Text = Plan.NombreCliente;
             txttelefono.Text = Plan.Telefono.ToString();
             txtdni.Text = Plan.Dni.ToString();
-            txtPatente.Text = Plan.Patente.ToString();
-            dateTimePicker1.Value = Plan.FechaHoraAlta;
+            txtPatente.Text = Plan.Patente;
             txtPatente.Enabled = false;
-            var cuota = Plan.Cuotas;
-            txttipoVehiculo.Text = cuota.FirstOrDefault().TarifaEstacionamiento.TipoVehiculo.ToString();
-            txttipoVehiculo.Enabled = false;
-            plan = Plan;
+
+            dateTimePicker1.Value = Plan.FechaHoraAlta;
+
+            var cuota = Plan.Cuotas.FirstOrDefault();
+            if (cuota != null)
+            {
+                txttipoVehiculo.Text = cuota.TarifaEstacionamiento.TipoVehiculo.ToString();
+                txttipoVehiculo.Enabled = false;
+            }
+
             dataGridView1.Enabled = false;
+
             this.Load += FormPlan_Load;
         }
 
         private void FormPlan_Load(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Gestionar planes");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Gestionar planes"))
             {
                 MessageBox.Show("Necesita permisos");
-                this.Close();
+                Close();
             }
         }
 
         void LlenarCom()
         {
-            var descuentos = ControladoraDescuentos.Instancia.getAllDescuentosActivos().ToList();
-            TxtDescuento.DataSource = descuentos;
-            txttipoVehiculo.DataSource = ControladoraTiposVehiculo.Instancia.getAllTiposVehiculo();
+            TxtDescuento.DataSource =
+                ControladoraDescuentos.Instancia.getAllDescuentosActivos().ToList();
+
+            txttipoVehiculo.DataSource =
+                ControladoraTiposVehiculo.Instancia.getAllTiposVehiculo();
+
             TxtDescuento.Enabled = false;
         }
 
-
-        private bool Validaciones() //validaciones del formulario
+        private bool Validaciones()
         {
-            var ok = true;
-            if (string.IsNullOrEmpty(txtNombre.Text))
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
                 MessageBox.Show("Ingrese nombre valido");
-                ok = false;
+                return false;
             }
-            if (string.IsNullOrEmpty(txtPatente.Text))
+
+            if (string.IsNullOrWhiteSpace(txtPatente.Text))
             {
                 MessageBox.Show("Ingrese patente valida");
-                ok = false;
+                return false;
             }
-            return ok;
+
+            return true;
         }
 
         private void btnaceptar_Click(object sender, EventArgs e)
         {
-            if (Validaciones())
+            if (!Validaciones())
+                return;
+
+            if (plan == null)
+                plan = new Plan();
+
+            try
             {
-                if (plan == null) { plan = new Plan(); }
-                try 
-                {
-                    plan.NombreCliente = txtNombre.Text;
-                    plan.Telefono = long.Parse(txttelefono.Text);
-                    plan.Dni = int.Parse(txtdni.Text);
-                    plan.Patente = txtPatente.Text;
-                    if (checkDesc.Checked)
-                    {
-                        plan.Descuento = TxtDescuento.SelectedItem as Descuento;
-                    }
-                    else
-                    {
-                        plan.Descuento = null;
-                    }                
-                    plan.FechaHoraAlta = dateTimePicker1.Value;
-                    plan.EstadoPlan = true;                   
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Ingreso invalido de datos");
-                    return;
-                }
-                if (txtPatente.Enabled) //para altas                          
-                {
-                    Cuota cuota = new Cuota();
-                    cuota.Actual = true;
-                    cuota.Plan = plan;
-                    cuota.FechaHoraEmision = dateTimePicker1.Value;
-                    cuota.Patente = plan.Patente;
-                    var tarifa = ControladoraTarifas.Instancia.getAllTarifasActuales().FirstOrDefault(x => x.TipoVehiculo == (TipoVehiculo)txttipoVehiculo.SelectedItem);
-                    if (tarifa != null)
-                    {
-                        cuota.TarifaEstacionamiento = tarifa;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tarifa no encontrada");
-                        return;
-                    }
-                    cuota.Estado = ControladoraTicketsBase.Instancia.getAllEstados().FirstOrDefault(x => x.Nombre == "Pendiente") ?? new Estado_Ticket();
-
-
-                    if (dataGridView1.CurrentRow != null)
-                    {
-                        var espacio = (Espacio)dataGridView1.CurrentRow.DataBoundItem;
-                        if (espacio.Disponibilidad)
-                        {
-                            cuota.Espacio = espacio;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Espacio ocupado a su totalidad");
-                            return;
-                        }
-                    }
-                    if(cuota.Espacio == null) 
-                    {
-                        MessageBox.Show("NO se selecciono ningun espacio");
-                        return;
-                    }
-                    if (ControladoraTicketsBase.Instancia.IsPresenteByPatente(cuota.Patente))
-                    {
-                        MessageBox.Show("Vehiculo: " + cuota.Patente + " ya se encuentra estacionado");
-                        return;
-                    }
-                    var ok = ControladoraPlanes.Instancia.AgregarPlan(plan);
-                    if (ok)
-                    {
-                        ControladoraTicketsBase.Instancia.AgregarTicket(cuota);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ya existe un plan con Esta patente asociada");
-                        return;
-                    }
-                    MessageBox.Show("Vehiculo ingresado al estacionamiento de forma exitosa");
-                }
-                else
-                {             
-                    var ok = ControladoraPlanes.Instancia.ModificarPlan(plan);
-                    MessageBox.Show(ok);
-                }
-                this.Close();
+                plan.NombreCliente = txtNombre.Text;
+                plan.Telefono = long.Parse(txttelefono.Text);
+                plan.Dni = int.Parse(txtdni.Text);
+                plan.Patente = txtPatente.Text;
+                plan.FechaHoraAlta = dateTimePicker1.Value;
+                plan.EstadoPlan = true;
+                plan.Descuento = checkDesc.Checked
+                    ? TxtDescuento.SelectedItem as Descuento
+                    : null;
+            }
+            catch
+            {
+                MessageBox.Show("Ingreso invalido de datos");
+                return;
             }
 
+            // === ALTA ===
+            if (txtPatente.Enabled)
+            {
+                if (!CrearCuotaInicial())
+                    return;
 
+                MessageBox.Show("Vehiculo ingresado al estacionamiento de forma exitosa");
+            }
+            else
+            {
+                var resultado = ControladoraPlanes.Instancia.ModificarPlan(plan);
+                MessageBox.Show(resultado);
+            }
+
+            Close();
+        }
+
+        private bool CrearCuotaInicial()
+        {
+            var cuota = new Cuota
+            {
+                Actual = true,
+                Plan = plan,
+                FechaHoraEmision = dateTimePicker1.Value,
+                Patente = plan.Patente,
+                Estado = ControladoraCuotas.Instancia
+                    .getAllEstados()
+                    .FirstOrDefault(x => x.Nombre == "Pendiente") ?? new Estado_Ticket()
+            };
+
+            var tarifa = ControladoraTarifasEstacionamiento.Instancia
+                .getAllTarifasActuales()
+                .FirstOrDefault(x => x.TipoVehiculo == (TipoVehiculo)txttipoVehiculo.SelectedItem);
+
+            if (tarifa == null)
+            {
+                MessageBox.Show("Tarifa no encontrada");
+                return false;
+            }
+
+            cuota.TarifaEstacionamiento = tarifa;
+
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("NO se selecciono ningun espacio");
+                return false;
+            }
+
+            var espacio = (Espacio)dataGridView1.CurrentRow.DataBoundItem;
+            if (!espacio.Disponibilidad)
+            {
+                MessageBox.Show("Espacio ocupado a su totalidad");
+                return false;
+            }
+
+            cuota.Espacio = espacio;
+
+            if (ControladoraTicketsDiarios.Instancia.IsPresenteByPatente(cuota.Patente))
+            {
+                MessageBox.Show($"Vehiculo: {cuota.Patente} ya se encuentra estacionado");
+                return false;
+            }
+
+            if (!ControladoraPlanes.Instancia.AgregarPlan(plan))
+            {
+                MessageBox.Show("Ya existe un plan con esta patente asociada");
+                return false;
+            }
+
+            ControladoraCuotas.Instancia.AgregarCuota(cuota);
+            return true;
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void checkDesc_CheckedChanged(object sender, EventArgs e)
@@ -182,25 +200,30 @@ namespace Vista
 
         private void txttipoVehiculo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var TipoVehiculo = (TipoVehiculo)txttipoVehiculo.SelectedItem;
-            if (TipoVehiculo != null)
-            {
-                if (TipoVehiculo.Disponibilidad)
-                {
-                    LabelNoLugar.Visible = false;
-                    llenarGrilla(TipoVehiculo);
-                }
-                else { LabelNoLugar.Visible = true; }
-            }
-            else
+            var tipoVehiculo = txttipoVehiculo.SelectedItem as TipoVehiculo;
+
+            if (tipoVehiculo == null)
             {
                 LabelNoLugar.Visible = false;
+                return;
             }
+
+            if (!tipoVehiculo.Disponibilidad)
+            {
+                LabelNoLugar.Visible = true;
+                return;
+            }
+
+            LabelNoLugar.Visible = false;
+            llenarGrilla(tipoVehiculo);
         }
+
         public void llenarGrilla(TipoVehiculo tipo)
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = ControladoraEspacios.Instancia.getAllEspaciosByTipoVehiculo(tipo);
+            dataGridView1.DataSource =
+                ControladoraEspacios.Instancia.getAllEspaciosByTipoVehiculo(tipo);
         }
     }
+
 }

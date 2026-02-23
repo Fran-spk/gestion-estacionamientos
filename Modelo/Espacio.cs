@@ -119,7 +119,7 @@ namespace MODELO
 
         int OcupacionActual()
         {
-            var diarios = tickets.Count(x => x.Estado.Nombre == "Pendiente" && x is Ticket);
+            var diarios = tickets.Count(x => x.Estado.Nombre == "Pendiente" && x is Ticket_Diario);
             var cuotas = tickets.Where(x => x is Cuota).ToList().OfType<Cuota>();
             var planesUnicos = cuotas
                 .Where(x => x.Plan.EstadoPlan)

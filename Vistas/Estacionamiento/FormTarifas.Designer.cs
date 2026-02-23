@@ -47,6 +47,7 @@
             panelContent = new Panel();
             label2 = new Label();
             dataGridView1 = new DataGridView();
+            tarifaBindingSource = new BindingSource(components);
             PrecioMediaHora = new DataGridViewTextBoxColumn();
             Hora = new DataGridViewTextBoxColumn();
             PrecioDia = new DataGridViewTextBoxColumn();
@@ -54,7 +55,6 @@
             vigenteDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
             tipoVehiculoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             fechaHoraActualizacionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            tarifaBindingSource = new BindingSource(components);
             panelHeader.SuspendLayout();
             panelSidebar.SuspendLayout();
             groupBoxFiltro.SuspendLayout();
@@ -71,7 +71,7 @@
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Location = new Point(0, 0);
             panelHeader.Name = "panelHeader";
-            panelHeader.Size = new Size(1400, 60);
+            panelHeader.Size = new Size(1471, 60);
             panelHeader.TabIndex = 0;
             // 
             // lblTitulo
@@ -229,7 +229,7 @@
             panelContent.Margin = new Padding(0);
             panelContent.Name = "panelContent";
             panelContent.Padding = new Padding(20);
-            panelContent.Size = new Size(1090, 732);
+            panelContent.Size = new Size(1167, 732);
             panelContent.TabIndex = 2;
             // 
             // label2
@@ -266,7 +266,6 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeight = 45;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { PrecioMediaHora, Hora, PrecioDia, Mes, vigenteDataGridViewCheckBoxColumn, tipoVehiculoDataGridViewTextBoxColumn, fechaHoraActualizacionDataGridViewTextBoxColumn });
             dataGridView1.DataSource = tarifaBindingSource;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -291,8 +290,12 @@
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.RowTemplate.Height = 40;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1050, 690);
+            dataGridView1.Size = new Size(1124, 690);
             dataGridView1.TabIndex = 1;
+            // 
+            // tarifaBindingSource
+            // 
+            tarifaBindingSource.DataSource = typeof(MODELO.TarifaEstacionamiento);
             // 
             // PrecioMediaHora
             // 
@@ -345,21 +348,19 @@
             // fechaHoraActualizacionDataGridViewTextBoxColumn
             // 
             fechaHoraActualizacionDataGridViewTextBoxColumn.DataPropertyName = "FechaHoraActualizacion";
-            fechaHoraActualizacionDataGridViewTextBoxColumn.HeaderText = "FechaHoraActualizacion";
+            fechaHoraActualizacionDataGridViewTextBoxColumn.HeaderText = "Fecha";
             fechaHoraActualizacionDataGridViewTextBoxColumn.MinimumWidth = 8;
             fechaHoraActualizacionDataGridViewTextBoxColumn.Name = "fechaHoraActualizacionDataGridViewTextBoxColumn";
             fechaHoraActualizacionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // tarifaBindingSource
-            // 
-            tarifaBindingSource.DataSource = typeof(MODELO.TarifaEstacionamiento);
-            // 
             // FormTarifas
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(1400, 850);
+            ClientSize = new Size(1471, 850);
             ControlBox = false;
             Controls.Add(panelContent);
             Controls.Add(panelSidebar);

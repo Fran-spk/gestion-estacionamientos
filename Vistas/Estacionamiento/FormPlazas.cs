@@ -1,6 +1,7 @@
 ﻿using Controladora;
 using MODELO;
 using MODELO.seguridad;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,8 +26,7 @@ namespace Vista
         }
         private void FormPlazas_Load(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Gestionar espacios de parqueo");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Gestionar espacios de parqueo"))
             {
                 MessageBox.Show("Necesita permisos");
                 this.Close();
@@ -40,6 +40,7 @@ namespace Vista
         }
         void LlenarGrilla()
         {
+            ControladoraTicketsDiarios.Instancia.ActualizarTicketsVencidos();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = ControladoraEspacios.Instancia.getAllEspacios();
             listBoxVehiculos.DataSource = null;

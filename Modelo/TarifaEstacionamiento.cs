@@ -11,6 +11,8 @@ namespace MODELO
 {
     public class TarifaEstacionamiento: TarifaBase
     {
+        private int tipovehiculoId;
+        private TipoVehiculo tipovehiculo;
         private decimal preciomediahora;
         private decimal preciohora;
         private decimal preciodia;
@@ -19,7 +21,7 @@ namespace MODELO
 
         public override string ToString()
         {
-            return base.TipoVehiculo.NombreVehiculo;
+            return TipoVehiculo.NombreVehiculo;
         }
         public int TarifaEstacionamientoId
         {
@@ -27,7 +29,16 @@ namespace MODELO
             set { tarifaEstacionamientoId = value; }
         }
 
-
+        public TipoVehiculo TipoVehiculo
+        {
+            get { return tipovehiculo; }
+            set { tipovehiculo = value; }
+        }
+        public int TipoVehiculoId
+        {
+            get { return tipovehiculoId; }
+            set { tipovehiculoId = value; }
+        }
         public decimal PrecioMediaHora
         {
             get { return preciomediahora; }

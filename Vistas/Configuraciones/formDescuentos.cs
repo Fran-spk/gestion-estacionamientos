@@ -1,6 +1,7 @@
 ﻿using Controladora;
 using MODELO;
 using MODELO.seguridad;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,10 +26,9 @@ namespace Vista
 
         private void formDescuentos_Load(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Gestionar Descuentos");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Gestionar Descuentos"))
             {
-                MessageBox.Show("Necesita permisos");
+                MessageBox.Show("Acceso denegado");
                 this.Close();
             }
         }

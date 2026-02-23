@@ -11,7 +11,6 @@ namespace MODELO
     {
         private int tipoServicioId;
         private string descripcion;
-        private double tiempoEstimado;
         private bool estado;
 
 
@@ -19,12 +18,6 @@ namespace MODELO
         {
             get { return tipoServicioId; }
             set { tipoServicioId = value; }
-        }
-
-        public double TiempoEstimado
-        {
-            get { return tiempoEstimado; }
-            set { tiempoEstimado = value; }
         }
 
         public string Descripcion

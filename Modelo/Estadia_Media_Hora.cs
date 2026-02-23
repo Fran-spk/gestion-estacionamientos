@@ -19,7 +19,7 @@ namespace MODELO
             }
             else
             {
-                var ticket = Ticket as Ticket;
+                var ticket = Ticket as Ticket_Diario;
                 if (ticket.Horas>= 1 || ticket.Minutos > 30)
                 {
                     Ticket.Estadia = new Estadia_Hora();

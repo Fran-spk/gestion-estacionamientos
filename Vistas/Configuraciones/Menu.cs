@@ -14,6 +14,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.Configuraciones;
+using Vista.Estacionamiento;
 using Vista.Seguridad;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -29,15 +31,39 @@ namespace Vista
                 Actualizargrilla();
                 Fecha_Usuario.Text = DateTime.UtcNow.ToLongDateString();
                 Fecha_Usuario.Text += ":  " + Sesion.Instancia.Perfil.PER_NOMBRE;
+                ControladoraSesiones.Instancia.OnSesionExpirada = ManejarSesionExpirada;
+                ActualizarFechaBackup();
             }
             else
             {
                 this.Close();
             }
-            this.Size = new Size(1280, 720); 
+            this.Size = new Size(1280, 720);
             this.StartPosition = FormStartPosition.CenterScreen;
         }
+        private void ManejarSesionExpirada(string motivo)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action<string>(ManejarSesionExpirada), motivo);
+                return;
+            }
 
+            MessageBox.Show(motivo, "Sesión Expirada",
+            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            Sesion.Instancia.Perfil = null;
+            CerrarTodosLosFormsMenosLogin();
+        }
+        private void CerrarTodosLosFormsMenosLogin()
+        {
+            foreach (Form form in Application.OpenForms.Cast<Form>().ToList())
+            {
+                if (!(form is FormIniciarSesion))
+                {
+                    form.Close();
+                }
+            }
+        }
 
 
         private void btnentrada_Click(object sender, EventArgs e)
@@ -50,27 +76,10 @@ namespace Vista
 
         void Actualizargrilla()
         {
+            ControladoraTicketsDiarios.Instancia.ActualizarTicketsVencidos();
             dataGridView1.DataSource = null;
-            ActualizarPendientes();
-            dataGridView1.DataSource = ControladoraTicketsBase.Instancia.getAllTicketsPendientes();
+            dataGridView1.DataSource = ControladoraTicketsDiarios.Instancia.getAllTicketsPendientes();
             CapacidadDiaria();
-        }
-
-        void ActualizarPendientes()
-        {
-            var tickets = ControladoraTicketsBase.Instancia.getAllTicketsPendientes();
-            foreach (var ticket in tickets)
-            {
-                if (ticket.Estadia is Estadia_Vencida && ticket.Estado.Nombre == "Pendiente")
-                {
-                    var estado = ControladoraTicketsBase.Instancia.getAllEstados().FirstOrDefault(x => x.Nombre == "Cancelado");
-                    if (estado != null)
-                    {
-                        ticket.Estado = estado;
-                        ControladoraTicketsBase.Instancia.ModificarTicket(ticket);
-                    }
-                }
-            }
         }
 
 
@@ -93,7 +102,7 @@ namespace Vista
 
             if (dataGridView1.CurrentRow != null)
             {
-                var vehiculo = (Ticket)dataGridView1.CurrentRow.DataBoundItem;
+                var vehiculo = (Ticket_Diario)dataGridView1.CurrentRow.DataBoundItem;
 
                 var form = new FormPago(vehiculo);
                 this.Hide();
@@ -154,6 +163,7 @@ namespace Vista
 
             if (resul == DialogResult.Yes)
             {
+                ControladoraSesiones.Instancia.RegistrarLogout();
                 Sesion.Instancia.Perfil = null;
                 this.Close();
                 Application.Exit();
@@ -194,12 +204,12 @@ namespace Vista
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Guardar Registro" || x.ACC_NOMBRE == "Eliminar Registro");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Guardar Registro") || !PermisoService.TienePermiso("Eliminar Registro"))
             {
                 MessageBox.Show("Necesita permisos");
                 return;
             }
+
             var form = new FormUsuarios();
             this.Hide();
             form.ShowDialog();
@@ -217,6 +227,7 @@ namespace Vista
 
             if (resul == DialogResult.Yes)
             {
+                ControladoraSesiones.Instancia.RegistrarLogout();
                 Sesion.Instancia.Perfil = null;
                 this.Close();
             }
@@ -253,10 +264,126 @@ namespace Vista
             reportes.ShowDialog();
         }
 
-        private void chart1_Click(object sender, EventArgs e)
+
+        private void tarifasDeServiciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            var form = new FormTarifasServicios();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void tiposDeServiciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormTiposServicio();
+            form.ShowDialog();
+        }
+
+        private void btnTarifasServicios_Click(object sender, EventArgs e)
+        {
+            var formservicios = new FormTarifaServicio();
+            formservicios.ShowDialog();
+        }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                var vehiculo = (Ticket_Diario)dataGridView1.CurrentRow.DataBoundItem;
+
+                var form = new FormAltaServicioPlan(vehiculo);
+                this.Hide();
+                form.ShowDialog();
+                this.Show();
+                Actualizargrilla();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un vehiculo");
+            }
+            Actualizargrilla();
+        }
+
+        private void btnSalidaByPatente_Click(object sender, EventArgs e)
+        {
+            var formSalidaPatente = new FormSalidaPorPatente();
+            formSalidaPatente.ShowDialog();
+        }
+
+        private void generarBackUpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!PermisoService.TienePermiso("Resguardar datos"))
+            {
+                MessageBox.Show("Necesita permisos");
+                return;
+            }
+            var confirm = MessageBox.Show(
+            "Se sobreescribirá el backup anterior. ¿Continuar?",
+            "Confirmar backup", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm != DialogResult.Yes) return;
+
+            try
+            {
+                var connectionString = ConfigurationHelper.GetConnectionString("DefaultConnection");
+                BackupService.GenerarBackup(connectionString);
+                ActualizarFechaBackup();
+                MessageBox.Show("Backup generado correctamente.", "Éxito",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al generar backup: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void ActualizarFechaBackup()
+        {
+            var fecha = BackupService.FechaUltimoBackup();
+            backUpLbl.Text = fecha.HasValue
+                ? $"Último backup: {fecha:dd/MM/yyyy HH:mm}"
+                : "Sin backup previo";
+        }
+
+
+        private void reestaurarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!PermisoService.TienePermiso("Restaurar datos"))
+            {
+                MessageBox.Show("Necesita permisos");
+                return;
+            }
+            if (!BackupService.ExisteBackup())
+            {
+                MessageBox.Show("No existe un backup previo.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var confirm = MessageBox.Show(
+                "Se restaurará la base de datos al estado del último backup. " +
+                "Todos los cambios posteriores se perderán. ¿Continuar?",
+                "Confirmar restauración", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirm != DialogResult.Yes) return;
+
+            try
+            {
+                var connectionString = ConfigurationHelper.GetConnectionString("DefaultConnection");
+                BackupService.RestaurarBackup(connectionString);
+                MessageBox.Show("Base de datos restaurada correctamente. " +
+                    "Reinicie la aplicación.", "Éxito",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ControladoraSesiones.Instancia.RegistrarLogout();
+                this.Close();
+                Application.Restart();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al restaurar: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
-
 }

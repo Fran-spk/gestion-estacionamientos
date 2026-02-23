@@ -9,7 +9,7 @@ namespace Modelo_Ids
 {
     public abstract class CalculadorPago
     {
-        public abstract void CalcularMonto(Pago pago);
+        public abstract void CalcularMonto(PagoDetalle pago);
 
     }
 }

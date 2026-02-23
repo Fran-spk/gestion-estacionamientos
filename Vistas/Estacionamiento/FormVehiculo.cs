@@ -1,12 +1,15 @@
 ﻿using Controladora;
 using MODELO;
 using MODELO.seguridad;
+using Modelo_Ids;
+using Servicios;
 using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Security;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using Vista.Estacionamiento;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace Vista
@@ -17,20 +20,110 @@ namespace Vista
         public FormVehiculo()
         {
             InitializeComponent();
+            ControladoraTicketsDiarios.Instancia.ActualizarTicketsVencidos();
             llenarCombos();
             this.Load += FormVehiculo_Load;
+            CargarServicios();
         }
 
 
-        private void FormVehiculo_Load(object sender, EventArgs e)
+     private Dictionary<int, CheckBox> checkBoxesServicios = new Dictionary<int, CheckBox>();
+
+        public void CargarServicios()
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Generar ingreso");
-            if (Accion == null)
+            var tipovehiculo = (TipoVehiculo)comboVehiculo.SelectedItem;
+            var servicios = ControladoraTarifasServicio.Instancia.getAllTarifasActualesByVehiculo(tipovehiculo);
+            var tickets = ControladoraTicketsDiarios.Instancia.getAllTicketsPendientes();
+            flowLayoutServicios.Controls.Clear();
+            checkBoxesServicios.Clear();
+
+            foreach (var Tarifaservicio in servicios)
             {
-                MessageBox.Show("Necesita permisos");
-                this.Close();
+                Panel panelServicio = new Panel
+                {
+                    Width = 380,
+                    Height = 65,
+                    Margin = new Padding(5),
+                    BackColor = Color.FromArgb(45, 45, 48),
+                    Padding = new Padding(10, 5, 10, 5)
+                };
+
+                // Crear checkbox
+                CheckBox chk = new CheckBox
+                {
+                    Text = $"{Tarifaservicio.ServicioVehiculo.Servicio.Descripcion}",
+                    ForeColor = Color.White,
+                    Font = new Font("Segoe UI", 10F, FontStyle.Bold),
+                    AutoSize = true,
+                    Location = new Point(10, 8),
+                    Tag = Tarifaservicio
+                };
+
+                // Crear label para el precio 
+                Label lblPrecio = new Label
+                {
+                    Text = $"${Tarifaservicio.Precio:N2}",
+                    ForeColor = Color.FromArgb(76, 175, 80),
+                    Font = new Font("Segoe UI", 11F, FontStyle.Bold),
+                    AutoSize = true,
+                    Location = new Point(300, 8)
+                };
+
+                // Tiempo de demora 
+                Label lblTiempoDemora = new Label
+                {
+                    Text = DemoraByServicioService.CalcularDemora(Tarifaservicio, tickets),
+                    ForeColor = Color.FromArgb(189, 189, 189), // Gris claro
+                    Font = new Font("Segoe UI", 8F, FontStyle.Italic),
+                    AutoSize = false,
+                    Width = 360,
+                    Height = 30,
+                    Location = new Point(10, 32)
+                };
+
+                panelServicio.Controls.Add(chk);
+                panelServicio.Controls.Add(lblPrecio);
+                panelServicio.Controls.Add(lblTiempoDemora);
+                flowLayoutServicios.Controls.Add(panelServicio);
+
+                checkBoxesServicios.Add(Tarifaservicio.TarifaServicioId, chk);
             }
         }
+
+        // Método para obtener los servicios seleccionados
+        public List<TarifaServicio> CrearServiciosConsumidos()
+        {
+            List<TarifaServicio> nuevosServicios = new List<TarifaServicio>();
+
+
+            foreach (var kvp in checkBoxesServicios)
+            {
+                if (!kvp.Value.Checked)
+                    continue;
+
+                var tarifa = (TarifaServicio)kvp.Value.Tag;
+                nuevosServicios.Add(tarifa);
+            }
+
+            return nuevosServicios;
+        }
+
+        
+    public void LimpiarServicios()
+    {
+        foreach (var kvp in checkBoxesServicios)
+        {
+            kvp.Value.Checked = false;
+        }
+    }
+    private void FormVehiculo_Load(object sender, EventArgs e)
+    {
+        if (!PermisoService.TienePermiso("Generar ingreso"))
+        {       
+            MessageBox.Show("Necesita permisos");
+            this.Close();
+        }
+    }
 
         public void llenarGrilla(TipoVehiculo tipo)
         {
@@ -40,13 +133,13 @@ namespace Vista
 
         public void llenarCombos()
         {
-            comboBox1.DataSource = null;
-            comboBox1.DataSource = ControladoraTiposVehiculo.Instancia.getAllTiposVehiculoActivos();
+            comboVehiculo.DataSource = null;
+            comboVehiculo.DataSource = ControladoraTiposVehiculo.Instancia.getAllTiposVehiculoActivos();
         }
 
 
 
-        public FormVehiculo(Ticket ticket)
+        public FormVehiculo(Ticket_Diario ticket)
         {
             InitializeComponent();
             llenarCombos();
@@ -69,7 +162,6 @@ namespace Vista
             }
 
             return ok;
-
         }
 
 
@@ -80,7 +172,7 @@ namespace Vista
         {
             if (Validaciones())
             {
-                Ticket ticket = new Ticket();
+                Ticket_Diario ticket = new Ticket_Diario();
                 Espacio espacio;
                 ticket.FechaHoraEmision = DateTime.Now;
                 if (CbxManual.Checked)
@@ -99,8 +191,7 @@ namespace Vista
                     }
                 }
                 ticket.Patente = txtpatente.Text;
-
-                ticket.Estado = ControladoraTicketsBase.Instancia.getAllEstados().FirstOrDefault(x => x.Nombre == "Pendiente") ?? new Estado_Ticket();
+                ticket.Estado = ControladoraCuotas.Instancia.getAllEstados().FirstOrDefault(x => x.Nombre == "Pendiente") ?? new Estado_Ticket();
                 if (dataGridView1.CurrentRow != null)
                 {
                     espacio = (Espacio)dataGridView1.CurrentRow.DataBoundItem;
@@ -120,13 +211,13 @@ namespace Vista
                     return;
                 }
 
-                if (ControladoraTicketsBase.Instancia.IsPresenteByPatente(ticket.Patente))
+                if (ControladoraTicketsDiarios.Instancia.IsPresenteByPatente(ticket.Patente))
                 {
                     MessageBox.Show("Vehiculo: " + ticket.Patente + " ya se encuentra estacionado");
                     return;
                 }
-                var tipovehiculo = (TipoVehiculo)comboBox1.SelectedItem;
-                var tarifa = ControladoraTarifas.Instancia.getAllTarifasActuales().FirstOrDefault(x => x.TipoVehiculo.NombreVehiculo == tipovehiculo.NombreVehiculo);
+                var tipovehiculo = (TipoVehiculo)comboVehiculo.SelectedItem;
+                var tarifa = ControladoraTarifasEstacionamiento.Instancia.getAllTarifasActuales().FirstOrDefault(x => x.TipoVehiculo.NombreVehiculo == tipovehiculo.NombreVehiculo);
                 if (tarifa != null)
                 {
                     ticket.TarifaEstacionamiento = tarifa;
@@ -136,7 +227,12 @@ namespace Vista
                     MessageBox.Show("Tarifa no encontrada");
                     return;
                 }
-                var ok = ControladoraTicketsBase.Instancia.AgregarTicket(ticket);
+                //logica para insertar servicios
+                foreach (var servicios in CrearServiciosConsumidos())
+                {
+                    ticket.RegistrarServicio(servicios);
+                }
+                var ok = ControladoraTicketsDiarios.Instancia.AgregarTicket(ticket, Sesion.Instancia.Perfil.PER_ID);
                 if (ok)
                 {
                     MessageBox.Show("Vehiculo ingresado al estacionamiento de forma exitosa");
@@ -165,8 +261,9 @@ namespace Vista
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var espacios = ControladoraEspacios.Instancia.getAllEspacios();
-            var TipoVehiculo = (TipoVehiculo)comboBox1.SelectedItem;
-            
+            var TipoVehiculo = (TipoVehiculo)comboVehiculo.SelectedItem;
+            CargarServicios();
+            LimpiarServicios();
             if (TipoVehiculo != null)
             {
                 if (TipoVehiculo.Disponibilidad)

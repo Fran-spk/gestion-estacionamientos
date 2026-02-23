@@ -1,4 +1,5 @@
 ﻿using MODELO.seguridad;
+using Modelo_Ids;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MODELO
 {
-    public class Plan:Persona
+    public class Plan: Persona, IConsumidorDeServicios
     {
         private DateTime fechaHoraAlta;
         private DateTime fechaHoraBaja;
@@ -19,8 +20,10 @@ namespace MODELO
         private string patente;
         private int dni;
         private long telefono;
+        private List<ServicioConsumido> serviciosConsumidos = new List<ServicioConsumido>();
 
         private List<Cuota> cuotas = new List<Cuota>(); 
+
 
         public List<Cuota> Cuotas
         {
@@ -28,8 +31,33 @@ namespace MODELO
             set { cuotas = value; }
         }
 
-  
+        public List<ServicioConsumido> ServiciosConsumidos
+        {
+            get { return serviciosConsumidos; }
+            set { serviciosConsumidos = value; }
+        }
 
+        public bool RegistrarServicio(TarifaServicio tarifa)
+        {
+            ServiciosConsumidos.Add(new ServicioConsumido
+            {
+                TarifaServicio = tarifa,
+                FechaHoraAsignado = DateTime.Now
+            });
+            return true;
+        }
+
+        public void AnularServicio(int servicioConsumidoId)
+        {
+            var servicio = ServiciosConsumidos
+                .FirstOrDefault(s => s.ServicioConsumidoId == servicioConsumidoId);
+
+            if (servicio != null)
+                servicio.Anular();
+        }
+
+        public IReadOnlyCollection<ServicioConsumido> ObtenerServiciosPendientes()
+         => ServiciosConsumidos.Where(s => s.Pendiente).ToList();
 
         public int? DescuentoId
         {

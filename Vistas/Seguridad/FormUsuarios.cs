@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Servicios;
 
 namespace Vista.Seguridad
 {
@@ -25,8 +26,7 @@ namespace Vista.Seguridad
 
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Gestionar usuarios");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Gestionar usuarios"))
             {
                 MessageBox.Show("Necesita permisos");
                 this.Close();
@@ -62,8 +62,7 @@ namespace Vista.Seguridad
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Guardar Registro");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Guardar Registro"))
             {
                 MessageBox.Show("Necesita permisos");
                 return;
@@ -75,8 +74,7 @@ namespace Vista.Seguridad
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Eliminar Registro");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Eliminar Registro"))
             {
                 MessageBox.Show("Necesita permisos");
                 return;
@@ -92,8 +90,7 @@ namespace Vista.Seguridad
 
         private void btnResetear_Click(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Eliminar Registro");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Eliminar Registro"))
             {
                 MessageBox.Show("Necesita permisos");
                 return;
@@ -119,8 +116,7 @@ namespace Vista.Seguridad
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Guardar Registro");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Guardar Registro"))
             {
                 MessageBox.Show("Necesita permisos");
                 return;

@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.Estacionamiento;
 
 
 namespace Vista
@@ -90,6 +92,30 @@ namespace Vista
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var form = new FormTarifasServicios();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var form = new FormTiposServicio();
+            form.ShowDialog();
+        }
+
+        private void button2_MouseMove(object sender, MouseEventArgs e)
+        {
+            TxtExplicacion.Text = "Gestion de las tarifas de los servicios";
+        }
+
+        private void button3_MouseMove(object sender, MouseEventArgs e)
+        {
+            TxtExplicacion.Text = "Gestion de los tipos de servicios del sistema";
         }
     }
 }

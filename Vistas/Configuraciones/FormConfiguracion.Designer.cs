@@ -36,6 +36,8 @@
             btnVolver = new Button();
             TxtExplicacion = new RichTextBox();
             panelBotones = new Panel();
+            button3 = new Button();
+            button2 = new Button();
             btnModificar = new Button();
             BtnDescuentos = new Button();
             BtnTarifas = new Button();
@@ -132,6 +134,8 @@
             // panelBotones
             // 
             panelBotones.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelBotones.Controls.Add(button3);
+            panelBotones.Controls.Add(button2);
             panelBotones.Controls.Add(btnModificar);
             panelBotones.Controls.Add(BtnDescuentos);
             panelBotones.Controls.Add(BtnTarifas);
@@ -142,6 +146,46 @@
             panelBotones.Size = new Size(1510, 690);
             panelBotones.TabIndex = 37;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(52, 58, 64);
+            button3.Dock = DockStyle.Top;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(0, 600);
+            button3.Margin = new Padding(0, 0, 0, 15);
+            button3.Name = "button3";
+            button3.Padding = new Padding(30, 0, 0, 0);
+            button3.Size = new Size(1510, 102);
+            button3.TabIndex = 37;
+            button3.Text = "\U0001f9fc Gestionar Tipos de servicios";
+            button3.TextAlign = ContentAlignment.MiddleLeft;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            button3.MouseMove += button3_MouseMove;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(52, 58, 64);
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(0, 500);
+            button2.Margin = new Padding(0, 0, 0, 15);
+            button2.Name = "button2";
+            button2.Padding = new Padding(30, 0, 0, 0);
+            button2.Size = new Size(1510, 100);
+            button2.TabIndex = 36;
+            button2.Text = "💰 Gestionar Tarifas de servicio";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            button2.MouseMove += button2_MouseMove;
+            // 
             // btnModificar
             // 
             btnModificar.BackColor = Color.FromArgb(52, 58, 64);
@@ -150,11 +194,11 @@
             btnModificar.FlatStyle = FlatStyle.Flat;
             btnModificar.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
             btnModificar.ForeColor = Color.White;
-            btnModificar.Location = new Point(0, 480);
+            btnModificar.Location = new Point(0, 400);
             btnModificar.Margin = new Padding(0, 0, 0, 15);
             btnModificar.Name = "btnModificar";
             btnModificar.Padding = new Padding(30, 0, 0, 0);
-            btnModificar.Size = new Size(1510, 120);
+            btnModificar.Size = new Size(1510, 100);
             btnModificar.TabIndex = 9;
             btnModificar.Text = "🅿️  Espacios de Parqueo";
             btnModificar.TextAlign = ContentAlignment.MiddleLeft;
@@ -170,11 +214,11 @@
             BtnDescuentos.FlatStyle = FlatStyle.Flat;
             BtnDescuentos.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
             BtnDescuentos.ForeColor = Color.White;
-            BtnDescuentos.Location = new Point(0, 360);
+            BtnDescuentos.Location = new Point(0, 300);
             BtnDescuentos.Margin = new Padding(0, 0, 0, 15);
             BtnDescuentos.Name = "BtnDescuentos";
             BtnDescuentos.Padding = new Padding(30, 0, 0, 0);
-            BtnDescuentos.Size = new Size(1510, 120);
+            BtnDescuentos.Size = new Size(1510, 100);
             BtnDescuentos.TabIndex = 19;
             BtnDescuentos.Text = "🏷️  Gestionar Descuentos";
             BtnDescuentos.TextAlign = ContentAlignment.MiddleLeft;
@@ -190,11 +234,11 @@
             BtnTarifas.FlatStyle = FlatStyle.Flat;
             BtnTarifas.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
             BtnTarifas.ForeColor = Color.White;
-            BtnTarifas.Location = new Point(0, 240);
+            BtnTarifas.Location = new Point(0, 200);
             BtnTarifas.Margin = new Padding(0, 0, 0, 15);
             BtnTarifas.Name = "BtnTarifas";
             BtnTarifas.Padding = new Padding(30, 0, 0, 0);
-            BtnTarifas.Size = new Size(1510, 120);
+            BtnTarifas.Size = new Size(1510, 100);
             BtnTarifas.TabIndex = 34;
             BtnTarifas.Text = "💰  Gestionar Tarifas";
             BtnTarifas.TextAlign = ContentAlignment.MiddleLeft;
@@ -210,11 +254,11 @@
             BtnActividades.FlatStyle = FlatStyle.Flat;
             BtnActividades.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point);
             BtnActividades.ForeColor = Color.White;
-            BtnActividades.Location = new Point(0, 120);
+            BtnActividades.Location = new Point(0, 100);
             BtnActividades.Margin = new Padding(0, 0, 0, 15);
             BtnActividades.Name = "BtnActividades";
             BtnActividades.Padding = new Padding(30, 0, 0, 0);
-            BtnActividades.Size = new Size(1510, 120);
+            BtnActividades.Size = new Size(1510, 100);
             BtnActividades.TabIndex = 25;
             BtnActividades.Text = "💳  Gestionar Métodos de Pago";
             BtnActividades.TextAlign = ContentAlignment.MiddleLeft;
@@ -234,7 +278,7 @@
             button1.Margin = new Padding(0);
             button1.Name = "button1";
             button1.Padding = new Padding(30, 0, 0, 0);
-            button1.Size = new Size(1510, 120);
+            button1.Size = new Size(1510, 100);
             button1.TabIndex = 35;
             button1.Text = "🚗  Gestionar Tipos de Vehículos";
             button1.TextAlign = ContentAlignment.MiddleLeft;
@@ -276,5 +320,7 @@
         private Panel panelHeader;
         private Label lblTitulo;
         private Panel panelBotones;
+        private Button button3;
+        private Button button2;
     }
 }

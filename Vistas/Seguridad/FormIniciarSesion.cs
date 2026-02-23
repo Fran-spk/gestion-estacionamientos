@@ -33,11 +33,20 @@ namespace Vista.Seguridad
                 var Usuario = ControladoraUsuarios.Instancia.IniciarSesion(txtUsuario.Text, txtClave.Text);
                 if (Usuario != null)
                 {
-                    Sesion.Instancia.Perfil = Usuario;
-                    Form form = new Menu();
-                    this.Hide();
-                    form.ShowDialog();
-                    this.Show();
+                    try
+                    {
+                        var sesion = ControladoraSesiones.Instancia.RegistrarLogin(Usuario);
+                        Sesion.Instancia.Perfil = Usuario;
+                        Form form = new Menu();
+                        this.Hide();
+                        form.ShowDialog();
+                        this.Show();
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
                 }
                 else
                 {

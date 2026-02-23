@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using MODELO.seguridad;
+using Servicios;
 
 namespace Vista
 {
@@ -28,8 +29,7 @@ namespace Vista
 
         private void FormTarifas_Load(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Gestionar Tarifas");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Gestionar Tarifas"))
             {
                 MessageBox.Show("Necesita permisos");
                 this.Close();
@@ -39,8 +39,8 @@ namespace Vista
         void ActualizarGrilla()
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = ControladoraTarifas.Instancia.getAllTarifasActuales();
-            var tarifas = ControladoraTarifas.Instancia.getAllTarifasActuales();
+            dataGridView1.DataSource = ControladoraTarifasEstacionamiento.Instancia.getAllTarifasActuales();
+            var tarifas = ControladoraTarifasEstacionamiento.Instancia.getAllTarifasActuales();
         }
 
         void ActualizarCombo()
@@ -71,7 +71,7 @@ namespace Vista
             if (dataGridView1.CurrentRow != null)
             {
                 var Tarifa = (TarifaEstacionamiento)dataGridView1.CurrentRow.DataBoundItem;
-                var mensaje = ControladoraTarifas.Instancia.EliminarTarifa(Tarifa);
+                var mensaje = ControladoraTarifasEstacionamiento.Instancia.EliminarTarifa(Tarifa);
                 MessageBox.Show(mensaje, "Atencion");
                 ActualizarGrilla();
             }
@@ -84,7 +84,7 @@ namespace Vista
 
         private void cmbTiempo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var Tarifas = ControladoraTarifas.Instancia.getAllTarifas().Where(x => x.TipoVehiculo == (TipoVehiculo)cbmTipo.SelectedItem).ToList();
+            var Tarifas = ControladoraTarifasEstacionamiento.Instancia.getAllTarifas().Where(x => x.TipoVehiculo == (TipoVehiculo)cbmTipo.SelectedItem).ToList();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = Tarifas;
         }

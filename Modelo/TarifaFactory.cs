@@ -10,20 +10,20 @@ namespace Modelo_Ids
     public static class TarifaFactory
     {
         public static TarifaBase CrearTarifa(
-            TipoVehiculo tipoVehiculo,
-            decimal precio,
-            TipoServicio? servicio = null,
+            TipoVehiculo? tipoVehiculo = null,
+            ServicioVehiculo? servicioVehiculo = null,
+            decimal? precio = null,
+            decimal? precioMediaHora = null,
             decimal? precioHora = null,
             decimal? precioDia = null,
             decimal? precioMes = null)
         {
-            if (servicio != null)
+            if (servicioVehiculo != null)
             {
                 return new TarifaServicio
                 {
-                    TipoVehiculo = tipoVehiculo,
-                    Precio = precio,
-                    Servicio = servicio,
+                    ServicioVehiculo = servicioVehiculo,
+                    Precio = precio ?? 0,
                     Vigente = true,
                     FechaHoraActualizacion = DateTime.Now
                 };
@@ -32,6 +32,7 @@ namespace Modelo_Ids
             return new TarifaEstacionamiento
             {
                 TipoVehiculo = tipoVehiculo,
+                PrecioMediaHora = precioMediaHora ?? 0,
                 PrecioHora = precioHora ?? 0,
                 PrecioDia = precioDia ?? 0,
                 PrecioMes = precioMes ?? 0,

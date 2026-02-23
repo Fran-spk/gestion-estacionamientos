@@ -72,8 +72,9 @@ namespace Controladora
             var TarifaEx = Estacionamiento.Contexto.Tarifas_Estacionamiento.FirstOrDefault(x => x.TarifaEstacionamientoId == tarifa.TarifaEstacionamientoId);
             if (TarifaEx != null)
             {
-                var Ticket = ControladoraTicketsBase.Instancia.getAllTickets().FirstOrDefault(x => x.TarifaId == tarifa.TarifaEstacionamientoId);
-                if (Ticket == null)
+                var Cuotas = ControladoraCuotas.Instancia.getAllCuotas().FirstOrDefault(x => x.TarifaId == tarifa.TarifaEstacionamientoId);
+                var Tickets = ControladoraTicketsDiarios.Instancia.getAllTickets().FirstOrDefault(x => x.TarifaId == tarifa.TarifaEstacionamientoId);
+                if (Tickets == null && Cuotas ==null)
                 {
                     if (!tarifa.Vigente)
                     {

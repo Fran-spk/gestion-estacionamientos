@@ -14,7 +14,6 @@ namespace MODELO
         private Plan plan;
         private int planId;
 
-
         public int PlanId
         {
             get { return planId; }
@@ -35,7 +34,7 @@ namespace MODELO
                 fechahoravencimiento = base.FechaHoraEmision.AddMonths(1);
                 return fechahoravencimiento;
             }
-           
+            set { fechahoravencimiento = fechahoravencimiento = base.FechaHoraEmision.AddMonths(1); }
         }
 
 
@@ -45,6 +44,22 @@ namespace MODELO
             set { plan = value; }
         }
 
+        public Cuota? RenovarCuota()
+        {
+            if (FechaHoraVencimiento > DateTime.Now)
+                return null;
+
+            Actual = false;
+
+            return new Cuota
+            {
+                Actual = true,
+                Plan = Plan,
+                FechaHoraEmision = FechaHoraVencimiento,
+                Patente = Plan.Patente,
+                Espacio = this.Espacio
+            };
+        }
 
     }
 }

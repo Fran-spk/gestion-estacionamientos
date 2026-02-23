@@ -1,6 +1,7 @@
 ﻿using Controladora;
 using MODELO;
 using MODELO.seguridad;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,8 +27,7 @@ namespace Vista
 
         private void FormMetodosDepago_Load(object sender, EventArgs e)
         {
-            var Accion = Sesion.Instancia.Acciones.FirstOrDefault(x => x.ACC_NOMBRE == "Gestionar Métodos de pago");
-            if (Accion == null)
+            if (!PermisoService.TienePermiso("Gestionar Métodos de pago"))
             {
                 MessageBox.Show("Necesita permisos");
                 this.Close();

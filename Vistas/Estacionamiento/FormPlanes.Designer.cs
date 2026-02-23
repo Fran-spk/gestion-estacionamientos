@@ -34,6 +34,8 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panelSidebar = new Panel();
+            btnGestionServicios = new Button();
+            btnServicios = new Button();
             BtnVerPago = new Button();
             BtnCobrar = new Button();
             groupBoxFiltros = new GroupBox();
@@ -59,12 +61,11 @@
             ticketAbonadoBindingSource = new BindingSource(components);
             ticketBindingSource = new BindingSource(components);
             ticketAbonadoBindingSource1 = new BindingSource(components);
-            codigoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            estadoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            dataGridView1 = new DataGridView();
             fechaHoraEmisionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             fechaHoraVencimientoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            actualDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
-            dataGridView1 = new DataGridView();
+            estadoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            lbSeriviciosPendientes = new Label();
             panelSidebar.SuspendLayout();
             groupBoxFiltros.SuspendLayout();
             panel3.SuspendLayout();
@@ -78,6 +79,8 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.FromArgb(28, 28, 30);
+            panelSidebar.Controls.Add(btnGestionServicios);
+            panelSidebar.Controls.Add(btnServicios);
             panelSidebar.Controls.Add(BtnVerPago);
             panelSidebar.Controls.Add(BtnCobrar);
             panelSidebar.Controls.Add(groupBoxFiltros);
@@ -93,14 +96,50 @@
             panelSidebar.Size = new Size(280, 1088);
             panelSidebar.TabIndex = 0;
             // 
+            // btnGestionServicios
+            // 
+            btnGestionServicios.BackColor = Color.FromArgb(52, 58, 64);
+            btnGestionServicios.CausesValidation = false;
+            btnGestionServicios.FlatAppearance.BorderSize = 0;
+            btnGestionServicios.FlatStyle = FlatStyle.Flat;
+            btnGestionServicios.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGestionServicios.ForeColor = Color.White;
+            btnGestionServicios.Location = new Point(15, 669);
+            btnGestionServicios.Margin = new Padding(0);
+            btnGestionServicios.Name = "btnGestionServicios";
+            btnGestionServicios.Size = new Size(240, 55);
+            btnGestionServicios.TabIndex = 21;
+            btnGestionServicios.Text = "🛠️ Gestion Servicios";
+            btnGestionServicios.TextAlign = ContentAlignment.MiddleLeft;
+            btnGestionServicios.UseVisualStyleBackColor = false;
+            btnGestionServicios.Click += btnGestionServicios_Click;
+            // 
+            // btnServicios
+            // 
+            btnServicios.BackColor = Color.FromArgb(52, 58, 64);
+            btnServicios.CausesValidation = false;
+            btnServicios.FlatAppearance.BorderSize = 0;
+            btnServicios.FlatStyle = FlatStyle.Flat;
+            btnServicios.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnServicios.ForeColor = Color.White;
+            btnServicios.Location = new Point(15, 743);
+            btnServicios.Margin = new Padding(0);
+            btnServicios.Name = "btnServicios";
+            btnServicios.Size = new Size(240, 55);
+            btnServicios.TabIndex = 20;
+            btnServicios.Text = "     Asignar servicios";
+            btnServicios.TextAlign = ContentAlignment.MiddleLeft;
+            btnServicios.UseVisualStyleBackColor = false;
+            btnServicios.Click += btnServicios_Click_1;
+            // 
             // BtnVerPago
             // 
-            BtnVerPago.BackColor = Color.FromArgb(35, 32, 39);
+            BtnVerPago.BackColor = Color.FromArgb(52, 58, 64);
             BtnVerPago.FlatAppearance.BorderSize = 0;
             BtnVerPago.FlatStyle = FlatStyle.Flat;
             BtnVerPago.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             BtnVerPago.ForeColor = Color.White;
-            BtnVerPago.Location = new Point(15, 461);
+            BtnVerPago.Location = new Point(15, 599);
             BtnVerPago.Margin = new Padding(0);
             BtnVerPago.Name = "BtnVerPago";
             BtnVerPago.Size = new Size(240, 50);
@@ -121,7 +160,7 @@
             BtnCobrar.Name = "BtnCobrar";
             BtnCobrar.Size = new Size(240, 50);
             BtnCobrar.TabIndex = 0;
-            BtnCobrar.Text = "💵 Cobrar cuota";
+            BtnCobrar.Text = "💵 Liquidar";
             BtnCobrar.UseVisualStyleBackColor = false;
             BtnCobrar.Click += BtnCobrar_Click;
             // 
@@ -188,7 +227,7 @@
             btnModificar.FlatStyle = FlatStyle.Flat;
             btnModificar.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             btnModificar.ForeColor = Color.White;
-            btnModificar.Location = new Point(15, 530);
+            btnModificar.Location = new Point(15, 456);
             btnModificar.Margin = new Padding(0);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(240, 50);
@@ -221,7 +260,7 @@
             btnBaja.FlatStyle = FlatStyle.Flat;
             btnBaja.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             btnBaja.ForeColor = Color.White;
-            btnBaja.Location = new Point(15, 601);
+            btnBaja.Location = new Point(15, 528);
             btnBaja.Margin = new Padding(0);
             btnBaja.Name = "btnBaja";
             btnBaja.Size = new Size(240, 50);
@@ -232,12 +271,12 @@
             // 
             // BtnCrear
             // 
-            BtnCrear.BackColor = Color.FromArgb(48, 30, 35);
+            BtnCrear.BackColor = Color.FromArgb(52, 58, 64);
             BtnCrear.FlatAppearance.BorderSize = 0;
             BtnCrear.FlatStyle = FlatStyle.Flat;
             BtnCrear.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             BtnCrear.ForeColor = Color.White;
-            BtnCrear.Location = new Point(15, 672);
+            BtnCrear.Location = new Point(15, 257);
             BtnCrear.Margin = new Padding(0);
             BtnCrear.Name = "BtnCrear";
             BtnCrear.Size = new Size(240, 50);
@@ -375,52 +414,12 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.White;
+            label9.ForeColor = Color.FromArgb(0, 204, 153);
             label9.Location = new Point(290, 192);
             label9.Name = "label9";
             label9.Size = new Size(81, 30);
             label9.TabIndex = 3;
             label9.Text = "Cuotas";
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            codigoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            codigoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
-            estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
-            estadoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            estadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaHoraEmisionDataGridViewTextBoxColumn
-            // 
-            fechaHoraEmisionDataGridViewTextBoxColumn.DataPropertyName = "FechaHoraEmision";
-            fechaHoraEmisionDataGridViewTextBoxColumn.HeaderText = "Emision";
-            fechaHoraEmisionDataGridViewTextBoxColumn.MinimumWidth = 8;
-            fechaHoraEmisionDataGridViewTextBoxColumn.Name = "fechaHoraEmisionDataGridViewTextBoxColumn";
-            fechaHoraEmisionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaHoraVencimientoDataGridViewTextBoxColumn
-            // 
-            fechaHoraVencimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaHoraVencimiento";
-            fechaHoraVencimientoDataGridViewTextBoxColumn.HeaderText = "Vencimiento";
-            fechaHoraVencimientoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            fechaHoraVencimientoDataGridViewTextBoxColumn.Name = "fechaHoraVencimientoDataGridViewTextBoxColumn";
-            fechaHoraVencimientoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // actualDataGridViewCheckBoxColumn
-            // 
-            actualDataGridViewCheckBoxColumn.DataPropertyName = "Actual";
-            actualDataGridViewCheckBoxColumn.HeaderText = "Actual";
-            actualDataGridViewCheckBoxColumn.MinimumWidth = 8;
-            actualDataGridViewCheckBoxColumn.Name = "actualDataGridViewCheckBoxColumn";
-            actualDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // dataGridView1
             // 
@@ -449,7 +448,7 @@
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeight = 45;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { actualDataGridViewCheckBoxColumn, fechaHoraVencimientoDataGridViewTextBoxColumn, fechaHoraEmisionDataGridViewTextBoxColumn, estadoDataGridViewTextBoxColumn, codigoDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fechaHoraEmisionDataGridViewTextBoxColumn, fechaHoraVencimientoDataGridViewTextBoxColumn, estadoDataGridViewTextBoxColumn });
             dataGridView1.DataSource = cuotaBindingSource;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(37, 37, 38);
@@ -461,7 +460,7 @@
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.FromArgb(50, 50, 50);
-            dataGridView1.Location = new Point(292, 231);
+            dataGridView1.Location = new Point(290, 222);
             dataGridView1.Margin = new Padding(0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -474,9 +473,42 @@
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.RowTemplate.Height = 40;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1515, 832);
+            dataGridView1.Size = new Size(1515, 851);
             dataGridView1.TabIndex = 4;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // fechaHoraEmisionDataGridViewTextBoxColumn
+            // 
+            fechaHoraEmisionDataGridViewTextBoxColumn.DataPropertyName = "FechaHoraEmision";
+            fechaHoraEmisionDataGridViewTextBoxColumn.HeaderText = "Fecha de emision";
+            fechaHoraEmisionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            fechaHoraEmisionDataGridViewTextBoxColumn.Name = "fechaHoraEmisionDataGridViewTextBoxColumn";
+            fechaHoraEmisionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaHoraVencimientoDataGridViewTextBoxColumn
+            // 
+            fechaHoraVencimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaHoraVencimiento";
+            fechaHoraVencimientoDataGridViewTextBoxColumn.HeaderText = "Fecha de vencimiento";
+            fechaHoraVencimientoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            fechaHoraVencimientoDataGridViewTextBoxColumn.Name = "fechaHoraVencimientoDataGridViewTextBoxColumn";
+            fechaHoraVencimientoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
+            estadoDataGridViewTextBoxColumn.HeaderText = "Estado del pago";
+            estadoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            estadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lbSeriviciosPendientes
+            // 
+            lbSeriviciosPendientes.AutoSize = true;
+            lbSeriviciosPendientes.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbSeriviciosPendientes.ForeColor = Color.FromArgb(192, 0, 0);
+            lbSeriviciosPendientes.Location = new Point(1408, 185);
+            lbSeriviciosPendientes.Name = "lbSeriviciosPendientes";
+            lbSeriviciosPendientes.Size = new Size(0, 29);
+            lbSeriviciosPendientes.TabIndex = 5;
             // 
             // FormPlanes
             // 
@@ -486,6 +518,7 @@
             BackColor = Color.FromArgb(30, 30, 30);
             ClientSize = new Size(1920, 1088);
             ControlBox = false;
+            Controls.Add(lbSeriviciosPendientes);
             Controls.Add(dataGridView1);
             Controls.Add(label9);
             Controls.Add(label7);
@@ -496,7 +529,6 @@
             Name = "FormPlanes";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Planes";
-            Load += FormPlanes_Load_1;
             panelSidebar.ResumeLayout(false);
             groupBoxFiltros.ResumeLayout(false);
             groupBoxFiltros.PerformLayout();
@@ -539,11 +571,14 @@
         private BindingSource ticketAbonadoBindingSource;
         private BindingSource ticketBindingSource;
         private BindingSource ticketAbonadoBindingSource1;
-        private DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
+        private Button btnServicios;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn TarifaEstacionamiento;
+        private DataGridViewTextBoxColumn planIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn fechaHoraEmisionDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn fechaHoraVencimientoDataGridViewTextBoxColumn;
-        private DataGridViewCheckBoxColumn actualDataGridViewCheckBoxColumn;
-        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
+        private Label lbSeriviciosPendientes;
+        private Button btnGestionServicios;
     }
 }

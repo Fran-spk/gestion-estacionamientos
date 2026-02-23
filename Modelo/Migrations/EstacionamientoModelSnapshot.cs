@@ -82,6 +82,45 @@ namespace ModeloIds.Migrations
                     b.ToTable("GrupoUsuario");
                 });
 
+            modelBuilder.Entity("MODELO.AuditoriaTicket", b =>
+                {
+                    b.Property<int>("AuditoriaTicketId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AuditoriaTicketId"));
+
+                    b.Property<string>("CampoModificado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaHora")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Operacion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TicketBaseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ValorAnterior")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ValorNuevo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AuditoriaTicketId");
+
+                    b.HasIndex("TicketBaseId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("AuditoriaTickets");
+                });
+
             modelBuilder.Entity("MODELO.Descuento", b =>
                 {
                     b.Property<int>("DescuentoId")
@@ -179,26 +218,25 @@ namespace ModeloIds.Migrations
                     b.Property<int>("MetodoDePagoId")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("Monto")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<decimal>("MontoDescuento")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("MontoEstacionamiento")
+                    b.Property<decimal>("MontoTotal")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("MontoFinal")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("Patente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("MontoServicios")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("TicketBaseId")
+                    b.Property<int?>("TicketBaseId")
                         .HasColumnType("int");
 
                     b.HasKey("PagoId");
 
                     b.HasIndex("MetodoDePagoId");
-
-                    b.HasIndex("TicketBaseId");
 
                     b.ToTable("Pagos");
                 });
@@ -253,10 +291,7 @@ namespace ModeloIds.Migrations
                     b.Property<decimal>("Precio")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("ServicioTipoServicioId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TipoVehiculoId")
+                    b.Property<int>("ServicioVehiculoId")
                         .HasColumnType("int");
 
                     b.Property<bool>("Vigente")
@@ -264,9 +299,7 @@ namespace ModeloIds.Migrations
 
                     b.HasKey("TarifaServicioId");
 
-                    b.HasIndex("ServicioTipoServicioId");
-
-                    b.HasIndex("TipoVehiculoId");
+                    b.HasIndex("ServicioVehiculoId");
 
                     b.ToTable("Tarifa_Servicios");
                 });
@@ -279,12 +312,11 @@ namespace ModeloIds.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TicketBaseId"));
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("EspacioId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("EstacionamientoPago")
+                        .HasColumnType("bit");
 
                     b.Property<int>("EstadoId")
                         .HasColumnType("int");
@@ -312,9 +344,7 @@ namespace ModeloIds.Migrations
 
                     b.ToTable("Tickets_Base", (string)null);
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("TicketBase");
-
-                    b.UseTphMappingStrategy();
+                    b.UseTptMappingStrategy();
                 });
 
             modelBuilder.Entity("MODELO.TipoServicio", b =>
@@ -331,9 +361,6 @@ namespace ModeloIds.Migrations
 
                     b.Property<bool>("Estado")
                         .HasColumnType("bit");
-
-                    b.Property<double>("TiempoEstimado")
-                        .HasColumnType("float");
 
                     b.HasKey("TipoServicioId");
 
@@ -385,6 +412,39 @@ namespace ModeloIds.Migrations
                     b.HasIndex("FOR_ID");
 
                     b.ToTable("Acciones");
+                });
+
+            modelBuilder.Entity("MODELO.seguridad.AuditoriaSesion", b =>
+                {
+                    b.Property<int>("AuditoriaSesionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AuditoriaSesionId"));
+
+                    b.Property<DateTime>("FechaHoraLogin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaHoraLogout")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SesionActiva")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("TiempoSesion")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TipoLogout")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AuditoriaSesionId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("AuditoriaSesiones");
                 });
 
             modelBuilder.Entity("MODELO.seguridad.Estado_Grupo", b =>
@@ -512,19 +572,109 @@ namespace ModeloIds.Migrations
                     b.UseTptMappingStrategy();
                 });
 
-            modelBuilder.Entity("TicketTarifaServicio", b =>
+            modelBuilder.Entity("Modelo_Ids.PagoDetalle", b =>
                 {
-                    b.Property<int>("TicketBaseId")
+                    b.Property<int>("PagoDetalleId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PagoDetalleId"));
+
+                    b.Property<string>("Detalle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Monto")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("MontoDescuento")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("PagoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ServicioConsumidoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TicketBaseId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PagoDetalleId");
+
+                    b.HasIndex("PagoId");
+
+                    b.HasIndex("ServicioConsumidoId");
+
+                    b.HasIndex("TicketBaseId");
+
+                    b.ToTable("PagoDetalles");
+                });
+
+            modelBuilder.Entity("Modelo_Ids.ServicioConsumido", b =>
+                {
+                    b.Property<int>("ServicioConsumidoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServicioConsumidoId"));
+
+                    b.Property<bool>("Anulado")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("FechaHoraAsignado")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Pagado")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("PlanId")
                         .HasColumnType("int");
 
                     b.Property<int>("TarifaServicioId")
                         .HasColumnType("int");
 
-                    b.HasKey("TicketBaseId", "TarifaServicioId");
+                    b.Property<int?>("TicketBaseId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ServicioConsumidoId");
+
+                    b.HasIndex("PlanId");
 
                     b.HasIndex("TarifaServicioId");
 
-                    b.ToTable("TicketTarifaServicio", (string)null);
+                    b.HasIndex("TicketBaseId");
+
+                    b.ToTable("ServiciosConsumidos");
+                });
+
+            modelBuilder.Entity("Modelo_Ids.ServicioVehiculo", b =>
+                {
+                    b.Property<int>("ServicioVehiculoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServicioVehiculoId"));
+
+                    b.Property<bool>("EsActivo")
+                        .HasColumnType("bit");
+
+                    b.Property<double>("TiempoEstimado")
+                        .HasColumnType("float");
+
+                    b.Property<int>("TipoServicioId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TipoVehiculoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ServicioVehiculoId");
+
+                    b.HasIndex("TipoVehiculoId");
+
+                    b.HasIndex("TipoServicioId", "ServicioVehiculoId")
+                        .IsUnique();
+
+                    b.ToTable("ServiciosVehiculos");
                 });
 
             modelBuilder.Entity("MODELO.Cuota", b =>
@@ -534,22 +684,25 @@ namespace ModeloIds.Migrations
                     b.Property<bool>("Actual")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("FechaHoraVencimiento")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("PlanId")
                         .HasColumnType("int");
 
                     b.HasIndex("PlanId");
 
-                    b.HasDiscriminator().HasValue("Cuota");
+                    b.ToTable("Cuotas", (string)null);
                 });
 
-            modelBuilder.Entity("MODELO.Ticket", b =>
+            modelBuilder.Entity("MODELO.Ticket_Diario", b =>
                 {
                     b.HasBaseType("MODELO.TicketBase");
 
                     b.Property<DateTime>("FechaHoraSalida")
                         .HasColumnType("datetime2");
 
-                    b.HasDiscriminator().HasValue("Ticket");
+                    b.ToTable("Tickets_Diarios", (string)null);
                 });
 
             modelBuilder.Entity("MODELO.Plan", b =>
@@ -674,6 +827,25 @@ namespace ModeloIds.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("MODELO.AuditoriaTicket", b =>
+                {
+                    b.HasOne("MODELO.TicketBase", "Ticket")
+                        .WithMany("auditoriaTickets")
+                        .HasForeignKey("TicketBaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MODELO.seguridad.Usuario", "Usuario")
+                        .WithMany("AuditoriaTickets")
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Ticket");
+
+                    b.Navigation("Usuario");
+                });
+
             modelBuilder.Entity("MODELO.Pago", b =>
                 {
                     b.HasOne("MODELO.MetodoDePago", "MetodoDePago")
@@ -682,15 +854,7 @@ namespace ModeloIds.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MODELO.TicketBase", "Ticket")
-                        .WithMany()
-                        .HasForeignKey("TicketBaseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("MetodoDePago");
-
-                    b.Navigation("Ticket");
                 });
 
             modelBuilder.Entity("MODELO.TarifaEstacionamiento", b =>
@@ -706,19 +870,13 @@ namespace ModeloIds.Migrations
 
             modelBuilder.Entity("MODELO.TarifaServicio", b =>
                 {
-                    b.HasOne("MODELO.TipoServicio", "Servicio")
-                        .WithMany()
-                        .HasForeignKey("ServicioTipoServicioId");
-
-                    b.HasOne("MODELO.TipoVehiculo", "TipoVehiculo")
-                        .WithMany()
-                        .HasForeignKey("TipoVehiculoId")
+                    b.HasOne("Modelo_Ids.ServicioVehiculo", "ServicioVehiculo")
+                        .WithMany("Tarifas")
+                        .HasForeignKey("ServicioVehiculoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Servicio");
-
-                    b.Navigation("TipoVehiculo");
+                    b.Navigation("ServicioVehiculo");
                 });
 
             modelBuilder.Entity("MODELO.TicketBase", b =>
@@ -757,6 +915,17 @@ namespace ModeloIds.Migrations
                     b.Navigation("Formulario");
                 });
 
+            modelBuilder.Entity("MODELO.seguridad.AuditoriaSesion", b =>
+                {
+                    b.HasOne("MODELO.seguridad.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Usuario");
+                });
+
             modelBuilder.Entity("MODELO.seguridad.Formulario", b =>
                 {
                     b.HasOne("MODELO.seguridad.Modulo", "Modulo")
@@ -777,19 +946,69 @@ namespace ModeloIds.Migrations
                     b.Navigation("Estado_Grupo");
                 });
 
-            modelBuilder.Entity("TicketTarifaServicio", b =>
+            modelBuilder.Entity("Modelo_Ids.PagoDetalle", b =>
                 {
-                    b.HasOne("MODELO.TarifaServicio", null)
-                        .WithMany()
-                        .HasForeignKey("TarifaServicioId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                    b.HasOne("MODELO.Pago", "Pago")
+                        .WithMany("Detalles")
+                        .HasForeignKey("PagoId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MODELO.TicketBase", null)
+                    b.HasOne("Modelo_Ids.ServicioConsumido", "ServicioConsumido")
                         .WithMany()
-                        .HasForeignKey("TicketBaseId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .HasForeignKey("ServicioConsumidoId");
+
+                    b.HasOne("MODELO.TicketBase", "Ticket")
+                        .WithMany()
+                        .HasForeignKey("TicketBaseId");
+
+                    b.Navigation("Pago");
+
+                    b.Navigation("ServicioConsumido");
+
+                    b.Navigation("Ticket");
+                });
+
+            modelBuilder.Entity("Modelo_Ids.ServicioConsumido", b =>
+                {
+                    b.HasOne("MODELO.Plan", "Plan")
+                        .WithMany("ServiciosConsumidos")
+                        .HasForeignKey("PlanId");
+
+                    b.HasOne("MODELO.TarifaServicio", "TarifaServicio")
+                        .WithMany()
+                        .HasForeignKey("TarifaServicioId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("MODELO.Ticket_Diario", "TicketDiario")
+                        .WithMany("ServiciosConsumidos")
+                        .HasForeignKey("TicketBaseId");
+
+                    b.Navigation("Plan");
+
+                    b.Navigation("TarifaServicio");
+
+                    b.Navigation("TicketDiario");
+                });
+
+            modelBuilder.Entity("Modelo_Ids.ServicioVehiculo", b =>
+                {
+                    b.HasOne("MODELO.TipoServicio", "Servicio")
+                        .WithMany()
+                        .HasForeignKey("TipoServicioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MODELO.TipoVehiculo", "Vehiculo")
+                        .WithMany()
+                        .HasForeignKey("TipoVehiculoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Servicio");
+
+                    b.Navigation("Vehiculo");
                 });
 
             modelBuilder.Entity("MODELO.Cuota", b =>
@@ -800,7 +1019,22 @@ namespace ModeloIds.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("MODELO.TicketBase", null)
+                        .WithOne()
+                        .HasForeignKey("MODELO.Cuota", "TicketBaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Plan");
+                });
+
+            modelBuilder.Entity("MODELO.Ticket_Diario", b =>
+                {
+                    b.HasOne("MODELO.TicketBase", null)
+                        .WithOne()
+                        .HasForeignKey("MODELO.Ticket_Diario", "TicketBaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("MODELO.Plan", b =>
@@ -838,6 +1072,16 @@ namespace ModeloIds.Migrations
                     b.Navigation("Tickets");
                 });
 
+            modelBuilder.Entity("MODELO.Pago", b =>
+                {
+                    b.Navigation("Detalles");
+                });
+
+            modelBuilder.Entity("MODELO.TicketBase", b =>
+                {
+                    b.Navigation("auditoriaTickets");
+                });
+
             modelBuilder.Entity("MODELO.seguridad.Formulario", b =>
                 {
                     b.Navigation("Acciones");
@@ -848,9 +1092,26 @@ namespace ModeloIds.Migrations
                     b.Navigation("Formularios");
                 });
 
+            modelBuilder.Entity("Modelo_Ids.ServicioVehiculo", b =>
+                {
+                    b.Navigation("Tarifas");
+                });
+
+            modelBuilder.Entity("MODELO.Ticket_Diario", b =>
+                {
+                    b.Navigation("ServiciosConsumidos");
+                });
+
             modelBuilder.Entity("MODELO.Plan", b =>
                 {
                     b.Navigation("Cuotas");
+
+                    b.Navigation("ServiciosConsumidos");
+                });
+
+            modelBuilder.Entity("MODELO.seguridad.Usuario", b =>
+                {
+                    b.Navigation("AuditoriaTickets");
                 });
 #pragma warning restore 612, 618
         }

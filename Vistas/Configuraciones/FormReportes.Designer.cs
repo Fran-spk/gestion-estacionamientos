@@ -43,6 +43,7 @@
             repositorioTarifasBindingSource = new BindingSource(components);
             panelHeader = new Panel();
             lblTitulo = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)vehiculoBindingSource).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ticketBindingSource1).BeginInit();
@@ -128,7 +129,7 @@
             btnsalir.FlatStyle = FlatStyle.Flat;
             btnsalir.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             btnsalir.ForeColor = Color.White;
-            btnsalir.Location = new Point(540, 350);
+            btnsalir.Location = new Point(770, 319);
             btnsalir.Margin = new Padding(6, 5, 6, 5);
             btnsalir.Name = "btnsalir";
             btnsalir.Size = new Size(200, 55);
@@ -139,7 +140,7 @@
             // 
             // ticketBindingSource1
             // 
-            ticketBindingSource1.DataSource = typeof(MODELO.Ticket);
+            ticketBindingSource1.DataSource = typeof(MODELO.Ticket_Diario);
             // 
             // BtnFiltrar
             // 
@@ -149,22 +150,22 @@
             BtnFiltrar.FlatStyle = FlatStyle.Flat;
             BtnFiltrar.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             BtnFiltrar.ForeColor = Color.White;
-            BtnFiltrar.Location = new Point(260, 350);
+            BtnFiltrar.Location = new Point(30, 319);
             BtnFiltrar.Margin = new Padding(6, 5, 6, 5);
             BtnFiltrar.Name = "BtnFiltrar";
-            BtnFiltrar.Size = new Size(260, 55);
+            BtnFiltrar.Size = new Size(341, 55);
             BtnFiltrar.TabIndex = 51;
-            BtnFiltrar.Text = "📊 Generar Reporte";
+            BtnFiltrar.Text = "📊 Reporte de Estacionamiento";
             BtnFiltrar.UseVisualStyleBackColor = false;
             BtnFiltrar.Click += BtnFiltrar_Click;
             // 
             // ticketBindingSource
             // 
-            ticketBindingSource.DataSource = typeof(MODELO.Ticket);
+            ticketBindingSource.DataSource = typeof(MODELO.Ticket_Diario);
             // 
             // repositorioTarifasBindingSource
             // 
-            repositorioTarifasBindingSource.DataSource = typeof(Controladora.ControladoraTarifas);
+            repositorioTarifasBindingSource.DataSource = typeof(Controladora.ControladoraTarifasEstacionamiento);
             // 
             // panelHeader
             // 
@@ -188,13 +189,31 @@
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Generar Reportes";
             // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button1.BackColor = Color.FromArgb(0, 122, 204);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(404, 319);
+            button1.Margin = new Padding(6, 5, 6, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(276, 55);
+            button1.TabIndex = 53;
+            button1.Text = "📊 Reporte de Auditoria";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // FormReportes
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(1000, 430);
+            ClientSize = new Size(1000, 405);
             ControlBox = false;
+            Controls.Add(button1);
             Controls.Add(groupBox1);
             Controls.Add(panelHeader);
             Controls.Add(BtnFiltrar);
@@ -205,6 +224,7 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
+            Load += FormReportes_Load;
             ((System.ComponentModel.ISupportInitialize)vehiculoBindingSource).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -232,5 +252,6 @@
         private BindingSource ticketBindingSource1;
         private Panel panelHeader;
         private Label lblTitulo;
+        private Button button1;
     }
 }

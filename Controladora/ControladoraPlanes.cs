@@ -36,12 +36,21 @@ namespace Controladora
 
         public ReadOnlyCollection<Plan> getAllPlanes()
         {
-            return Estacionamiento.Contexto.Planes.Include("Descuento").ToList().AsReadOnly();
+            return Estacionamiento.Contexto.Planes.
+                Include("Descuento")
+                .Include(x=>x.ServiciosConsumidos)
+                .Include(c=>c.Cuotas)
+                . ToList().AsReadOnly();
         }
 
         public Plan? getPlanActivoByPatente(string Patente)
         {
-            var plan = Estacionamiento.Contexto.Planes.Include("Descuento").FirstOrDefault(p => p.Patente == Patente && p.EstadoPlan);
+            var plan = Estacionamiento.Contexto.Planes.Include("Descuento")
+                                .Include(x => x.ServiciosConsumidos)
+                .Include(c => c.Cuotas)
+                .Include(s => s.ServiciosConsumidos)
+                    .ThenInclude(m => m.TarifaServicio)
+                .FirstOrDefault(p => p.Patente == Patente && p.EstadoPlan);
             if (plan != null)
             {
                 return plan;
@@ -52,9 +61,18 @@ namespace Controladora
 
         public ReadOnlyCollection<Plan> getAllPlanesActivos()
         {
-            return Estacionamiento.Contexto.Planes.Include("Descuento").Where(x => x.EstadoPlan).ToList().AsReadOnly();
+            return Estacionamiento.Contexto.Planes.Include("Descuento")
+                .Include(x => x.ServiciosConsumidos)
+                     .ThenInclude(m => m.TarifaServicio)
+                     .ThenInclude(sv => sv.ServicioVehiculo)
+                     .ThenInclude(v=>v.Vehiculo)
+                .Include(x => x.ServiciosConsumidos)
+                     .ThenInclude(m => m.TarifaServicio)
+                     .ThenInclude(sv => sv.ServicioVehiculo)
+                     .ThenInclude(v => v.Servicio)
+                .Include(c => c.Cuotas).Where(x => x.EstadoPlan).ToList().AsReadOnly();
         }
-
+        
 
 
         public bool AgregarPlan(Plan plan)

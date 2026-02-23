@@ -1,50 +1,50 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modelo_Ids;
 
 namespace MODELO
 {
+   
     public abstract class TicketBase
     {
-        public TicketBase() 
+        public TicketBase()
         {
-            estadia= new Estadia_Media_Hora();
-            tarifasAdicionales = new List<TarifaServicio>();
+            estadia = new Estadia_Media_Hora();
         }
+        [NotMapped]
         private int ticketbaseId;
         private DateTime fechahoraemision;
         private string patente;
         private TarifaEstacionamiento tarifaEstacionamiento;
         private int tarifaEstacionamientoId;
-        private List<TarifaServicio> tarifasAdicionales;
         private Estadia estadia;
         private Estado_Ticket estado;
         private int estadoId;
         private string codigo;
         private Espacio espacio;
         private int espacioId;
+        
+        public bool EstacionamientoPago {  get; set; }
 
+        public List<AuditoriaTicket> auditoriaTickets { get; set; }
         public int TicketBaseId
         {
             get { return ticketbaseId; }
             set { ticketbaseId = value; }
         }
 
-        public List<TarifaServicio> TarifasAdicionales
-        {
-            get { return tarifasAdicionales; }
-            set { tarifasAdicionales = value; }
-        }
         public int TarifaId
         {
             get { return tarifaEstacionamientoId; }
             set { tarifaEstacionamientoId = value; }
         }
 
-      
+
         public DateTime FechaHoraEmision
         {
             get { return fechahoraemision; }
@@ -56,7 +56,7 @@ namespace MODELO
             get { return patente; }
             set { patente = value; }
         }
-  
+
 
         public TarifaEstacionamiento TarifaEstacionamiento
         {
@@ -64,14 +64,14 @@ namespace MODELO
             set { tarifaEstacionamiento = value; }
         }
 
- 
+
 
         public Estadia Estadia
         {
-            get 
+            get
             {
                 CambiarEstadia();
-                return estadia; 
+                return estadia;
             }
 
             set { estadia = value; }
@@ -96,7 +96,7 @@ namespace MODELO
             set { espacio = value; }
         }
 
-        public int EspacioId 
+        public int EspacioId
         {
             get { return espacioId; }
             set { espacioId = value; }
@@ -104,21 +104,18 @@ namespace MODELO
 
         public string Codigo
         {
-            get 
+            get
             {
                 codigo = $"{Patente}{FechaHoraEmision}";
-                return codigo; 
+                return codigo;
             }
         }
 
-
-
-       void CambiarEstadia()
-       {
+        void CambiarEstadia()
+        {
             estadia.ActualizarEstadia(this);
-       }
+        }
 
 
     }
 }
-

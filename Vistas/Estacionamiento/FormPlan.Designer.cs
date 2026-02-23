@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -55,11 +56,17 @@
             dataGridView1 = new DataGridView();
             btnaceptar = new Button();
             btncancelar = new Button();
+            espacioBindingSource = new BindingSource(components);
+            nombreEspacioDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            capacidadDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ocupacionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            disponibilidadDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
             panelHeader.SuspendLayout();
             groupBoxCliente.SuspendLayout();
             groupBoxPlan.SuspendLayout();
             groupBoxEspacios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)espacioBindingSource).BeginInit();
             SuspendLayout();
             // 
             // panelHeader
@@ -183,8 +190,6 @@
             groupBoxPlan.Controls.Add(checkDesc);
             groupBoxPlan.Controls.Add(label11);
             groupBoxPlan.Controls.Add(TxtDescuento);
-            groupBoxPlan.Controls.Add(label10);
-            groupBoxPlan.Controls.Add(dateTimePicker1);
             groupBoxPlan.FlatStyle = FlatStyle.Flat;
             groupBoxPlan.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             groupBoxPlan.ForeColor = Color.FromArgb(0, 122, 204);
@@ -280,7 +285,7 @@
             TxtDescuento.FormattingEnabled = true;
             TxtDescuento.Location = new Point(20, 290);
             TxtDescuento.Name = "TxtDescuento";
-            TxtDescuento.Size = new Size(150, 38);
+            TxtDescuento.Size = new Size(340, 38);
             TxtDescuento.TabIndex = 6;
             // 
             // label10
@@ -288,7 +293,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(190, 255);
+            label10.Location = new Point(799, 502);
             label10.Name = "label10";
             label10.Size = new Size(119, 28);
             label10.TabIndex = 7;
@@ -298,7 +303,7 @@
             // 
             dateTimePicker1.CalendarMonthBackground = Color.FromArgb(45, 45, 48);
             dateTimePicker1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(190, 291);
+            dateTimePicker1.Location = new Point(933, 493);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(170, 37);
             dateTimePicker1.TabIndex = 8;
@@ -336,6 +341,7 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.FromArgb(45, 45, 48);
             dataGridView1.BorderStyle = BorderStyle.None;
@@ -351,6 +357,8 @@
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeight = 40;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nombreEspacioDataGridViewTextBoxColumn, capacidadDataGridViewTextBoxColumn, ocupacionDataGridViewTextBoxColumn, disponibilidadDataGridViewCheckBoxColumn });
+            dataGridView1.DataSource = espacioBindingSource;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(37, 37, 38);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
@@ -387,7 +395,7 @@
             btnaceptar.Name = "btnaceptar";
             btnaceptar.Size = new Size(180, 50);
             btnaceptar.TabIndex = 4;
-            btnaceptar.Text = "✓ Crear Plan";
+            btnaceptar.Text = "✓ Aceptar";
             btnaceptar.UseVisualStyleBackColor = false;
             btnaceptar.Click += btnaceptar_Click;
             // 
@@ -407,6 +415,42 @@
             btncancelar.UseVisualStyleBackColor = false;
             btncancelar.Click += btncancelar_Click;
             // 
+            // espacioBindingSource
+            // 
+            espacioBindingSource.DataSource = typeof(MODELO.Espacio);
+            // 
+            // nombreEspacioDataGridViewTextBoxColumn
+            // 
+            nombreEspacioDataGridViewTextBoxColumn.DataPropertyName = "NombreEspacio";
+            nombreEspacioDataGridViewTextBoxColumn.HeaderText = "NombreEspacio";
+            nombreEspacioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            nombreEspacioDataGridViewTextBoxColumn.Name = "nombreEspacioDataGridViewTextBoxColumn";
+            nombreEspacioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // capacidadDataGridViewTextBoxColumn
+            // 
+            capacidadDataGridViewTextBoxColumn.DataPropertyName = "Capacidad";
+            capacidadDataGridViewTextBoxColumn.HeaderText = "Capacidad";
+            capacidadDataGridViewTextBoxColumn.MinimumWidth = 8;
+            capacidadDataGridViewTextBoxColumn.Name = "capacidadDataGridViewTextBoxColumn";
+            capacidadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ocupacionDataGridViewTextBoxColumn
+            // 
+            ocupacionDataGridViewTextBoxColumn.DataPropertyName = "Ocupacion";
+            ocupacionDataGridViewTextBoxColumn.HeaderText = "Ocupacion";
+            ocupacionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            ocupacionDataGridViewTextBoxColumn.Name = "ocupacionDataGridViewTextBoxColumn";
+            ocupacionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // disponibilidadDataGridViewCheckBoxColumn
+            // 
+            disponibilidadDataGridViewCheckBoxColumn.DataPropertyName = "Disponibilidad";
+            disponibilidadDataGridViewCheckBoxColumn.HeaderText = "Disponibilidad";
+            disponibilidadDataGridViewCheckBoxColumn.MinimumWidth = 8;
+            disponibilidadDataGridViewCheckBoxColumn.Name = "disponibilidadDataGridViewCheckBoxColumn";
+            disponibilidadDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
             // FormPlan
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -420,6 +464,8 @@
             Controls.Add(groupBoxPlan);
             Controls.Add(groupBoxCliente);
             Controls.Add(panelHeader);
+            Controls.Add(label10);
+            Controls.Add(dateTimePicker1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "FormPlan";
@@ -434,7 +480,9 @@
             groupBoxEspacios.ResumeLayout(false);
             groupBoxEspacios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)espacioBindingSource).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -463,5 +511,10 @@
         private DataGridView dataGridView1;
         private Button btnaceptar;
         private Button btncancelar;
+        private DataGridViewTextBoxColumn nombreEspacioDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn capacidadDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn ocupacionDataGridViewTextBoxColumn;
+        private DataGridViewCheckBoxColumn disponibilidadDataGridViewCheckBoxColumn;
+        private BindingSource espacioBindingSource;
     }
 }

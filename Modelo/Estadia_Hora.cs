@@ -12,7 +12,7 @@ namespace MODELO
     {
         public override void ActualizarEstadia(TicketBase Ticket)
         {
-            var ticket = Ticket as Ticket;
+            var ticket = Ticket as Ticket_Diario;
             if (ticket.Horas >= 6)
             {
                 Ticket.Estadia = new Estadia_Dia();
